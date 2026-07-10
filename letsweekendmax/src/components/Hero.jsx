@@ -1,65 +1,54 @@
-export default function Hero(){
+import { useState } from "react";
+import "./Hero.css";
 
-return(
+export default function Hero() {
 
-<section className="hero">
+    const [flipped, setFlipped] = useState(false);
 
-    <div className="hero-overlay">
+    return (
 
+        <section className="hero">
 
-        <div className="hero-text">
+            <div className="hero-overlay">
 
-            <h1>
-                Let's<br/>
-                Weekendmax
-            </h1>
+                <div
+                    className={`postcard-container ${flipped ? "clicked" : ""}`}
+                    onClick={() => setFlipped(!flipped)}
+                >
 
-
-            <p>
-                Travel guides, credit card points,
-                and weekend adventures.
-            </p>
+                    <div className="postcard-flipper">
 
 
-            <button>
-                Explore Trips →
-            </button>
+                        {/* FRONT OF POSTCARD */}
+                        <div className="postcard-side postcard-front">
 
-        </div>
+                            <img
+                                src="/front.png"
+                                alt="Postcard front"
+                            />
 
-
-
-        <div className="postcard">
-
-            <img
-                src="/postcard-venice.png"
-                alt="Venice postcard"
-            />
+                        </div>
 
 
-            <div className="postcard-info">
+                        {/* BACK OF POSTCARD */}
+                        <div className="postcard-side postcard-back">
 
-                <h3>
-                    Greetings from Venice 🇮🇹
-                </h3>
+                            <img
+                                src="/back.png"
+                                alt="Postcard back"
+                            />
+
+                        </div>
 
 
-                <p>
-                    48 hours exploring canals,
-                    cafes, and hidden streets.
-                </p>
+                    </div>
+
+                </div>
 
             </div>
 
+        </section>
 
-        </div>
-
-
-    </div>
-
-
-</section>
-
-)
+    );
 
 }
