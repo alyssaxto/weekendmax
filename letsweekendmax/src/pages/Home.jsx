@@ -12,10 +12,10 @@ return(
 <>
 
 <Hero />
+<FlightDeals />
 
 <FeaturedPostcards />
 
-<FlightDeals />
 
 <AboutPreview />
 
