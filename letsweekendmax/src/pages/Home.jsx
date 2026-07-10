@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import FeaturedPostcards from "../components/FeaturedPostcards";
+import Itineraries from "../components/Itineraries";
 import FlightDeals from "../components/FlightDeals";
 import AboutPreview from "../components/AboutPreview";
 import Newsletter from "../components/Newsletter";
@@ -14,8 +14,7 @@ return(
 <Hero />
 <FlightDeals />
 
-<FeaturedPostcards />
-
+<Itineraries />
 
 <AboutPreview />
 
