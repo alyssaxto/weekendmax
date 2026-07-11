@@ -24,7 +24,7 @@ return (
 
 <Route path="/about" element={<About />} />
 
-<Route path="/itineraries" element={<Destinations />} />
+<Route path="/destinations" element={<Destinations />} />
 
 <Route path="/deals" element={<Deals />} />
 

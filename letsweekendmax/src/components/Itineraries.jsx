@@ -142,7 +142,7 @@ export default function Itinerary(){
 
 
                     <Link
-                        to="/itineraries"
+                        to="/destinations"
                         className="view-all"
                     >
                         View All →
