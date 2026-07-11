@@ -34,7 +34,7 @@
 
 .about-header h1{
 
-    color:#23415d;
+    color:#26382F;
 
     font-size:3rem;
 
@@ -64,7 +64,7 @@
 
     margin-top:20px;
 
-    color:#d58b5b;
+    color:#D9784A;
 
     font-weight:600;
 
@@ -147,164 +147,306 @@
 
 
 
-/* ---------- HORIZONTAL POSTCARD ---------- */
+/* ========================= */
+/* PASSPORTS */
+/* ========================= */
 
+.creator-container{
 
-.creator-card{
+display:flex;
 
-    display:flex;
+flex-direction:column;
 
-    flex-direction:row;
+gap:80px;
 
-    background:#fffaf0;
+max-width:1200px;
 
-    border-radius:8px;
-
-    overflow:hidden;
-
-    position:relative;
-
-    min-height:350px;
-
-    border:2px solid #eadfcf;
-
-    box-shadow:
-    0 25px 50px rgba(0,0,0,.12);
-
-    transition:.35s ease;
+margin:90px auto 0;
 
 }
 
+/* Passport */
 
+.passport{
 
-/* postcard angles */
+background:#fffaf0;
 
+border:2px solid #e4d8c6;
 
-.creator-card:nth-child(1){
+border-radius:8px;
 
-    transform:rotate(-1.5deg);
+position:relative;
 
-}
+overflow:hidden;
 
+box-shadow:
+0 25px 55px rgba(0,0,0,.10);
 
-
-.creator-card:nth-child(2){
-
-    transform:rotate(1.5deg);
-
-}
-
-
-
-.creator-card:hover{
-
-    transform:
-    rotate(0deg)
-    translateY(-8px);
+transition:.35s;
 
 }
 
+/* watermark */
 
+.passport::before{
 
+content:"";
 
+position:absolute;
 
+inset:0;
 
-/* stamp */
+background:
+radial-gradient(circle,#d8c7ad22 2px,transparent 2px);
 
+background-size:30px 30px;
 
-.creator-card::before{
+opacity:.35;
 
-    content:"";
-
-    position:absolute;
-
-    top:20px;
-
-    right:25px;
-
-    width:70px;
-
-    height:70px;
-
-    border:2px dashed #d58b5b;
-
-    opacity:.5;
-
-    border-radius:4px;
+pointer-events:none;
 
 }
 
+.passport:hover{
 
+transform:
+translateY(-8px);
 
-
-
-/* ---------- IMAGE ---------- */
-
-
-.creator-image{
-
-    width:40%;
-
-    min-height:350px;
+box-shadow:
+0 40px 80px rgba(0,0,0,.15);
 
 }
 
+/* Header */
 
+.passport-header{
 
-.creator-image img{
+display:flex;
 
-    width:100%;
+justify-content:space-between;
 
-    height:100%;
+padding:18px 35px;
 
-    object-fit:cover;
+border-bottom:2px solid #e8dccd;
 
-}
+font-size:.85rem;
 
+font-weight:700;
 
+letter-spacing:2px;
 
+color:#23415d;
 
-
-
-/* ---------- INFO ---------- */
-
-
-.creator-info{
-
-    width:60%;
-
-    padding:45px;
+background:#faf4ea;
 
 }
 
+/* Body */
 
+.passport-body{
 
-.creator-info h2{
+display:grid;
 
-    color:#23415d;
+grid-template-columns:300px 1fr;
 
-    font-size:2.2rem;
+gap:45px;
 
-    margin-bottom:20px;
+padding:45px;
 
 }
 
+/* Photo */
 
+.passport-photo{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.passport-photo img{
+
+width:220px;
+
+height:280px;
+
+object-fit:cover;
+
+border:10px solid white;
+
+box-shadow:
+0 12px 30px rgba(0,0,0,.12);
+
+filter:
+grayscale(.12)
+sepia(.08);
+
+}
+
+.passport-number{
+
+margin-top:20px;
+
+font-size:.8rem;
+
+letter-spacing:2px;
+
+color:#888;
+
+}
+
+/* Info */
+
+.field{
+
+margin-bottom:28px;
+
+}
+
+.field span{
+
+display:block;
+
+font-size:.8rem;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+color:#d58b5b;
+
+margin-bottom:8px;
+
+}
+
+.field h2{
+
+font-size:2.2rem;
+
+color:#23415d;
+
+margin:0;
+
+}
 
 .bio{
 
-    color:#536273;
+line-height:1.8;
 
-    line-height:1.8;
-
-    margin-bottom:30px;
+color:#5E625B;
 
 }
 
+/* Bottom */
 
+.passport-grid{
 
+display:grid;
 
+grid-template-columns:1fr 1fr;
 
+gap:30px;
+
+margin-top:25px;
+
+}
+
+.credential-box,
+.social-box{
+
+background:#f7f1e8;
+
+padding:22px;
+
+border-left:5px solid #d58b5b;
+
+}
+
+.credential-box h3,
+.social-box h3{
+
+color:#23415d;
+
+margin-bottom:15px;
+
+font-size:1rem;
+
+}
+
+.credential-box p{
+
+white-space:pre-line;
+
+line-height:1.8;
+
+color:#536273;
+
+}
+
+.social-box{
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.social-box a{
+
+text-decoration:none;
+
+color:#23415d;
+
+font-weight:600;
+
+transition:.25s;
+
+}
+
+.social-box a:hover{
+
+color:#d58b5b;
+
+transform:translateX(6px);
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.passport-body{
+
+grid-template-columns:1fr;
+
+}
+
+.passport-photo{
+
+align-items:flex-start;
+
+}
+
+.passport-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.passport-photo img{
+
+width:180px;
+
+height:230px;
+
+}
+
+}
 
 /* ---------- SOCIALS ---------- */
 
@@ -355,7 +497,7 @@
 
 .credit-cards{
 
-    background:#F2EDDE;
+    background:#FAF4E8  ;
 
     border:2px dashed #d8c7ad;
 
@@ -440,5 +582,76 @@
 
 }
 
+
+}
+
+/* ---------- SOCIAL ICONS ---------- */
+
+
+.social-icon-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+.social-icon-link img{
+
+    width:22px;
+
+    height:22px;
+
+    object-fit:contain;
+
+}
+
+
+
+.social-box a:hover{
+
+    color:#D9784A;
+
+    transform:translateX(6px);
+
+}
+
+
+
+
+/* PORTFOLIO ARROW */
+
+.portfolio-link{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+.portfolio-link span{
+
+    font-size:1.3rem;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+
+
+.portfolio-link:hover span{
+
+    transform:
+
+    translate(4px,-4px);
 
 }

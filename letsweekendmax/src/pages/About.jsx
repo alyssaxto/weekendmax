@@ -61,129 +61,144 @@ target="_blank"
 Learn the Basics →
 </button>
 </a>
+<div className="creator-container">
 
-            <div className="creator-container">
+{creators.map((creator,index)=>(
 
+<div
+className="passport"
+key={index}
+>
 
-                {creators.map((creator,index)=>(
+<div className="passport-header">
 
+<div className="passport-title">
+🛂 PASSPORT
+</div>
 
-                    <div 
-                        className="creator-card"
-                        key={index}
-                    >
+<div className="passport-country">
+UNITED STATES
+</div>
 
+</div>
 
-                        <div className="creator-image">
 
-                            <img 
-                                src={creator.image}
-                                alt={creator.name}
-                            />
+<div className="passport-body">
 
-                        </div>
+<div className="passport-photo">
 
+<img
+src={creator.image}
+alt={creator.name}
+/>
 
+<div className="passport-number">
+No. 00{index + 1}84725
+</div>
 
+</div>
 
 
-                        <div className="creator-info">
+<div className="passport-info">
 
+<div className="field">
 
-                            <h2>
-                                {creator.name}
-                            </h2>
+<span>NAME</span>
 
+<h2>{creator.name}</h2>
 
+</div>
 
+<div className="field">
 
-                            <p className="bio">
-                                {creator.bio}
-                            </p>
+<span>ABOUT</span>
 
+<p className="bio">
+{creator.bio}
+</p>
 
+</div>
 
 
+<div className="passport-grid">
 
+<div className="credential-box">
 
-                            <div className="social-links">
+<h3>
+Travel Credentials
+</h3>
 
+<p>
+{creator.cards}
+</p>
 
-                                <a 
-                                    href={creator.instagram}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    ◎ Instagram
-                                </a>
+</div>
 
+<div className="social-box">
 
+<h3>
+Connect
+</h3>
 
+<a
+href={creator.instagram}
+target="_blank"
+rel="noreferrer"
+className="social-icon-link"
+>
+<img 
+src="/instagram.png"
+alt="Instagram"
+/>
+Instagram
+</a>
 
-                                <a 
-                                    href={creator.linkedin}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    ▣ LinkedIn
-                                </a>
 
+<a
+href={creator.linkedin}
+target="_blank"
+rel="noreferrer"
+className="social-icon-link"
+>
+<img 
+src="/linkedin.png"
+alt="LinkedIn"
+/>
+LinkedIn
+</a>
 
 
+{creator.website && (
 
+<a
+href={creator.linkedin}
+target="_blank"
+rel="noreferrer"
+className="social-icon-link"
+>
+<img 
+src="/website.png"
+alt="LinkedIn"
+/>
+Portfolio
+</a>
 
-                                {creator.website && (
+)}
 
-                                    <a
-                                        href={creator.website}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        ◌ Website
-                                    </a>
+</div>
 
-                                )}
+</div>
 
+</div>
 
+</div>
 
-                            </div>
+</div>
 
+))}
 
+</div>
 
-
-
-
-
-                            <div className="credit-cards">
-
-
-                                <h3>
-                                    ▤ Credit Cards We Use
-                                </h3>
-
-
-
-                                <p>
-                                    {creator.cards}
-                                </p>
-
-
-
-                            </div>
-
-
-
-                        </div>
-
-
-                    </div>
-
-
-                ))}
-
-
-
-            </div>
 
 
         </section>

@@ -48,11 +48,16 @@ return(
 
             <a 
                 className="weekend-instagram"
-                href="https://instagram.com/letsweekendmax"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                ◎ @letsweekendmax
+target="_blank"
+rel="noreferrer"
+className="social-icon-link"
+>
+<img 
+src="/instagram.png"
+alt="LinkedIn"
+/>
+        
+                @letsweekendmax
             </a>
 
 

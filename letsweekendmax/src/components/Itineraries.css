@@ -2,7 +2,7 @@
 
     padding:100px 8%;
 
-    background:#F2EDDE;
+    background:#FAF4E8;
 
     overflow:visible;
 
@@ -28,7 +28,7 @@
 
     font-size:3rem;
 
-    color:#23415d;
+    color:#26382F;
 
     margin-bottom:15px;
 
@@ -40,7 +40,7 @@
 
     font-size:1.1rem;
 
-    color:#536273;
+    color:#5E625B;
 
     max-width:650px;
 
@@ -54,7 +54,7 @@
 
 .view-all{
 
-    background:#23415d;
+    background:#D9784A;
 
     color:white;
 
@@ -74,7 +74,10 @@
 
     transform:translateY(-3px);
 
+    background:#C7653C;
+
 }
+
 
 
 
@@ -102,11 +105,13 @@
 }
 
 
+
 .itinerary-scroll::-webkit-scrollbar{
 
     display:none;
 
 }
+
 
 
 .itinerary-scroll.dragging{
@@ -116,6 +121,8 @@
     scroll-behavior:auto;
 
 }
+
+
 
 
 
@@ -131,7 +138,7 @@
 
     background-position:center;
 
-    border-radius:14px;
+    border-radius:18px;
 
     overflow:hidden;
 
@@ -146,19 +153,16 @@
 
     box-shadow .35s ease;
 
-
 }
 
 
 
-/* SMALL EXPAND */
-
 .itinerary-card:hover{
-
 
     transform:
 
     scale(1.05)
+
     translateY(-10px);
 
 
@@ -166,8 +170,6 @@
 
     margin-right:8px;
 
-
- 
 }
 
 
@@ -195,12 +197,13 @@
 
         transparent,
 
-        rgba(0,0,0,.75)
+        rgba(19, 30, 44, 0.85)
 
     );
 
-
 }
+
+
 
 
 
@@ -242,9 +245,9 @@
 
 .itinerary-title span{
 
-    color:#ffd09b;
+    color:#F2B880;
 
-    font-size:1.1rem;  /* bigger points */
+    font-size:1.1rem;
 
     font-weight:700;
 
@@ -253,17 +256,20 @@
 }
 
 
+
 .itinerary-info p{
 
     line-height:1.5;
 
     margin-bottom:25px;
 
-    font-size:.85rem; /* smaller description */
+    font-size:.85rem;
 
     opacity:.9;
 
 }
+
+
 
 
 
@@ -284,7 +290,7 @@
 
     background:white;
 
-    color:#23415d;
+    color:#26382F;
 
 
     font-family:Poppins;
@@ -294,10 +300,23 @@
     cursor:pointer;
 
 
+    transition:.3s;
+
 }
 
 
 
+.itinerary-info button:hover{
+
+    background:#EAD8B5;
+
+}
+
+
+
+
+
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
