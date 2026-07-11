@@ -8,7 +8,7 @@ export default function About(){
             image:"/alyssa.jpeg",
 
             instagram:"https://instagram.com/alyssaa.to",
-            linkedin:"https://www.linkedin.com/in/lalyssaxto",
+            linkedin:"https://www.linkedin.com/in/alyssaxto",
             website:"https://alyssaxto.com",
 
             bio:
@@ -21,7 +21,7 @@ export default function About(){
 
         {
             name:"Lauren Hower",
-            image:"/lauren.jpeg",
+            image:"/lauren.jpg",
 
             instagram:"https://instagram.com/lauren.hower",
             linkedin:"https://www.linkedin.com/in/laurenhower",
