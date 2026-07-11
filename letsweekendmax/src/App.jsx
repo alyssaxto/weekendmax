@@ -6,25 +6,29 @@ import About from "./pages/About.jsx";
 import Destinations from "./pages/Destinations.jsx";
 import Deals from "./pages/Deals.jsx";
 
-function App(){
+function App() {
 
-return (
+  return (
 
-<>
+    <>
 
-<Navbar />
+      <Navbar />
 
-<Routes>
+      <Routes>
 
-<Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
 
-<Route path="/about" element={<About />} />
+        <Route path="/destinations" element={<Destinations />} />
 
-</Routes>
+        <Route path="/deals" element={<Deals />} />
 
-</>
+        <Route path="/about" element={<About />} />
 
-)
+      </Routes>
+
+    </>
+
+  );
 
 }
 

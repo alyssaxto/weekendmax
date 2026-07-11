@@ -19,10 +19,29 @@ export default function Navbar() {
         </div>
 
         <ul className={`navbar__menu ${menuOpen ? "active" : ""}`}>
-          <li><Link to="/" className="navbar__links">Home</Link></li>
-          <li><Link to="/deals" className="navbar__links">Flight Deals</Link></li>
-          <li><Link to="/itineraries" className="navbar__links">Itineraries</Link></li>
-          <li><Link to="/about" className="navbar__links">About Us</Link></li>
+          <li>
+            <Link to="/" className="navbar__links">
+              Home
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/destinations" className="navbar__links">
+              Itineraries
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/deals" className="navbar__links">
+              Flight Deals
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/about" className="navbar__links">
+              About Us
+            </Link>
+          </li>
         </ul>
 
       </div>

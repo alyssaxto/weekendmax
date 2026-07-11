@@ -93,25 +93,29 @@
 
     padding:50px 20px;
 
-}
+    cursor:grab;
 
+    scroll-behavior:smooth;
+
+    scrollbar-width:none;
+
+}
 
 
 .itinerary-scroll::-webkit-scrollbar{
 
-    height:8px;
+    display:none;
 
 }
 
 
-.itinerary-scroll::-webkit-scrollbar-thumb{
+.itinerary-scroll.dragging{
 
-    background:#d8c7ad;
+    cursor:grabbing;
 
-    border-radius:20px;
+    scroll-behavior:auto;
 
 }
-
 
 
 

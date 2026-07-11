@@ -12,9 +12,9 @@ return(
 <>
 
 <Hero />
-<FlightDeals />
-
 <Itineraries />
+
+<FlightDeals />
 
 <AboutPreview />
 
