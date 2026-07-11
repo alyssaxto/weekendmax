@@ -53,16 +53,16 @@
 }
 .postcard-container{
 
-    width:60vh;
+    width:70vh;
 
-    max-width:650px;
+    max-width:850px;
 
     perspective:1000px;
 
     cursor:pointer;
 
     transform:translateY(50px);
-transform:translateY(150px); /* much lower */
+transform:translateY(200px); /* much lower */
 }
 
 
