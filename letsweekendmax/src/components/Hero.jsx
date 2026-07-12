@@ -1,54 +1,33 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Hero.css";
 
 export default function Hero() {
+  return (
+    <section className="hero">
 
-    const [flipped, setFlipped] = useState(false);
+      <div className="hero-overlay">
 
-    return (
+        <p className="hero-small">
+          LET'S
+        </p>
 
-        <section className="hero">
+        <h1 className="hero-title">
+          WEEKENDMAX
+        </h1>
 
-            <div className="hero-overlay">
+        <p className="hero-description">
+          Make every weekend count with award travel, curated itineraries,
+          and smart points strategies to help you travel farther for less.
+        </p>
 
-                <div
-                    className={`postcard-container ${flipped ? "clicked" : ""}`}
-                    onClick={() => setFlipped(!flipped)}
-                >
+        <Link to="/itineraries">
+          <button className="hero-button">
+            Explore Itineraries →
+          </button>
+        </Link>
 
-                    <div className="postcard-flipper">
+      </div>
 
-
-                        {/* FRONT OF POSTCARD */}
-                        <div className="postcard-side postcard-front">
-
-                            <img
-                                src="/front.png"
-                                alt="Postcard front"
-                            />
-
-                        </div>
-
-
-                        {/* BACK OF POSTCARD */}
-                        <div className="postcard-side postcard-back">
-
-                            <img
-                                src="/back.png"
-                                alt="Postcard back"
-                            />
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    );
-
+    </section>
+  );
 }
