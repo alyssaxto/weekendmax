@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 
-/* ---------- PAGE ---------- */
+/* =========================
+   PAGE
+========================= */
 
 .about-page{
 
     padding:120px 8%;
 
-    background:#F2EDDE;
+    background:
+    radial-gradient(
+        circle at top left,
+        rgba(213,139,91,.15),
+        transparent 30%
+    ),
+    #F2EDDE;
 
     min-height:100vh;
 
@@ -16,8 +24,9 @@
 }
 
 
-
-/* ---------- HEADER ---------- */
+/* =========================
+   HEADER
+========================= */
 
 
 .about-header{
@@ -31,14 +40,35 @@
 }
 
 
-
 .about-header h1{
 
-    color:#26382F;
+    color:#23415d;
 
-    font-size:3rem;
+    font-size:3.5rem;
+
+    font-weight:700;
+
+    letter-spacing:-1px;
 
     margin-bottom:20px;
+
+}
+
+
+
+.about-header h1::before{
+
+    content:"✈ JOURNAL ENTRY";
+
+    display:block;
+
+    font-size:.9rem;
+
+    letter-spacing:4px;
+
+    color:#d58b5b;
+
+    margin-bottom:18px;
 
 }
 
@@ -48,15 +78,18 @@
 
     color:#536273;
 
-    font-size:1.15rem;
+    font-size:1.2rem;
 
-    line-height:1.8;
+    line-height:1.9;
 
 }
 
 
 
+
+
 /* INSTAGRAM */
+
 
 .brand-instagram{
 
@@ -75,12 +108,13 @@
 }
 
 
-
 .brand-instagram:hover{
 
     color:#23415d;
 
 }
+
+
 
 
 
@@ -125,7 +159,9 @@
 
 
 
-/* ---------- POSTCARD CONTAINER ---------- */
+/* =========================
+   PASSPORT CONTAINER
+========================= */
 
 
 .creator-container{
@@ -134,324 +170,391 @@
 
     flex-direction:column;
 
-    gap:70px;
+    gap:80px;
 
-    max-width:1100px;
+    max-width:1200px;
 
-    margin:auto;
-
-}
-
-
-
-
-
-
-/* ========================= */
-/* PASSPORTS */
-/* ========================= */
-
-.creator-container{
-
-display:flex;
-
-flex-direction:column;
-
-gap:80px;
-
-max-width:1200px;
-
-margin:90px auto 0;
+    margin:90px auto 0;
 
 }
 
-/* Passport */
+
+
+
+
+/* =========================
+   PASSPORT
+========================= */
+
 
 .passport{
 
-background:#fffaf0;
+    position:relative;
 
-border:2px solid #e4d8c6;
+    overflow:hidden;
 
-border-radius:8px;
+    background:
+    linear-gradient(
+        135deg,
+        #fffaf0,
+        #f7ecd9
+    );
 
-position:relative;
+    border-radius:12px;
 
-overflow:hidden;
+    border:1px solid #d8c7ad;
 
-box-shadow:
-0 25px 55px rgba(0,0,0,.10);
+    box-shadow:
 
-transition:.35s;
+    0 25px 55px rgba(0,0,0,.12);
 
-}
-
-/* watermark */
-
-.passport::before{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-radial-gradient(circle,#d8c7ad22 2px,transparent 2px);
-
-background-size:30px 30px;
-
-opacity:.35;
-
-pointer-events:none;
+    transition:.35s;
 
 }
+
+
 
 .passport:hover{
 
-transform:
-translateY(-8px);
+    transform:translateY(-8px);
 
-box-shadow:
-0 40px 80px rgba(0,0,0,.15);
+    box-shadow:
+
+    0 40px 80px rgba(0,0,0,.15);
 
 }
 
-/* Header */
+
+
+
+
+/* PASSPORT PAPER TEXTURE */
+
+
+.passport::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+        circle,
+        #d8c7ad40 2px,
+        transparent 2px
+    );
+
+    background-size:30px 30px;
+
+    opacity:.35;
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+/* AIRPLANE WATERMARK */
+
+
+.passport::after{
+
+    content:"✈";
+
+    position:absolute;
+
+    right:-40px;
+
+    bottom:-50px;
+
+    font-size:18rem;
+
+    color:#23415d;
+
+    opacity:.04;
+
+    transform:rotate(-20deg);
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+/* HEADER */
+
 
 .passport-header{
 
-display:flex;
+    display:flex;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-padding:18px 35px;
+    align-items:center;
 
-border-bottom:2px solid #e8dccd;
+    padding:18px 35px;
 
-font-size:.85rem;
+    background:#faf4ea;
 
-font-weight:700;
+    border-bottom:2px solid #e8dccd;
 
-letter-spacing:2px;
+    color:#23415d;
 
-color:#23415d;
+    font-size:.85rem;
 
-background:#faf4ea;
+    font-weight:700;
+
+    letter-spacing:2px;
 
 }
 
-/* Body */
+
+
+
+
+/* BODY */
+
 
 .passport-body{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:300px 1fr;
+    grid-template-columns:300px 1fr;
 
-gap:45px;
+    gap:45px;
 
-padding:45px;
+    padding:45px;
 
 }
 
-/* Photo */
+
+
+
+
+/* STAMP */
+
+
+.passport-stamp{
+
+    position:absolute;
+
+    right:40px;
+
+    bottom:35px;
+
+    width:110px;
+
+    height:110px;
+
+    border:3px dashed #d58b5b;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:#d58b5b;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    transform:rotate(-15deg);
+
+    opacity:.75;
+
+}
+
+
+
+
+
+/* PHOTO */
+
 
 .passport-photo{
 
-display:flex;
+    display:flex;
 
-flex-direction:column;
+    flex-direction:column;
 
-align-items:center;
+    align-items:center;
 
 }
+
+
 
 .passport-photo img{
 
-width:220px;
+    width:220px;
 
-height:280px;
+    height:280px;
 
-object-fit:cover;
+    object-fit:cover;
 
-border:10px solid white;
+    border:10px solid white;
 
-box-shadow:
-0 12px 30px rgba(0,0,0,.12);
+    box-shadow:
 
-filter:
-grayscale(.12)
-sepia(.08);
+    0 12px 30px rgba(0,0,0,.12);
+
+    filter:
+
+    grayscale(.12)
+
+    sepia(.08);
 
 }
+
+
 
 .passport-number{
 
-margin-top:20px;
+    margin-top:20px;
 
-font-size:.8rem;
+    font-size:.8rem;
 
-letter-spacing:2px;
+    letter-spacing:2px;
 
-color:#888;
+    color:#888;
 
 }
 
-/* Info */
+
+
+
+
+/* INFO */
+
 
 .field{
 
-margin-bottom:28px;
+    margin-bottom:28px;
 
 }
+
 
 .field span{
 
-display:block;
+    display:block;
 
-font-size:.8rem;
+    font-size:.8rem;
 
-font-weight:700;
+    font-weight:700;
 
-letter-spacing:2px;
+    letter-spacing:2px;
 
-color:#d58b5b;
+    color:#d58b5b;
 
-margin-bottom:8px;
+    margin-bottom:8px;
 
 }
+
 
 .field h2{
 
-font-size:2.2rem;
+    font-size:2.2rem;
 
-color:#23415d;
+    color:#23415d;
 
-margin:0;
+    margin:0;
 
 }
+
+
 
 .bio{
 
-line-height:1.8;
+    line-height:1.8;
 
-color:#5E625B;
+    color:#5E625B;
 
 }
 
-/* Bottom */
+
+
+
+
+/* =========================
+   LOWER BOXES
+========================= */
+
 
 .passport-grid{
 
-display:grid;
+    display:grid;
 
-grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
-gap:30px;
+    gap:30px;
 
-margin-top:25px;
+    margin-top:25px;
 
 }
+
+
+
 
 .credential-box,
 .social-box{
 
-background:#f7f1e8;
+    background:#f7f1e8;
 
-padding:22px;
+    padding:22px;
 
-border-left:5px solid #d58b5b;
+    border-left:5px solid #d58b5b;
 
 }
+
+
 
 .credential-box h3,
 .social-box h3{
 
-color:#23415d;
+    color:#23415d;
 
-margin-bottom:15px;
+    margin-bottom:15px;
 
-font-size:1rem;
+    font-size:1rem;
 
 }
+
+
+
+
 
 .credential-box p{
 
-white-space:pre-line;
+    white-space:pre-line;
 
-line-height:1.8;
+    line-height:1.8;
 
-color:#536273;
+    color:#536273;
 
 }
+
+
+
+
+
+/* SOCIAL */
+
 
 .social-box{
-
-display:flex;
-
-flex-direction:column;
-
-gap:12px;
-
-}
-
-.social-box a{
-
-text-decoration:none;
-
-color:#23415d;
-
-font-weight:600;
-
-transition:.25s;
-
-}
-
-.social-box a:hover{
-
-color:#d58b5b;
-
-transform:translateX(6px);
-
-}
-
-/* Responsive */
-
-@media(max-width:900px){
-
-.passport-body{
-
-grid-template-columns:1fr;
-
-}
-
-.passport-photo{
-
-align-items:flex-start;
-
-}
-
-.passport-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.passport-photo img{
-
-width:180px;
-
-height:230px;
-
-}
-
-}
-
-/* ---------- SOCIALS ---------- */
-
-
-.social-links{
 
     display:flex;
 
@@ -459,133 +562,8 @@ height:230px;
 
     gap:12px;
 
-    margin-bottom:30px;
-
 }
 
-
-
-.social-links a{
-
-    color:#d58b5b;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.25s;
-
-}
-
-
-
-.social-links a:hover{
-
-    color:#23415d;
-
-    transform:translateX(8px);
-
-}
-
-
-
-
-
-
-/* ---------- CREDIT CARDS ---------- */
-
-
-.credit-cards{
-
-    background:#FAF4E8  ;
-
-    border:2px dashed #d8c7ad;
-
-    padding:20px;
-
-    border-radius:6px;
-
-}
-
-
-
-.credit-cards h3{
-
-    color:#23415d;
-
-    margin-bottom:12px;
-
-}
-
-
-
-.credit-cards p{
-
-    color:#536273;
-
-    white-space:pre-line;
-
-    line-height:1.8;
-
-}
-
-
-
-
-
-/* ---------- MOBILE ---------- */
-
-
-@media(max-width:900px){
-
-
-.creator-card{
-
-    flex-direction:column;
-
-}
-
-
-
-.creator-image{
-
-    width:100%;
-
-    height:350px;
-
-}
-
-
-
-.creator-info{
-
-    width:100%;
-
-    padding:30px;
-
-}
-
-
-
-.creator-card:nth-child(1),
-.creator-card:nth-child(2){
-
-    transform:rotate(0deg);
-
-}
-
-
-
-.about-header h1{
-
-    font-size:2.3rem;
-
-}
-
-
-}
-
-/* ---------- SOCIAL ICONS ---------- */
 
 
 .social-icon-link{
@@ -596,7 +574,16 @@ height:230px;
 
     gap:10px;
 
+    text-decoration:none;
+
+    color:#23415d;
+
+    font-weight:600;
+
+    transition:.25s;
+
 }
+
 
 
 .social-icon-link img{
@@ -611,7 +598,7 @@ height:230px;
 
 
 
-.social-box a:hover{
+.social-icon-link:hover{
 
     color:#D9784A;
 
@@ -622,36 +609,143 @@ height:230px;
 
 
 
-/* PORTFOLIO ARROW */
 
-.portfolio-link{
+/* =========================
+   MOBILE
+========================= */
 
-    display:flex;
 
-    align-items:center;
+@media(max-width:900px){
+
+
+.about-page{
+
+    padding:80px 20px;
+
+}
+
+
+
+.about-header h1{
+
+    font-size:2.3rem;
+
+}
+
+
+
+.about-header p{
+
+    font-size:1rem;
+
+}
+
+
+
+.passport-header{
+
+    padding:15px 20px;
+
+    font-size:.65rem;
+
+}
+
+
+
+.passport-body{
+
+    grid-template-columns:1fr;
+
+    padding:30px 20px;
+
+    gap:30px;
+
+}
+
+
+
+.passport-photo{
+
+    align-items:flex-start;
+
+}
+
+
+
+.passport-photo img{
+
+    width:180px;
+
+    height:230px;
+
+}
+
+
+
+.field h2{
+
+    font-size:1.8rem;
+
+}
+
+
+
+.passport-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.passport-stamp{
+
+    width:80px;
+
+    height:80px;
+
+    right:20px;
+
+    bottom:20px;
+
+    font-size:.6rem;
+
+}
+
+
+
+}
+
+
+
+
+@media(max-width:500px){
+
+
+.passport-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
 
     gap:8px;
 
 }
 
 
+.creator-container{
 
-.portfolio-link span{
-
-    font-size:1.3rem;
-
-    font-weight:700;
-
-    transition:.25s;
+    gap:50px;
 
 }
 
 
 
-.portfolio-link:hover span{
+.passport{
 
-    transform:
+    border-radius:8px;
 
-    translate(4px,-4px);
+}
+
 
 }

@@ -270,14 +270,199 @@
 
 
 
+/* ---------- TABLET ---------- */
+
+@media(max-width:1200px){
+
+    .destination-grid{
+
+        grid-template-columns:repeat(2, 1fr);
+
+        gap:25px;
+
+    }
 
 
-@media(max-width:900px){
+    .filters{
 
-.filters{
+        grid-template-columns:repeat(2,1fr);
 
-    grid-template-columns:1fr;
+    }
+
+
+    .destination-header h1{
+
+        font-size:2.6rem;
+
+    }
 
 }
+
+
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:700px){
+
+
+    .destinations{
+
+        padding:80px 5%;
+
+    }
+
+
+
+    .destination-header{
+
+        max-width:100%;
+
+    }
+
+
+    .destination-header h1{
+
+        font-size:2.2rem;
+
+        line-height:1.2;
+
+        margin-bottom:14px;
+
+    }
+
+
+    .destination-header p{
+
+        font-size:.95rem;
+
+        line-height:1.7;
+
+        margin-bottom:35px;
+
+    }
+
+
+
+    /* FILTERS */
+
+    .filters{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+        margin-bottom:40px;
+
+    }
+
+
+    .filters input,
+    .filters select{
+
+        height:50px;
+
+        font-size:.9rem;
+
+    }
+
+
+
+    /* DESTINATION CARDS */
+
+    .destination-grid{
+
+        grid-template-columns:1fr;
+
+        gap:22px;
+
+    }
+
+
+    .trip-card{
+
+        height:380px;
+
+        border-radius:16px;
+
+    }
+
+
+    .trip-overlay{
+
+        padding:22px;
+
+    }
+
+
+    .trip-overlay h2{
+
+        font-size:1.7rem;
+
+        margin-bottom:12px;
+
+    }
+
+
+    .trip-details{
+
+        gap:8px;
+
+        margin-bottom:16px;
+
+    }
+
+
+    .trip-details span{
+
+        padding:7px 12px;
+
+        font-size:.8rem;
+
+    }
+
+
+    .trip-overlay button{
+
+        width:100%;
+
+        padding:13px;
+
+    }
+
+}
+
+
+
+/* ---------- SMALL PHONES ---------- */
+
+@media(max-width:400px){
+
+
+    .destinations{
+
+        padding:70px 20px;
+
+    }
+
+
+    .destination-header h1{
+
+        font-size:2rem;
+
+    }
+
+
+    .trip-card{
+
+        height:350px;
+
+    }
+
+
+    .trip-overlay h2{
+
+        font-size:1.5rem;
+
+    }
 
 }

@@ -133,6 +133,82 @@
 
     margin:60px auto 0;
 
+
+
+}
+
+/* ---------- FLOATING EFFECT ---------- */
+
+.postcard-wrapper{
+
+    animation:floatCard 4s ease-in-out infinite;
+
+}
+
+
+
+@keyframes floatCard{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+
+
+/* CLICK HINT */
+
+.postcard-wrapper::after{
+
+    content:"Click to flip ✦";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-35px;
+
+    transform:translateX(-50%);
+
+    color:#23415d;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    opacity:.7;
+
+    animation:pulseHint 2s ease-in-out infinite;
+
+}
+
+
+
+@keyframes pulseHint{
+
+    0%,100%{
+
+        opacity:.5;
+
+    }
+
+
+    50%{
+
+        opacity:1;
+
+    }
+
 }
 .postcard-face{
 
@@ -227,14 +303,206 @@
     transform:translateY(-4px);
 
 }
-@media(max-width:500px){
+/* ---------- TABLET ---------- */
+
+@media(max-width:900px){
+
+
+    .hero{
+
+        padding-top:100px;
+
+        min-height:85vh;
+
+    }
+
+
+
+    .hero__content{
+
+        width:100%;
+
+        padding:0 25px;
+
+        box-sizing:border-box;
+
+    }
+
+
+
+    .hero-small{
+
+        font-size:1.5rem;
+
+        letter-spacing:.35rem;
+
+    }
+
+
+
+    .hero-title{
+
+        font-size:4rem;
+
+        line-height:1;
+
+    }
+
+
+
+    .hero-description{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+        margin:25px auto;
+
+        max-width:500px;
+
+    }
+
+
+
+    .hero-button{
+
+        padding:15px 35px;
+
+        font-size:.95rem;
+
+    }
+
+
+}
+
+
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:600px){
+
+
+    .hero{
+
+        padding-top:90px;
+
+        min-height:90vh;
+
+    }
+
+
+
+    .hero__content{
+
+        padding:0 20px;
+
+    }
+
+
+
+    .hero-small{
+
+        font-size:1.1rem;
+
+        letter-spacing:.25rem;
+
+        margin-bottom:5px;
+
+    }
+
+
+
+    .hero-title{
+
+        font-size:2.8rem;
+
+        line-height:1.05;
+
+        letter-spacing:.05rem;
+
+    }
+
+
+
+    .hero-description{
+
+        font-size:.95rem;
+
+        line-height:1.6;
+
+        margin:20px auto 30px;
+
+    }
+
+
+
+    .hero-button{
+
+        width:auto;
+
+        padding:14px 28px;
+
+        font-size:.9rem;
+
+    }
+
+
 
     .postcard{
 
         width:90vw;
 
-        margin-top:40px;
+        margin-top:35px;
 
     }
+
+
+}
+
+
+
+/* ---------- SMALL PHONES ---------- */
+
+@media(max-width:400px){
+
+
+    .hero{
+
+        padding-top:80px;
+
+    }
+
+
+
+    .hero-small{
+
+        font-size:1rem;
+
+    }
+
+
+
+    .hero-title{
+
+        font-size:2.3rem;
+
+    }
+
+
+
+    .hero-description{
+
+        font-size:.85rem;
+
+    }
+
+
+
+    .hero-button{
+
+        padding:13px 24px;
+
+    }
+
 
 }

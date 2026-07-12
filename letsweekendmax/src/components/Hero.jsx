@@ -40,27 +40,31 @@ export default function Hero(){
                 </Link>
 
 
-                <div 
-                    className={`postcard ${flipped ? "flipped" : ""}`}
-                    onClick={()=>setFlipped(!flipped)}
-                >
+<div className="postcard-wrapper">
 
-                    <div className="postcard-face postcard-front">
-                        <img 
-                            src="/front.png" 
-                            alt="front postcard"
-                        />
-                    </div>
+    <div 
+        className={`postcard ${flipped ? "flipped" : ""}`}
+        onClick={()=>setFlipped(!flipped)}
+    >
+
+        <div className="postcard-face postcard-front">
+            <img 
+                src="/front.png" 
+                alt="front postcard"
+            />
+        </div>
 
 
-                    <div className="postcard-face postcard-back">
-                        <img 
-                            src="/back.png" 
-                            alt="back postcard"
-                        />
-                    </div>
+        <div className="postcard-face postcard-back">
+            <img 
+                src="/back.png" 
+                alt="back postcard"
+            />
+        </div>
 
-                </div>
+    </div>
+
+</div>
 
 
             </div>

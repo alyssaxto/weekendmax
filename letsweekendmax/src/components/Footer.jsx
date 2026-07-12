@@ -86,7 +86,7 @@ export default function Footer(){
                             Home
                         </a>
 
-                        <a href="/itineraries">
+                        <a href="/destinations">
                             Itineraries
                         </a>
 
