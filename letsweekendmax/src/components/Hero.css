@@ -1,128 +1,317 @@
 .hero{
+
     min-height:100vh;
 
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
     background-image:url("/herobg.png");
+
     background-size:cover;
+
     background-position:center;
+
     background-repeat:no-repeat;
 
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
+    padding:80px;
 
-    padding-top:150px;
-
-    position:relative;
 }
 
 
-.hero-overlay{
+
+/* ---------- POSTCARD ---------- */
+
+.postcard{
+
+    width:min(900px,90vw);
+
+    aspect-ratio:3/2;
+
     position:relative;
-    z-index:2;
+
+    perspective:2200px;
+
+    cursor:pointer;
+
+}
+
+
+
+/* ---------- BOTH SIDES ---------- */
+
+.postcard-face{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    backface-visibility:hidden;
+
+    transition:transform .9s ease;
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.25);
+
+}
+
+
+
+/* ---------- FRONT ---------- */
+
+.postcard-front{
+
+    background:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
 
     text-align:center;
 
-    max-width:850px;
+    padding:60px;
 
-    padding:0 30px;
 }
 
-.hero-small{
 
-    color:white;
 
-    font-size:2rem;
+.lets{
 
-    letter-spacing:.45rem;
+    font-size:1.5rem;
+
+    letter-spacing:.5rem;
+
+    color:#23415d;
+
+    margin-bottom:-10px;
 
     font-weight:600;
 
-    margin-bottom:-12px;
-
-    text-transform:uppercase;
 }
 
-.hero-title{
 
-    color:white;
+
+.postcard-front h1{
 
     font-size:6rem;
 
-    line-height:.95;
+    color:#23415d;
 
-    font-weight:800;
+    line-height:.9;
 
-    letter-spacing:.1rem;
+    margin-bottom:25px;
 
-    text-transform:uppercase;
-
-    margin-bottom:30px;
-
-    text-shadow:
-        0 6px 20px rgba(0,0,0,.35);
 }
 
-.hero-description{
 
-    color:white;
 
-    font-size:1.25rem;
+.caption{
+
+    max-width:550px;
+
+    font-size:1.15rem;
 
     line-height:1.8;
 
-    max-width:700px;
+    color:#536273;
 
-    margin:auto;
+    margin-bottom:40px;
 
-    margin-bottom:45px;
-
-    text-shadow:
-        0 3px 10px rgba(0,0,0,.35);
 }
 
-.hero-button{
 
-    background:#d58b5b;
 
-    color:white;
+.postcard-front button{
 
     border:none;
 
-    padding:18px 42px;
+    background:#23415d;
+
+    color:white;
+
+    padding:18px 40px;
 
     border-radius:999px;
 
     font-size:1rem;
 
-    font-weight:600;
-
     cursor:pointer;
 
     transition:.3s;
+
 }
 
-.hero-button:hover{
 
-    background:#23415d;
 
-    transform:translateY(-4px);
+.postcard-front button:hover{
+
+    background:#d58b5b;
+
 }
+
+
+
+.flip-text{
+
+    position:absolute;
+
+    bottom:30px;
+
+    color:#d58b5b;
+
+    font-weight:600;
+
+}
+
+
+
+/* ---------- STAMP ---------- */
+
+.stamp{
+
+    position:absolute;
+
+    top:35px;
+
+    right:35px;
+
+    width:80px;
+
+    height:80px;
+
+    border:2px dashed #d58b5b;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+}
+
+
+
+/* ---------- BACK ---------- */
+
+.postcard-back{
+
+    transform:rotateY(180deg);
+
+    background-image:url("/back.png");
+
+    background-size:contain;
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    background-color:transparent;
+
+}
+
+
+
+.flip-back{
+
+    position:absolute;
+
+    bottom:25px;
+
+    right:30px;
+
+    color:white;
+
+    background:rgba(0,0,0,.4);
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:.9rem;
+
+}
+
+
+
+/* ---------- FLIP ---------- */
+
+.postcard.flipped .postcard-front{
+
+    transform:rotateY(180deg);
+
+}
+
+
+
+.postcard.flipped .postcard-back{
+
+    transform:rotateY(360deg);
+
+}
+
+
+
+/* ---------- MOBILE ---------- */
 
 @media(max-width:900px){
 
-    .hero{
-        padding-top:140px;
-    }
+.hero{
 
-    .hero-small{
-        font-size:1.5rem;
-    }
+    padding:30px;
 
-    .hero-title{
-        font-size:3.8rem;
-    }
+}
 
-    .hero-description{
-        font-size:1rem;
-    }
+.postcard{
+
+    width:95vw;
+
+}
+
+.postcard-front{
+
+    padding:35px;
+
+}
+
+.postcard-front h1{
+
+    font-size:3.3rem;
+
+}
+
+.lets{
+
+    font-size:1.1rem;
+
+}
+
+.caption{
+
+    font-size:1rem;
+
+}
+
+.stamp{
+
+    width:60px;
+
+    height:60px;
+
+    font-size:1.5rem;
+
+}
+
 }

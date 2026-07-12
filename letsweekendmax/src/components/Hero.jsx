@@ -1,33 +1,78 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Hero.css";
 
 export default function Hero() {
-  return (
-    <section className="hero">
 
-      <div className="hero-overlay">
+    const [flipped, setFlipped] = useState(false);
 
-        <p className="hero-small">
-          LET'S
-        </p>
+    return(
 
-        <h1 className="hero-title">
-          WEEKENDMAX
-        </h1>
+        <section className="hero">
 
-        <p className="hero-description">
-          Make every weekend count with award travel, curated itineraries,
-          and smart points strategies to help you travel farther for less.
-        </p>
+            <div
+                className={`postcard ${flipped ? "flipped" : ""}`}
+                onClick={() => setFlipped(!flipped)}
+            >
 
-        <Link to="/itineraries">
-          <button className="hero-button">
-            Explore Itineraries →
-          </button>
-        </Link>
+                {/* FRONT */}
 
-      </div>
+                <div className="postcard-face postcard-front">
 
-    </section>
-  );
+                    <div className="stamp">
+                        ✈
+                    </div>
+
+                    <p className="lets">
+                        LET'S
+                    </p>
+
+                    <h1>
+                        WEEKENDMAX
+                    </h1>
+
+                    <p className="caption">
+                        Make every weekend count with award travel,
+                        curated itineraries, and smart points strategies
+                        that help you travel farther for less.
+                    </p>
+
+                    <Link to="/itineraries">
+
+                        <button>
+
+                            Explore Itineraries →
+
+                        </button>
+
+                    </Link>
+
+                    <span className="flip-text">
+
+                        Click to flip ↺
+
+                    </span>
+
+                </div>
+
+
+
+                {/* BACK */}
+
+                <div className="postcard-face postcard-back">
+
+                    <span className="flip-back">
+
+                        Click to flip back ↺
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    )
+
 }
