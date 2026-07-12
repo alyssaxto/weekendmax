@@ -2,77 +2,69 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Hero.css";
 
-export default function Hero() {
+export default function Hero(){
 
-    const [flipped, setFlipped] = useState(false);
+    const [flipped,setFlipped] = useState(false);
 
     return(
-
         <section className="hero">
 
-            <div
-                className={`postcard ${flipped ? "flipped" : ""}`}
-                onClick={() => setFlipped(!flipped)}
-            >
+            <div className="hero-scene">
+                <img 
+                    src="/herobg.png"
+                    className="hero-background"
+                    alt=""
+                />
+            </div>
 
-                {/* FRONT */}
 
-                <div className="postcard-face postcard-front">
+            <div className="hero__content">
 
-                    <div className="stamp">
-                        ✈
+                <p className="hero-small">
+                    LET'S
+                </p>
+
+                <h1 className="hero-title">
+                    WEEKENDMAX
+                </h1>
+
+                <p className="hero-description">
+                    Make every weekend count with award travel, curated itineraries,
+                    and smart points strategies to help you travel farther for less.
+                </p>
+
+                <Link to="/itineraries">
+                    <button className="hero-button">
+                        Explore Itineraries →
+                    </button>
+                </Link>
+
+
+                <div 
+                    className={`postcard ${flipped ? "flipped" : ""}`}
+                    onClick={()=>setFlipped(!flipped)}
+                >
+
+                    <div className="postcard-face postcard-front">
+                        <img 
+                            src="/front.png" 
+                            alt="front postcard"
+                        />
                     </div>
 
-                    <p className="lets">
-                        LET'S
-                    </p>
 
-                    <h1>
-                        WEEKENDMAX
-                    </h1>
-
-                    <p className="caption">
-                        Make every weekend count with award travel,
-                        curated itineraries, and smart points strategies
-                        that help you travel farther for less.
-                    </p>
-
-                    <Link to="/itineraries">
-
-                        <button>
-
-                            Explore Itineraries →
-
-                        </button>
-
-                    </Link>
-
-                    <span className="flip-text">
-
-                        Click to flip ↺
-
-                    </span>
+                    <div className="postcard-face postcard-back">
+                        <img 
+                            src="/back.png" 
+                            alt="back postcard"
+                        />
+                    </div>
 
                 </div>
 
-
-
-                {/* BACK */}
-
-                <div className="postcard-face postcard-back">
-
-                    <span className="flip-back">
-
-                        Click to flip back ↺
-
-                    </span>
-
-                </div>
 
             </div>
 
         </section>
-
     )
-
 }
