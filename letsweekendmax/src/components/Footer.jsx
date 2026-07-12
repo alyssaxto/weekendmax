@@ -6,7 +6,15 @@ export default function Footer(){
 
         <footer className="footer">
 
-            <div className="footer-container">
+
+            <img 
+                src="/stamp.png"
+                className="footer-stamp"
+                alt="stamp"
+            />
+
+
+            <div className="footer-main">
 
 
                 <div className="footer-brand">
@@ -15,54 +23,99 @@ export default function Footer(){
                         Let's Weekendmax ✈️
                     </h2>
 
+
                     <p>
-                        Turning credit card points into unforgettable weekend adventures.
+                        Turning credit card points into
+                        unforgettable weekend adventures.
                     </p>
 
+
+
+                    <div className="newsletter">
+
+                        <h3>
+                            Join the travel postcard ✉️
+                        </h3>
+
+                        <p>
+                            Get flight deals, points tips,
+                            and weekend getaway ideas.
+                        </p>
+
+
+                        <div className="newsletter-input">
+
+                            <input
+                                type="email"
+                                placeholder="Your email"
+                            />
+
+                            <button>
+                                Subscribe
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+
                 </div>
 
 
 
 
-                <div className="footer-links">
 
-                    <a href="/">
-                        Home
-                    </a>
-
-                    <a href="/itineraries">
-                        Itineraries
-                    </a>
-
-                    <a href="/deals">
-                        Flight Deals
-                    </a>
-
-                    <a href="/about">
-                        About Us
-                    </a>
-
-                </div>
+                <div className="footer-divider"></div>
 
 
 
 
-                <div className="footer-social">
+
+                <div className="footer-message">
+
+
+                    <p>
+                        Explore
+                    </p>
+
+
+                    <div className="footer-nav">
+
+                        <a href="/">
+                            Home
+                        </a>
+
+                        <a href="/itineraries">
+                            Itineraries
+                        </a>
+
+                        <a href="/deals">
+                            Flight Deals
+                        </a>
+
+                        <a href="/about">
+                            About Us
+                        </a>
+
+                    </div>
+
+
 
                     <a 
+                        className="instagram"
                         href="https://instagram.com/letsweekendmax"
-                        target="_blank"
                     >
-                        ◎ Instagram
+
+                        <img
+                            src="/instagram.png"
+                            alt="Instagram"
+                        />
+
+                        @letsweekendmax
+
                     </a>
 
-
-                    <a 
-                        href="https://www.linkedin.com"
-                        target="_blank"
-                    >
-                        💼 LinkedIn
-                    </a>
 
                 </div>
 
@@ -71,9 +124,10 @@ export default function Footer(){
 
 
 
+
             <div className="footer-bottom">
 
-                © {new Date().getFullYear()} Let's Weekendmax. All rights reserved.
+                © {new Date().getFullYear()} Let's Weekendmax
 
             </div>
 

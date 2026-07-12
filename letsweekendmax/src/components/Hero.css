@@ -121,24 +121,19 @@
 
 
 /* ---------- POSTCARD ---------- */
-
 .postcard{
 
     width:min(650px,85vw);
 
-    aspect-ratio:3/2;
-
     position:relative;
 
-    perspective:2200px;
+    aspect-ratio:3/2;
 
-    cursor:pointer;
+    perspective:2200px;
 
     margin:60px auto 0;
 
 }
-
-
 .postcard-face{
 
     position:absolute;
@@ -153,7 +148,6 @@
 
 }
 
-
 .postcard-face img{
 
     width:100%;
@@ -162,10 +156,9 @@
 
     display:block;
 
-    object-fit:fill;
+    object-fit:contain;
 
 }
-
 
 
 /* FRONT */

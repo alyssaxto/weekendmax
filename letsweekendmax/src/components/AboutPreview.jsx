@@ -7,18 +7,24 @@ return(
 <section className="about-preview">
 
 
-    <div className="about-postcard">
+    <div className="ticket">
 
 
-        <img 
-            className="stamp-image"
-            src="/preview.jpeg"
-            alt="postcard stamp"
-        />
+        <div className="ticket-main">
 
 
+            <div className="ticket-header">
 
-        <div className="postcard-content">
+                <span>
+                    WEEKENDMAX AIR ✈
+                </span>
+
+                <span>
+                    BOARDING PASS
+                </span>
+
+            </div>
+
 
 
             <h2>
@@ -48,16 +54,18 @@ return(
 
             <a 
                 className="weekend-instagram"
-target="_blank"
-rel="noreferrer"
-className="social-icon-link"
->
-<img 
-src="/instagram.png"
-alt="LinkedIn"
-/>
-        
+                href="https://instagram.com/letsweekendmax"
+                target="_blank"
+                rel="noreferrer"
+            >
+
+                <img 
+                    src="/instagram.png"
+                    alt="Instagram"
+                />
+
                 @letsweekendmax
+
             </a>
 
 
@@ -65,11 +73,40 @@ alt="LinkedIn"
 
 
 
-        <div className="postcard-lines">
 
-            <span></span>
-            <span></span>
-            <span></span>
+
+        <div className="ticket-side">
+
+
+            <img
+                className="stamp-image"
+                src="/stamp.png"
+                alt="stamp"
+            />
+
+
+            <div className="flight-info">
+
+                <p>
+                    DESTINATION
+                </p>
+
+                <h3>
+                    WEEKEND
+                </h3>
+
+
+                <p>
+                    CLASS
+                </p>
+
+                <h3>
+                    ADVENTURE
+                </h3>
+
+
+            </div>
+
 
         </div>
 
