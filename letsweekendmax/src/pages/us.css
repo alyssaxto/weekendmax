@@ -535,7 +535,45 @@
 
 
 
+.brand-instagram{
 
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:20px;
+
+    color:#D9784A;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+
+.brand-instagram img{
+
+    width:24px;
+
+    height:24px;
+
+    object-fit:contain;
+
+}
+
+
+.brand-instagram:hover{
+
+    color:#23415d;
+
+    transform:translateX(5px);
+
+}
 
 .credential-box p{
 

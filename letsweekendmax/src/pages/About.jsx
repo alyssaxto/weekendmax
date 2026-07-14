@@ -48,13 +48,18 @@ Two friends turning credit card points into unforgettable adventures.
 </p>
 
 <a 
-href="https://instagram.com/letsweekendmax"
-className="brand-instagram"
-target="_blank"
+    href="https://instagram.com/letsweekendmax"
+    className="brand-instagram"
+    target="_blank"
+    rel="noreferrer"
 >
-📷 @letsweekendmax
-</a>
+    <img 
+        src="/instagram.png"
+        alt="Instagram"
+    />
 
+    @letsweekendmax
+</a>
 
 <a href="/basics">
 <button className="basics-button">
