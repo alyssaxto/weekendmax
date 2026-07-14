@@ -33,7 +33,7 @@ export default function Hero(){
                     and smart points strategies to help you travel farther for less.
                 </p>
 
-                <Link to="/itineraries">
+                <Link to="/destinations">
                     <button className="hero-button">
                         Explore Itineraries →
                     </button>
