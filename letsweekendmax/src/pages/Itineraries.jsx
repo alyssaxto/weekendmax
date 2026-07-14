@@ -1,4 +1,5 @@
 import "./Itineraries.css";
+import { Link } from "react-router-dom";
 
 export default function Destinations() {
 
@@ -10,7 +11,8 @@ export default function Destinations() {
             points:"65k Chase",
             season:"Summer",
             region:"Europe",
-            duration:"4 Days"
+            duration:"4 Days",
+            link:"/iceland"
         },
 
         {
@@ -19,7 +21,8 @@ export default function Destinations() {
             points:"40k Capital One",
             season:"Spring",
             region:"Caribbean",
-            duration:"5 Days"
+            duration:"5 Days",
+            link:"/filler"
         },
 
         {
@@ -28,7 +31,8 @@ export default function Destinations() {
             points:"28k United",
             season:"Fall",
             region:"North America",
-            duration:"Weekend"
+            duration:"Weekend",
+            link:"/filler"
         },
 
         {
@@ -37,7 +41,8 @@ export default function Destinations() {
             points:"18k Venture",
             season:"Winter",
             region:"North America",
-            duration:"Weekend"
+            duration:"Weekend",
+            link:"/filler"
         },
 
         {
@@ -46,7 +51,8 @@ export default function Destinations() {
             points:"18k Venture",
             season:"Winter",
             region:"North America",
-            duration:"Weekend"
+            duration:"Weekend",
+            link:"/filler"
           },
 
         {
@@ -55,7 +61,8 @@ export default function Destinations() {
             points:"18k Venture",
             season:"Winter",
             region:"North America",
-            duration:"Weekend"
+            duration:"Weekend",
+            link:"/filler"
         }
 
         
@@ -140,9 +147,11 @@ export default function Destinations() {
 
                             </div>
 
-                            <button>
-                                View Itinerary →
-                            </button>
+                      <Link to={trip.link}>
+    <button>
+        View Itinerary →
+    </button>
+</Link>
 
                         </div>
 

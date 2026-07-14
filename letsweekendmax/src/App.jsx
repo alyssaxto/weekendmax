@@ -7,7 +7,7 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Itineraries from "./pages/Itineraries.jsx";
 import Deals from "./pages/Deals.jsx";
-
+import Iceland from "./pages/Iceland";
 
 function App(){
 
@@ -20,7 +20,10 @@ return (
 <CustomCursor />
 
 <Routes>
-
+<Route 
+    path="/iceland" 
+    element={<Iceland />} 
+/>
 <Route path="/" element={<Home />} />
 
 <Route path="/about" element={<About />} />
