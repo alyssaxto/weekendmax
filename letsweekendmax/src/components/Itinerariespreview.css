@@ -28,7 +28,7 @@
 
     font-size:3rem;
 
-    color:#26382F;
+    color:#2B4C6D;
 
     margin-bottom:15px;
 
@@ -40,7 +40,7 @@
 
     font-size:1.1rem;
 
-    color:#5E625B;
+    color:#2B4C6D;
 
     max-width:650px;
 
@@ -74,7 +74,7 @@
 
     transform:translateY(-3px);
 
-    background:#C7653C;
+    background:#2B4C6D;
 
 }
 
@@ -308,7 +308,7 @@
 
 .itinerary-info button:hover{
 
-    background:#EAD8B5;
+    background:#d58b5b;
 
 }
 
