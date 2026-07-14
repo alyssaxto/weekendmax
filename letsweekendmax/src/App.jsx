@@ -1,11 +1,8 @@
-import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-
+import CustomCursor from "./components/CustomCursor.jsx";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Destinations from "./pages/Destinations.jsx";
@@ -19,8 +16,8 @@ return (
 <>
 
 <Navbar />
-      <ScrollToTop />
-
+<ScrollToTop />
+<CustomCursor />
 
 <Routes>
 
