@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
-import Destinations from "./pages/Destinations.jsx";
+import Itineraries from "./pages/Itineraries.jsx";
 import Deals from "./pages/Deals.jsx";
 
 
@@ -25,9 +25,9 @@ return (
 
 <Route path="/about" element={<About />} />
 
-<Route path="/destinations" element={<Destinations />} />
+<Route path="/itineraries" element={<Itineraries />} />
 
-<Route path="/deals" element={<Deals />} />
+<Route path="/flightdeals" element={<Deals />} />
 
 </Routes>
 

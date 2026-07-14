@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Itineraries.css";
+import "./Itinerariespreview.css";
 import { useRef, useState } from "react";
 
 

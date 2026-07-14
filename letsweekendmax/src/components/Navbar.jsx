@@ -26,13 +26,13 @@ export default function Navbar() {
           </li>
 
           <li>
-            <Link to="/destinations" className="navbar__links">
+            <Link to="/itineraries" className="navbar__links">
               Itineraries
             </Link>
           </li>
 
           <li>
-            <Link to="/deals" className="navbar__links">
+            <Link to="/flightdeals" className="navbar__links">
               Flight Deals
             </Link>
           </li>

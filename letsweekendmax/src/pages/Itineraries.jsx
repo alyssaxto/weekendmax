@@ -1,4 +1,4 @@
-import "./Destinations.css";
+import "./Itineraries.css";
 
 export default function Destinations() {
 
@@ -151,7 +151,69 @@ export default function Destinations() {
                 ))}
 
             </div>
+<section className="partner-section">
 
+    <div className="partner-card">
+
+        <img
+            src="/stamp.png"
+            className="partner-stamp"
+            alt="travel stamp"
+        />
+
+
+        <div className="partner-content">
+
+            <span className="partner-tag">
+                ✈ WORK WITH US
+            </span>
+
+
+            <h2>
+                Want your hotel or destination featured?
+            </h2>
+
+
+            <p>
+                We're always looking for unique hotels, boutique stays,
+                resorts, and unforgettable weekend destinations to share
+                with our audience. If you'd like us to feature your property,
+                collaborate on a trip, or create travel content, we'd love
+                to hear from you.
+            </p>
+
+
+            <a href="mailto:hello@letsweekendmax.com">
+
+                <button>
+                    Contact Us →
+                </button>
+
+            </a>
+
+        </div>
+
+
+        <div className="partner-details">
+
+            <p>
+                FEATURED PARTNER
+            </p>
+
+            <h3>
+                LET'S WEEKENDMAX
+            </h3>
+
+            <span>
+                TRAVEL • HOTELS • EXPERIENCES
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
         </section>
 
     )

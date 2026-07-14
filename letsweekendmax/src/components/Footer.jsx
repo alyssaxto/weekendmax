@@ -72,12 +72,11 @@ export default function Footer(){
 
 
 
-                <div className="footer-message">
+ <div className="footer-message">
 
-
-                    <p>
-                        Explore
-                    </p>
+    <h3>
+        Explore
+    </h3>
 
 
                     <div className="footer-nav">
@@ -86,11 +85,11 @@ export default function Footer(){
                             Home
                         </a>
 
-                        <a href="/destinations">
+                        <a href="/itineraries">
                             Itineraries
                         </a>
 
-                        <a href="/deals">
+                        <a href="/flightdeals">
                             Flight Deals
                         </a>
 

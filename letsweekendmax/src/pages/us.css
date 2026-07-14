@@ -607,8 +607,253 @@
 }
 
 
+/* ========================= */
+/* COLLABORATION CARD */
+/* ========================= */
+
+.collaborate-section{
+
+    max-width:1000px;
+
+    margin:120px auto 0;
+
+    padding:65px 80px;
+
+    background:#fffaf0;
+
+    border:2px solid #e8d9c2;
+
+    border-radius:18px;
+
+    text-align:left;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.12);
+
+    transform:rotate(-1deg);
+
+    transition:.3s;
+
+}
 
 
+.collaborate-section:hover{
+
+    transform:
+    rotate(0deg)
+    translateY(-5px);
+
+}
+
+
+/* stamp */
+
+.collab-stamp{
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:contain;
+
+    right:55px;
+
+    top:45px;
+
+    transform:rotate(8deg);
+
+    filter:
+    drop-shadow(0 8px 15px rgba(0,0,0,.12));
+
+}
+
+
+
+/* label */
+
+.collaborate-section span{
+
+    display:inline-block;
+
+    color:#d58b5b;
+
+    font-size:.85rem;
+
+    letter-spacing:.15rem;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* heading */
+
+.collaborate-section h2{
+
+    color:#23415d;
+
+    font-size:2.7rem;
+
+    max-width:650px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* paragraph */
+
+.collaborate-section p{
+
+    color:#536273;
+
+    max-width:650px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* buttons */
+
+.collab-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.collab-buttons button{
+
+    background:#23415d;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-family:"Poppins",sans-serif;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.collab-buttons button:hover{
+
+    background:#d58b5b;
+
+    transform:translateY(-3px);
+
+}
+
+
+.collab-buttons .secondary{
+
+    background:white;
+
+    color:#23415d;
+
+    border:2px solid #23415d;
+
+}
+
+
+.collab-buttons .secondary:hover{
+
+    background:#23415d;
+
+    color:white;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+
+    .collaborate-section{
+
+        padding:45px 30px;
+
+        text-align:left;
+
+    }
+
+
+    .collab-stamp{
+
+        width:75px;
+
+        height:75px;
+
+        right:25px;
+
+        top:25px;
+
+    }
+
+
+    .collaborate-section h2{
+
+        font-size:2rem;
+
+        padding-right:70px;
+
+    }
+
+
+    .collaborate-section p{
+
+        font-size:.95rem;
+
+    }
+
+
+    .collab-buttons{
+
+        flex-direction:column;
+
+    }
+
+
+    .collab-buttons button{
+
+        width:100%;
+
+    }
+
+}
 
 /* =========================
    MOBILE

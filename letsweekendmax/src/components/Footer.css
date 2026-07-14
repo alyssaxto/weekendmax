@@ -188,8 +188,10 @@
 
     padding-top:20px;
         text-align:left;
-
     align-items:flex-start;
+    color:#23415d;
+
+
 
 }
 
@@ -197,14 +199,16 @@
 
 .footer-message p{
 
+   text-align:left;
     color:#23415d;
 
+    margin:0 0 8px;
+
+    line-height:1.3;
+
+    font-size:1.4rem;
+
     font-weight:600;
-
-    text-align:left;
-
-    margin-left:0;
-
 }
 
 

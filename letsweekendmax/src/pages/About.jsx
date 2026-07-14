@@ -199,7 +199,43 @@ Portfolio
 
 </div>
 
+<section className="collaborate-section">
 
+    <img
+        src="/stamp.png"
+        className="collab-stamp"
+        alt="travel stamp"
+    />
+
+    <span>Let's Collaborate</span>
+
+    <h2>
+        Interested in working together?
+    </h2>
+    <p>
+        We're passionate about helping people travel farther for less through
+        points, weekend itineraries, and honest recommendations. If you're a
+        hotel, tourism board, airline, or travel brand interested in a
+        collaboration, we'd love to connect.
+    </p>
+
+    <div className="collab-buttons">
+
+        <a href="mailto:hello@letsweekendmax.com">
+            <button>Contact Us</button>
+        </a>
+
+        <a
+            href="https://instagram.com/letsweekendmax"
+            target="_blank"
+            rel="noreferrer"
+        >
+
+        </a>
+
+    </div>
+
+</section>
 
         </section>
 
