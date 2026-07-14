@@ -1,4 +1,7 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -16,6 +19,7 @@ return (
 <>
 
 <Navbar />
+      <ScrollToTop />
 
 
 <Routes>
