@@ -72,7 +72,132 @@
 }
 
 
+/* ================= TRIP PASSPORT NAV ================= */
 
+
+.trip-nav{
+
+    position:fixed;
+
+    left:35px;
+
+    top:150px;
+
+    width:230px;
+
+    background:#fffaf0;
+
+    padding:25px;
+
+    border:1px solid #e6d8c5;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+
+    z-index:100;
+
+}
+
+
+
+.trip-nav h3{
+
+    margin:0 0 20px;
+
+    color:#23415d;
+
+    font-size:1.25rem;
+
+    border-bottom:1px dashed #d8c7ad;
+
+    padding-bottom:15px;
+
+}
+
+
+
+.trip-nav a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:#536273;
+
+    font-size:.9rem;
+
+    margin:14px 0;
+
+    transition:.25s ease;
+
+}
+
+
+
+.trip-nav a:hover{
+
+    color:#d58b5b;
+
+    transform:translateX(5px);
+
+}
+
+
+
+.trip-nav .day-link{
+
+    padding-left:15px;
+
+    font-size:.85rem;
+
+}
+
+
+
+/* ================= SMOOTH SCROLL ================= */
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+/* Prevent headings hiding behind navbar */
+
+#overview,
+#cost,
+#hotel,
+#itinerary,
+[id^="day-"],
+#tips,
+#verdict{
+
+    scroll-margin-top:120px;
+
+}
+
+
+
+
+
+
+
+/* ================= TABLET + MOBILE ================= */
+
+
+@media(max-width:1200px){
+
+
+    .trip-nav{
+
+        display:none;
+
+    }
+
+
+}
 
 /* ================= SUMMARY ================= */
 

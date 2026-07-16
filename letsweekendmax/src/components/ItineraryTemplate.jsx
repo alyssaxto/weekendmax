@@ -13,11 +13,81 @@ export default function ItineraryTemplate({ trip }) {
         <section className="itinerary-page">
 
 
-            {/* COVER */}
+            {/* ================= TRIP NAV ================= */}
+
+            <nav className="trip-nav">
+
+                <h3>
+                    ✈ Trip Passport
+                </h3>
+
+
+                <a href="#overview">
+                    The Trip
+                </a>
+
+
+                <a href="#cost">
+                    Cost Breakdown
+                </a>
+
+
+                {trip.hotel && (
+
+                    <a href="#hotel">
+                        Where We Stayed
+                    </a>
+
+                )}
+
+
+                <a href="#itinerary">
+                    Itinerary
+                </a>
+
+
+
+                {trip.days.map((day,index)=>(
+
+                    <a
+                        key={index}
+                        href={`#day-${index+1}`}
+                        className="day-link"
+                    >
+
+                        Day {index+1}: {day.title}
+
+                    </a>
+
+                ))}
+
+
+
+                <a href="#tips">
+                    ✨ Weekendmax Tips
+                </a>
+
+
+
+                <a href="#verdict">
+                    📝 Final Thoughts
+                </a>
+
+
+            </nav>
+
+
+
+
+
+            {/* ================= COVER ================= */}
+
 
             <div
                 className="itinerary-cover"
-                style={{ backgroundImage: `url(${trip.cover})` }}
+                style={{
+                    backgroundImage:`url(${trip.cover})`
+                }}
             >
 
                 <div className="cover-overlay">
@@ -26,25 +96,36 @@ export default function ItineraryTemplate({ trip }) {
                         TRAVEL JOURNAL
                     </p>
 
+
                     <h1>
                         {trip.destination}
                     </h1>
+
 
                     <span>
                         {trip.duration} • {trip.season}
                     </span>
 
+
                 </div>
+
 
             </div>
 
 
 
-            {/* SUMMARY */}
+
+
+
+
+            {/* ================= SUMMARY ================= */}
+
 
             <div className="trip-summary">
 
+
                 <div>
+
                     <label>
                         Total Cost
                     </label>
@@ -52,10 +133,13 @@ export default function ItineraryTemplate({ trip }) {
                     <h2>
                         {trip.totalCost}
                     </h2>
+
                 </div>
 
 
+
                 <div>
+
                     <label>
                         Points Used
                     </label>
@@ -63,18 +147,26 @@ export default function ItineraryTemplate({ trip }) {
                     <h2>
                         {trip.points}
                     </h2>
+
                 </div>
 
 
+
+
                 <div>
+
                     <label>
                         Travelers
                     </label>
 
+
                     <h2>
                         {trip.travelers}
                     </h2>
+
                 </div>
+
+
 
             </div>
 
@@ -82,12 +174,20 @@ export default function ItineraryTemplate({ trip }) {
 
 
 
-            {/* OVERVIEW */}
 
-            <div className="journal-section">
+
+
+
+            {/* ================= OVERVIEW ================= */}
+
+
+            <div
+                className="journal-section"
+                id="overview"
+            >
 
                 <h2>
-                    The Trip 
+                    The Trip
                 </h2>
 
 
@@ -95,26 +195,38 @@ export default function ItineraryTemplate({ trip }) {
                     {trip.description}
                 </p>
 
+
             </div>
 
 
 
 
 
-            {/* COST BREAKDOWN */}
 
-            <div className="journal-section">
+
+
+
+            {/* ================= COST ================= */}
+
+
+            <div
+                className="journal-section"
+                id="cost"
+            >
+
 
                 <h2>
-                    Cost Breakdown 
+                    Cost Breakdown
                 </h2>
+
 
 
                 <div className="cost-grid">
 
+
                     {trip.costs.map((item,index)=>(
 
-                        <div 
+                        <div
                             className="cost-card"
                             key={index}
                         >
@@ -133,73 +245,115 @@ export default function ItineraryTemplate({ trip }) {
                                 {item.price}
                             </strong>
 
+
                         </div>
+
 
                     ))}
 
+
                 </div>
+
 
             </div>
 
 
 
-{/* HOTEL */}
-
-{trip.hotel && (
-
-    <div className="journal-section">
-
-        <h2>
-            Where We Stayed 
-        </h2>
 
 
-        <div className="hotel-card">
-
-            <h3>
-                {trip.hotel.name}
-            </h3>
 
 
-            <p>
-                {trip.hotel.description}
-            </p>
 
 
-            {trip.hotel.photos && (
+            {/* ================= HOTEL ================= */}
 
-                <div className="hotel-photo-grid">
 
-                    {trip.hotel.photos.map((photo,index)=>(
+            {trip.hotel && (
 
-                        <img
-                            key={index}
-                            src={photo}
-                            alt={`${trip.hotel.name} photo`}
-                            onClick={() => setSelectedPhoto(photo)}
-                        />
+            <div
+                className="journal-section"
+                id="hotel"
+            >
 
-                    ))}
+
+                <h2>
+                    Where We Stayed
+                </h2>
+
+
+
+                <div className="hotel-card">
+
+
+                    <h3>
+                        {trip.hotel.name}
+                    </h3>
+
+
+
+                    <p>
+                        {trip.hotel.description}
+                    </p>
+
+
+
+
+                    {trip.hotel.photos && (
+
+                        <div className="hotel-photo-grid">
+
+
+                            {trip.hotel.photos.map((photo,index)=>(
+
+                                <img
+                                    key={index}
+                                    src={photo}
+                                    alt="hotel"
+                                    onClick={() =>
+                                        setSelectedPhoto(photo)
+                                    }
+                                />
+
+                            ))}
+
+
+                        </div>
+
+                    )}
+
+
 
                 </div>
 
+
+            </div>
+
             )}
 
-        </div>
-
-    </div>
-
-)}
 
 
 
-            {/* DAILY ITINERARY */}
 
-            <div className="journal-section">
+
+
+
+
+
+
+            {/* ================= ITINERARY ================= */}
+
+
+
+            <div
+                className="journal-section"
+                id="itinerary"
+            >
+
 
                 <h2>
-                    Itinerary 
+                    Itinerary
                 </h2>
+
 
 
                 {trip.days.map((day,index)=>(
@@ -207,16 +361,19 @@ export default function ItineraryTemplate({ trip }) {
 
                     <div
                         className="day-entry"
+                        id={`day-${index+1}`}
                         key={index}
                     >
+
 
 
                         <div className="day-header">
 
 
                             <span>
-                                DAY {index + 1}
+                                DAY {index+1}
                             </span>
+
 
 
                             <h3>
@@ -224,28 +381,41 @@ export default function ItineraryTemplate({ trip }) {
                             </h3>
 
 
+
                         </div>
 
 
-<div className="day-description">
 
-{Array.isArray(day.description) ? (
 
-    day.description.map((paragraph, i)=>(
-        <p key={i}>
-            {paragraph}
-        </p>
-    ))
 
-) : (
+                        <div className="day-description">
 
-    <p>
-        {day.description}
-    </p>
 
-)}
+                            {Array.isArray(day.description)
 
-</div>
+                            ?
+
+                            day.description.map((text,i)=>(
+
+                                <p key={i}>
+                                    {text}
+                                </p>
+
+                            ))
+
+                            :
+
+                            <p>
+                                {day.description}
+                            </p>
+
+                            }
+
+
+                        </div>
+
+
+
 
 
 
@@ -254,16 +424,17 @@ export default function ItineraryTemplate({ trip }) {
 
                             {day.photos.map((photo,i)=>(
 
-
                                 <img
 
                                     key={i}
 
                                     src={photo}
 
-                                    alt={`${trip.destination} Day ${index + 1}`}
+                                    alt={`${trip.destination} day ${index+1}`}
 
-                                    onClick={() => setSelectedPhoto(photo)}
+                                    onClick={() =>
+                                        setSelectedPhoto(photo)
+                                    }
 
                                 />
 
@@ -281,6 +452,7 @@ export default function ItineraryTemplate({ trip }) {
                 ))}
 
 
+
             </div>
 
 
@@ -289,29 +461,33 @@ export default function ItineraryTemplate({ trip }) {
 
 
 
-            {/* WEEKENDMAX TIPS */}
 
-            <div className="tips-card">
+
+            {/* ================= TIPS ================= */}
+
+
+
+            <div
+                className="tips-card"
+                id="tips"
+            >
 
 
                 <h2>
-                    Weekendmax Tips 
+                    Weekendmax Tips
                 </h2>
 
 
 
                 <ul>
 
+                {trip.tips.map((tip,index)=>(
 
-                    {trip.tips.map((tip,index)=>(
+                    <li key={index}>
+                        {tip}
+                    </li>
 
-
-                        <li key={index}>
-                            {tip}
-                        </li>
-
-
-                    ))}
+                ))}
 
 
                 </ul>
@@ -319,20 +495,38 @@ export default function ItineraryTemplate({ trip }) {
 
             </div>
 
-{/* FINAL VERDICT */}
-
-<div className="journal-section verdict-section">
-
-    <h2>
-        Why Roatán is Worth Weekendmaxing 
-    </h2>
 
 
-    <p className="trip-description">
-        {trip.verdict}
-    </p>
 
-</div>
+
+
+
+
+
+            {/* ================= VERDICT ================= */}
+
+
+
+            <div
+                className="journal-section verdict-section"
+                id="verdict"
+            >
+
+                <h2>
+                    Why {trip.destination} is Worth Weekendmaxing
+                </h2>
+
+
+                <p className="trip-description">
+                    {trip.verdict}
+                </p>
+
+
+            </div>
+
+
+
+
 
 
         </section>
@@ -341,45 +535,34 @@ export default function ItineraryTemplate({ trip }) {
 
 
 
-        {/* PHOTO LIGHTBOX */}
+
+
+
+
+        {/* ================= LIGHTBOX ================= */}
+
 
 
         {selectedPhoto && (
 
             <div
-
                 className="photo-modal"
-
                 onClick={() => setSelectedPhoto(null)}
-
             >
 
-
                 <img
-
                     src={selectedPhoto}
-
-                    alt="Expanded travel photo"
-
+                    alt="expanded"
                     onClick={(e)=>e.stopPropagation()}
-
                 />
 
 
-
-                <button
-
-                    onClick={() => setSelectedPhoto(null)}
-
-                >
-
+                <button>
                     ✕
-
                 </button>
 
 
             </div>
-
 
         )}
 
