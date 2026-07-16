@@ -8,6 +8,8 @@ import About from "./pages/About.jsx";
 import Itineraries from "./pages/Itineraries.jsx";
 import Deals from "./pages/Deals.jsx";
 import Iceland from "./pages/Iceland";
+import Roatan from "./pages/Roatan";
+
 
 function App(){
 
@@ -23,6 +25,10 @@ return (
 <Route 
     path="/iceland" 
     element={<Iceland />} 
+/>
+<Route 
+    path="/Roatan" 
+    element={<Roatan />} 
 />
 <Route path="/" element={<Home />} />
 

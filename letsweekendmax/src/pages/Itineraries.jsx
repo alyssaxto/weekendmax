@@ -16,13 +16,13 @@ export default function Destinations() {
         },
 
         {
-            image:"/roatan.jpg",
+            image:"/roatan/11.jpg",
             location:"Roatan",
-            points:"40k Capital One",
+            points:"30k Capital One",
             season:"Spring",
             region:"Caribbean",
-            duration:"5 Days",
-            link:"/filler"
+            duration:"4 Days",
+            link:"/roatan"
         },
 
         {
