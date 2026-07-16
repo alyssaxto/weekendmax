@@ -31,15 +31,28 @@
 }
 
 .navbar__links {
-  font-family: "poppins", sans-serif;
-  font-weight: 400;
-  color: #2B4C6D;
-  text-decoration: none;
-  padding: 10px;
-  position: relative;
-  transition: color 0.3s ease, font-weight 0.3s ease, padding 0.3s ease;
-  display: inline-block;
-  will-change: transform; /* fixes hover animation issues */
+
+  font-family:"poppins",sans-serif;
+
+  font-weight:400;
+
+  color:#2B4C6D;
+
+  text-decoration:none;
+
+  padding:10px;
+
+  position:relative;
+
+  transition:
+  color .3s ease,
+  font-weight .3s ease,
+  transform .3s ease;
+
+  display:inline-block;
+
+  white-space:nowrap;
+
 }
 
 .navbar__links::after {
@@ -55,9 +68,13 @@
 }
 
 .navbar__links:hover {
-  color: #d58b5b;
-  padding-left: 25px;
-  padding-right: 25px;
+
+  color:#d58b5b;
+
+  font-weight:600;
+
+  transform:scale(1.04);
+
 }
 
 .navbar__links:hover::after {

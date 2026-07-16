@@ -23,7 +23,7 @@ export default function ItineraryTemplate({ trip }) {
                 <div className="cover-overlay">
 
                     <p>
-                        ✈ TRAVEL JOURNAL
+                        TRAVEL JOURNAL
                     </p>
 
                     <h1>

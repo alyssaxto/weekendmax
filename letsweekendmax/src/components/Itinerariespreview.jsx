@@ -68,47 +68,54 @@ export default function Itinerary(){
 
 
     const trips = [
-
+        {
+            location:"Roatan",
+            points:"30,000 points",
+            image:"./roatan/11.jpg",
+            description:"A weekend escape for beaches, snorkeling, and relaxation.",
+              link:"/roatan"
+            
+        },
         {
             location:"Iceland",
             points:"45,000 points",
             image:"/iceland.jpg",
-            description:"Chasing waterfalls, glaciers, and the northern lights."
+            description:"Chasing waterfalls, glaciers, and the northern lights.",
+            link:"/iceland"
+
         },
 
-        {
-            location:"Roatan",
-            points:"18,000 points",
-            image:"/roatan.jpg",
-            description:"A weekend escape for beaches, snorkeling, and relaxation."
-        },
 
         {
             location:"Seattle",
             points:"12,000 points",
             image:"/seattle.jpg",
-            description:"Coffee shops, mountain views, and city adventures."
+            description:"Coffee shops, mountain views, and city adventures.",
+              link:"/filler"
         },
 
         {
             location:"El Salvador",
             points:"10,000 points",
             image:"/elsalvador.jpg",
-            description:"A quick weekend getaway using credit card points."
+            description:"A quick weekend getaway using credit card points.",
+              link:"/filler"
         },
 
         {
             location:"Puerto Rico",
             points:"10,000 points",
             image:"/puertorico.jpg",
-            description:"Exploring beaches, food, and tropical adventures."
+            description:"Exploring beaches, food, and tropical adventures.",
+              link:"/filler"
         },
 
         {
             location:"Michigan",
             points:"10,000 points",
             image:"/michigan.jpg",
-            description:"A scenic weekend escape filled with nature and views."
+            description:"A scenic weekend escape filled with nature and views.",
+              link:"/filler"
         }
 
     ];
@@ -177,17 +184,19 @@ export default function Itinerary(){
                 {trips.map((trip,index)=>(
 
 
-                    <div
+<Link
 
-                        className="itinerary-card"
+    to={trip.link}
 
-                        key={index}
+    className="itinerary-card"
 
-                        style={{
-                            backgroundImage:`url(${trip.image})`
-                        }}
+    key={index}
 
-                    >
+    style={{
+        backgroundImage:`url(${trip.image})`
+    }}
+
+>
 
 
                         <div className="itinerary-overlay">
@@ -230,8 +239,7 @@ export default function Itinerary(){
 
                         </div>
 
-
-                    </div>
+</Link>
 
 
                 ))}

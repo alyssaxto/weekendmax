@@ -49,7 +49,15 @@
 }
 
 
+.itinerary-card{
 
+    text-decoration:none;
+
+    color:inherit;
+
+    display:block;
+
+}
 /* VIEW ALL */
 
 .view-all{
