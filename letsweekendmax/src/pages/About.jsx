@@ -176,14 +176,14 @@ LinkedIn
 {creator.website && (
 
 <a
-href={creator.linkedin}
+href={creator.website}
 target="_blank"
 rel="noreferrer"
 className="social-icon-link"
 >
 <img 
 src="/website.png"
-alt="LinkedIn"
+alt="Portfolio"
 />
 Portfolio
 </a>
