@@ -380,7 +380,6 @@
 }
 
 /* ================= MOBILE ================= */
-/* ================= MOBILE ================= */
 
 @media(max-width:600px){
 
@@ -513,6 +512,7 @@
 
 /* ================= MOBILE ================= */
 
+/* ================= MOBILE ================= */
 
 @media(max-width:800px){
 
@@ -536,9 +536,11 @@
 
         grid-template-columns:1fr;
 
-        width:85%;
+        width:90%;
 
         margin:30px auto;
+
+        padding:25px;
 
     }
 
@@ -546,9 +548,13 @@
 
     .journal-section{
 
-        width:85%;
+        width:100%;
 
-        margin:60px auto;
+        max-width:none;
+
+        margin:60px 0;
+
+        padding:0 20px;
 
     }
 
@@ -558,6 +564,19 @@
 
         font-size:2rem;
 
+        margin-bottom:25px;
+
+    }
+
+
+
+    .trip-description,
+    .day-description{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
     }
 
 
@@ -566,13 +585,33 @@
 
         grid-template-columns:1fr;
 
+        gap:15px;
+
+    }
+
+
+
+    .cost-card{
+
+        padding:20px;
+
+    }
+
+
+
+    .day-entry{
+
+        margin:60px 0;
+
+        padding-bottom:60px;
+
     }
 
 
 
     .day-header h3{
 
-        font-size:2rem;
+        font-size:1.8rem;
 
     }
 
@@ -580,7 +619,7 @@
 
     .day-photo-grid{
 
-        grid-template-columns:1fr;
+        columns:1;
 
     }
 
@@ -588,7 +627,17 @@
 
     .day-photo-grid img{
 
-        height:260px;
+        height:300px;
+
+        object-fit:cover;
+
+    }
+
+
+
+    .verdict-section{
+
+        padding:25px;
 
     }
 
@@ -596,7 +645,7 @@
 
     .tips-card{
 
-        width:85%;
+        width:90%;
 
         padding:30px;
 
