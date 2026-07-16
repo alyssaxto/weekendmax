@@ -4,7 +4,15 @@ import { Link } from "react-router-dom";
 export default function Destinations() {
 
     const trips = [
-
+        {
+            image:"/roatan/11.jpg",
+            location:"Roatan",
+            points:"30k Capital One",
+            season:"Spring",
+            region:"Caribbean",
+            duration:"4 Days",
+            link:"/roatan"
+        },
         {
             image:"/iceland.jpg",
             location:"Iceland",
@@ -15,15 +23,6 @@ export default function Destinations() {
             link:"/iceland"
         },
 
-        {
-            image:"/roatan/11.jpg",
-            location:"Roatan",
-            points:"30k Capital One",
-            season:"Spring",
-            region:"Caribbean",
-            duration:"4 Days",
-            link:"/roatan"
-        },
 
         {
             image:"/seattle.jpg",
@@ -77,7 +76,7 @@ export default function Destinations() {
                 <h1>Explore Our Itineraries</h1>
 
                 <p>
-                    Browse destination guides, discover how we booked flights with points, and see how we made the most of every adventure.
+                    Browse destination guides, discover how we booked flights with points and cheap cash deals, and see how we made the most of every adventure.
                 </p>
 
             </div>

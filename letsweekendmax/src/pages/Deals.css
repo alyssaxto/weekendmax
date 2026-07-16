@@ -52,20 +52,21 @@
 
 /* ---------- FILTERS ---------- */
 
+/* ---------- FILTERS ---------- */
+
 .deal-filters{
 
     display:grid;
 
-    grid-template-columns:2fr repeat(4,1fr);
+    grid-template-columns:repeat(6,1fr);
 
-    gap:18px;
+    gap:15px;
 
     margin-bottom:55px;
 
     width:100%;
 
 }
-
 
 .deal-filters input,
 .deal-filters select{
@@ -331,6 +332,82 @@
 }
 
 
+/* ================= FLIGHT ROUTE ================= */
+
+
+.flight-route{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    background:#fffaf0;
+
+    padding:18px;
+
+    margin-bottom:20px;
+
+    border:1px dashed #d8c7ad;
+
+}
+
+
+
+.airport{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.airport label{
+
+    font-size:.65rem;
+
+    letter-spacing:2px;
+
+    color:#d58b5b;
+
+    font-weight:700;
+
+}
+
+
+
+.airport strong{
+
+    color:#23415d;
+
+    font-size:.9rem;
+
+}
+
+
+
+.route-plane{
+
+    color:#d58b5b;
+
+    font-size:1.3rem;
+
+}
+
+
+
+
+
+.deal-info h2{
+
+    color:#23415d;
+
+    margin-top:10px;
+
+}
 
 
 

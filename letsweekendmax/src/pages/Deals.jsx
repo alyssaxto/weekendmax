@@ -59,47 +59,74 @@ const deals = [
                 </p>
 
             </div>
+<div className="deal-filters">
 
-            <div className="deal-filters">
 
-                <input
-                    type="text"
-                    placeholder="Search destination..."
-                />
+<select>
+    <option>Where from?</option>
+    <option>Houston (IAH)</option>
+    <option>Dallas (DFW)</option>
+    <option>Los Angeles (LAX)</option>
+    <option>New York (JFK)</option>
+    <option>Chicago (ORD)</option>
+    <option>Miami (MIA)</option>
+    <option>San Francisco (SFO)</option>
+    <option>Seattle (SEA)</option>
+</select>
 
-                <select>
-                    <option>All Programs</option>
-                    <option>Chase</option>
-                    <option>Capital One</option>
-                    <option>Amex</option>
-                    <option>Bilt</option>
-                </select>
 
-                <select>
-                    <option>All Airlines</option>
-                    <option>United</option>
-                    <option>Delta</option>
-                    <option>American</option>
-                    <option>Air France</option>
-                </select>
 
-                <select>
-                    <option>Cabin</option>
-                    <option>Economy</option>
-                    <option>Premium Economy</option>
-                    <option>Business</option>
-                    <option>First</option>
-                </select>
+<select>
+    <option>Where to?</option>
+    <option>Europe</option>
+    <option>Asia</option>
+    <option>Caribbean</option>
+    <option>Hawaii</option>
+    <option>South America</option>
+</select>
 
-                <select>
-                    <option>Region</option>
-                    <option>North America</option>
-                    <option>Europe</option>
-                    <option>Asia</option>
-                    <option>Caribbean</option>
-                </select>
 
-            </div>
+
+<select>
+    <option>All Programs</option>
+    <option>Chase</option>
+    <option>Capital One</option>
+    <option>Amex</option>
+    <option>Bilt</option>
+</select>
+
+
+
+<select>
+    <option>All Airlines</option>
+    <option>United</option>
+    <option>Delta</option>
+    <option>American</option>
+    <option>Air France</option>
+</select>
+
+
+
+<select>
+    <option>Cabin</option>
+    <option>Economy</option>
+    <option>Premium Economy</option>
+    <option>Business</option>
+    <option>First</option>
+</select>
+
+
+
+<select>
+    <option>Region</option>
+    <option>North America</option>
+    <option>Europe</option>
+    <option>Asia</option>
+    <option>Caribbean</option>
+</select>
+
+
+</div>
 
             <div className="deal-list">
 
