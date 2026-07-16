@@ -143,7 +143,53 @@ export default function ItineraryTemplate({ trip }) {
 
 
 
+{/* HOTEL */}
 
+{trip.hotel && (
+
+    <div className="journal-section">
+
+        <h2>
+            Where We Stayed 
+        </h2>
+
+
+        <div className="hotel-card">
+
+            <h3>
+                {trip.hotel.name}
+            </h3>
+
+
+            <p>
+                {trip.hotel.description}
+            </p>
+
+
+            {trip.hotel.photos && (
+
+                <div className="hotel-photo-grid">
+
+                    {trip.hotel.photos.map((photo,index)=>(
+
+                        <img
+                            key={index}
+                            src={photo}
+                            alt={`${trip.hotel.name} photo`}
+                            onClick={() => setSelectedPhoto(photo)}
+                        />
+
+                    ))}
+
+                </div>
+
+            )}
+
+        </div>
+
+    </div>
+
+)}
 
 
 
@@ -183,26 +229,21 @@ export default function ItineraryTemplate({ trip }) {
 
 <div className="day-description">
 
-    {typeof day.description === "string" ? (
+{Array.isArray(day.description) ? (
 
-        day.description
-            .trim()
-            .split("\n\n")
-            .map((paragraph, i) => (
-                <p key={i}>
-                    {paragraph.trim()}
-                </p>
-            ))
+    day.description.map((paragraph, i)=>(
+        <p key={i}>
+            {paragraph}
+        </p>
+    ))
 
-    ) : (
+) : (
 
-        day.description.map((paragraph, i)=>(
-            <p key={i}>
-                {paragraph}
-            </p>
-        ))
+    <p>
+        {day.description}
+    </p>
 
-    )}
+)}
 
 </div>
 
@@ -283,7 +324,7 @@ export default function ItineraryTemplate({ trip }) {
 <div className="journal-section verdict-section">
 
     <h2>
-        Why Roatán is Worth Weekendmaxing ✈️
+        Why Roatán is Worth Weekendmaxing 
     </h2>
 
 

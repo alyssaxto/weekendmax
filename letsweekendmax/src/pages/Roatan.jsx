@@ -52,67 +52,136 @@ export default function Roatan() {
             }
 
         ],
+hotel: {
+    name: "Arca Hotel",
+    link: "https://arcaroatan.com/",
+    
+description: (
+    <>
+        We stayed at{" "}
+        <a
+            href="https://arcaroatan.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Arca Hotel
+        </a>
+        , a beachfront villa-style hotel located directly on West Bay Beach.
+        When we arrived, we were welcomed with complimentary watermelon juice
+        and a vodka shot — the perfect start to our Caribbean getaway.
+
+        <br /><br />
+
+        Our villa came with a private balcony overlooking the beautiful ocean,
+        giving us the perfect spot to relax and watch the waves throughout the
+        day. The hotel also provided its own beach chairs and towels, making it
+        easy to spend hours enjoying the beach without needing to bring anything
+        with us.
+
+        <br /><br />
+
+        The property had an amazing beachfront location, allowing us to walk
+        straight from our villa to the ocean. The hotel restaurant served fresh
+        seafood and drinks, which made it convenient to enjoy great meals without
+        needing transportation. The front desk was also extremely helpful with
+        arranging taxis whenever we wanted to explore other parts of the island.
+
+        <br /><br />
+
+        Splitting the villa between four people made the stay even more affordable
+        while still feeling like a luxury island escape.
+    </>
+),
+
+    photos:[
+        "/roatan/6.1.jpg",
+        "/roatan/19.jpg",
+        "/roatan/20.jpg"
+    ]
+},
 days: [
 
-    {
-        title: "Arrival + West Bay Beach + Local Food",
-        description: `
-       We landed early Saturday morning after a nonstop United flight from Houston,
-    grabbed a taxi to Arca Hotel, and immediately changed into swimsuits.
-    One of the biggest reasons we loved this trip was how little PTO it required.
-    By planning around a long weekend and using points instead of cash, we turned
-    just two vacation days into a Caribbean escape.
+{
+    title: "Arrival + West Bay Beach + Local Food",
 
-    After checking into Arca Hotel, we walked over to Ricas Pupusas al Paso Roatán
-    for lunch. The pupusas were one of our favorite meals of the trip. It was affordable,
-    authentic, and conveniently located within walking distance of our hotel.
+    description: [
+        <>
+            We landed early Saturday morning after a nonstop United flight from Houston,
+            grabbed a taxi to{" "}
+            <a 
+                href="https://arcaroatan.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                Arca Hotel
+            </a>
+            , and immediately changed into swimsuits. One of the biggest reasons we loved
+            this trip was how little PTO it required. By planning around a long weekend
+            and using points instead of cash, we turned just two vacation days into a
+            Caribbean escape.
+        </>,
 
-    We spent the rest of the afternoon relaxing at West Bay Beach, swimming in
-    crystal-clear water, and watching one of the island's incredible sunsets.
-    Since we were staying near West Bay, we never felt the need to rent a car and
-    were able to explore most places nearby on foot or by taxi.
+        <>
+            After checking into{" "}
+            <a 
+                href="https://arcaroatan.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
+                Arca Hotel
+            </a>
+            , we walked over to Ricas Pupusas al Paso Roatán for lunch. The pupusas
+            were one of our favorite meals of the trip. It was affordable, authentic,
+            and conveniently located within walking distance of our hotel.
+        </>,
 
-    That night, we got ready and headed out to experience Roatán's nightlife.
-    We took a taxi to Splash Inn for dinner before continuing the night at Frank's
-    Hideaway Bar. It was the perfect first night on the island. We had great food, good
-    drinks, and a fun introduction to the local atmosphere before the rest of our
-    adventures began.
-        `,
-        photos:[
-            "/roatan/1.jpg",
-            "/roatan/6.1.jpg",
-            "/roatan/2.jpg",
-            "/roatan/3.jpg",
-            "/roatan/6.jpg",
-            "/roatan/5.5.jpg",
-        ]
-    },
+        <>
+            We spent the rest of the afternoon relaxing at West Bay Beach, swimming in
+            crystal-clear water, and watching one of the island's incredible sunsets.
+            Since we were staying near West Bay, we never felt the need to rent a car
+            and were able to explore most places nearby on foot or by taxi.
+        </>,
 
+        <>
+            That night, we got ready and headed out to experience Roatán's nightlife.
+            We took a taxi to Splash Inn for dinner before continuing the night at
+            Frank's Hideaway Bar. It was the perfect first night on the island.
+            We had great food, good drinks, and a fun introduction to the local
+            atmosphere before the rest of our adventures began.
+        </>
+    ],
+
+    photos:[
+        "/roatan/1.jpg",
+        "/roatan/18.jpg",
+        "/roatan/2.jpg",
+        "/roatan/3.jpg",
+        "/roatan/6.jpg",
+        "/roatan/5.5.jpg",
+    ]
+},
 
     {
         title:"Beach Day + Island Dining",
-        description:`
-            Our second day was all about slowing down and enjoying island life.
-            We spent most of the day relaxing at West Bay Beach, swimming, snorkeling,
-            and enjoying the views without rushing from activity to activity.
+        description:[
+    `Our second day was all about slowing down and enjoying island life.
+    We spent most of the day relaxing at West Bay Beach, swimming, snorkeling,
+    and enjoying the views without rushing from activity to activity.`,
 
+    `For lunch we stopped by Gypsy Restaurant & Cocktails, which had an amazing
+    three-lobster special during our visit. It was an incredible value and
+    definitely something we'd recommend checking out while visiting Roatán.`,
 
-            For lunch we stopped by Gypsy Restaurant & Cocktails, which had an amazing
-            three-lobster special during our visit. It was an incredible value and
-            definitely something we'd recommend checking out while visiting Roatán.
+    `While relaxing on the beach, someone approached us advertising banana boat
+    rides. For only $5 per person, we decided to do it spontaneously, and it ended
+    up being one of those random travel moments that became a favorite memory.
+    Sometimes the best experiences are the ones you don't plan.`,
 
-            While relaxing on the beach, someone approached us advertising banana boat
-            rides. For only $5 per person, we decided to do it spontaneously, and it ended
-            up being one of those random travel moments that became a favorite memory.
-            Sometimes the best experiences are the ones you don't plan.
-
-            For dinner, we walked to Alera, a restaurant located inside another hotel
-            nearby. The ceviche was incredible and ended up being one of our favorite
-            meals of the entire trip. Being able to walk to amazing restaurants from
-            Arca Hotel made the location extremely convenient.
-
-    
-        `,
+    `For dinner, we walked to Alera, a restaurant located inside another hotel
+    nearby. The ceviche was incredible and ended up being one of our favorite
+    meals of the entire trip. Being able to walk to amazing restaurants from
+    Arca Hotel made the location extremely convenient.`
+],
         photos:[
             "/roatan/4.jpg",
             "/roatan/6.9.jpg",
@@ -127,37 +196,59 @@ days: [
     },
 
 
-    {
-        title:"Private Boat Adventure + Fly Home",
-        description:`
-            We saved the biggest adventure for our final day, which was a private boat charter
-            with Jackson Marine Adventures. The two brothers who run the tours were
-            incredibly welcoming, funny, and made the entire experience unforgettable.
+{
+    title:"Snorkeling on a Private Boat",
 
+    description:[
+
+        <>
+            We saved the biggest adventure for our final day, which was a private boat charter
+            with{" "}
+            <a
+                href="https://www.tripadvisor.com/Attraction_Review-g292019-d7267438-Reviews-Jackson_Marine_Adventures-Roatan_Bay_Islands.html"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Jackson Marine Adventures
+            </a>
+            . The two brothers who run the tours were incredibly welcoming, funny, and
+            made the entire experience unforgettable.
+        </>,
+
+
+        <>
             Since we purchased alcohol at Duty Free before arriving, we were able to
             bring our own drinks onboard while spending the day snorkeling beautiful
             coral reefs with our own private guide.
+        </>,
 
+
+        <>
             One tip we highly recommend: bring a portable speaker and create your own
             boat playlist before the trip. Having your favorite songs playing while
             cruising through the Caribbean made the experience feel even more special.
+        </>,
 
+
+        <>
             Scheduling the boat excursion on our last day ended up working perfectly.
             After spending hours snorkeling, swimming, and being out on the water,
             we were completely exhausted (in the best way possible) and ready to head
             straight to the airport for our afternoon flight back to Houston.
-        `,
-        photos:[
-            "/roatan/11.jpg",
-            "/roatan/12.jpg",
-            "/roatan/13.jpg",
-            "/roatan/14.jpg",
-            "/roatan/15.jpg",
-            "/roatan/16.jpg",
-               "/roatan/17.jpg"
-            
-        ]
-    }
+        </>
+
+    ],
+
+    photos:[
+        "/roatan/11.jpg",
+        "/roatan/12.jpg",
+        "/roatan/13.jpg",
+        "/roatan/14.jpg",
+        "/roatan/15.jpg",
+        "/roatan/16.jpg",
+        "/roatan/17.jpg"
+    ]
+},
 
 ],
 
