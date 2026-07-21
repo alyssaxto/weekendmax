@@ -9,13 +9,7 @@
 
     padding:120px 8%;
 
-    background:
-    radial-gradient(
-        circle at top left,
-        rgba(213,139,91,.15),
-        transparent 30%
-    ),
-    #F2EDDE;
+    background: #F2EDDE;
 
     min-height:100vh;
 
