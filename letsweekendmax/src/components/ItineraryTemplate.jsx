@@ -5,6 +5,7 @@ export default function ItineraryTemplate({ trip }) {
 
     const [selectedPhoto, setSelectedPhoto] = useState(null);
 
+    const [navOpen, setNavOpen] = useState(false);
 
     return (
 
@@ -15,7 +16,13 @@ export default function ItineraryTemplate({ trip }) {
 
             {/* ================= TRIP NAV ================= */}
 
-            <nav className="trip-nav">
+<nav className={`trip-nav ${navOpen ? "open" : ""}`}>
+    <button
+    className="nav-toggle"
+    onClick={() => setNavOpen(!navOpen)}
+>
+    ✈
+</button>
 
                 <h3>
                     ✈ Trip Passport
@@ -114,64 +121,64 @@ export default function ItineraryTemplate({ trip }) {
 
 
 
+{/* ================= SUMMARY ================= */}
+
+<div className="trip-summary">
+
+
+    <div>
+
+        <label>
+            Total Cost
+        </label>
+
+        <h2>
+            {trip.totalCost}
+        </h2>
+
+    </div>
 
 
 
+    <div>
 
-            {/* ================= SUMMARY ================= */}
+        <label>
+            Points Used
+        </label>
 
+        <h2>
+            {trip.points}
+        </h2>
 
-            <div className="trip-summary">
-
-
-                <div>
-
-                    <label>
-                        Total Cost
-                    </label>
-
-                    <h2>
-                        {trip.totalCost}
-                    </h2>
-
-                </div>
+    </div>
 
 
 
-                <div>
+    <div>
 
-                    <label>
-                        Points Used
-                    </label>
+        <label>
+            Travelers
+        </label>
 
-                    <h2>
-                        {trip.points}
-                    </h2>
+        <h2>
+            {trip.travelers}
+        </h2>
 
-                </div>
+    </div>
 
+{trip.flightLink && (
 
+    <a
+        href={trip.flightLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flight-icon flight-deal"
+    >
+        ✈
+    </a>
 
-
-                <div>
-
-                    <label>
-                        Travelers
-                    </label>
-
-
-                    <h2>
-                        {trip.travelers}
-                    </h2>
-
-                </div>
-
-
-
-            </div>
-
-
-
+)}
+</div>
 
 
 

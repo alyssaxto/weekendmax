@@ -32,6 +32,11 @@ export default function Navbar() {
           </li>
 
           <li>
+            <Link to="/Basics" className="navbar__links">
+              Basics
+            </Link>
+          </li>
+          <li>
             <Link to="/flightdeals" className="navbar__links">
               Flight Deals
             </Link>

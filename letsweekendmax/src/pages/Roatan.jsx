@@ -18,6 +18,8 @@ export default function Roatan() {
 
         travelers: "4 People",
 
+    flightLink: "https://www.united.com/",
+
         description:
             "We spent three nights exploring the beautiful island of Roatán, Honduras, while only using two vacation days. By redeeming 30,000 Capital One miles for a roundtrip United Airlines flight that was selling for nearly $1,000, we turned an expensive Caribbean getaway into one of our favorite award travel redemptions. We stayed at the Arca Hotel and split the cost between four travelers, making our beachfront accommodations surprisingly affordable. Between snorkeling crystal-clear water, watching incredible sunsets, enjoying fresh seafood, and relaxing by the beach, this trip proved you don't need an entire week off work to experience paradise.",
 

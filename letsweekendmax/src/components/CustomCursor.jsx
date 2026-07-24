@@ -11,16 +11,28 @@ const CustomCursor = () => {
 useEffect(() => {
   if (isMobile) return;
 
-  const handleMouseOver = (e) => {
-    if (e.target.closest(".postcard")) {
-      setHoverText("Click to flip ✦");
-    } else if (e.target.closest("a, button")) {
-      setHoverText("[click me!]");
-    } else {
-      setHoverText("");
-    }
-  };
+const handleMouseOver = (e) => {
 
+  const target = e.target;
+
+  if (target.closest(".flight-deal")) {
+
+    setHoverText("Book this flight deal ✈");
+
+  } else if (target.closest(".postcard")) {
+
+    setHoverText("Click to flip ✦");
+
+  } else if (target.closest("a, button")) {
+
+    setHoverText("[click me!]");
+
+  } else {
+
+    setHoverText("");
+
+  }
+};
   const handleMouseOut = (e) => {
     if (e.target.closest(".postcard, a, button")) {
       setHoverText("");
