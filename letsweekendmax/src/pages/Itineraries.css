@@ -322,6 +322,7 @@
     justify-content:flex-end;
 
     padding:28px;
+    z-index:15;
 
     background:
     linear-gradient(
@@ -346,17 +347,13 @@
 }
 
 /* ================= SUMMARY OVERLAY ================= */
-
 .trip-summary-overlay{
 
     position:absolute;
 
     inset:0;
 
-    background:
-    rgba(0,0,0,.75);
-
-    backdrop-filter:blur(6px);
+    background:rgba(0,0,0,.78);
 
     display:flex;
 
@@ -368,19 +365,26 @@
 
     text-align:center;
 
-    padding:35px;
+    color:white;
+
+    padding:30px;
 
     opacity:0;
 
+    pointer-events:none;
+
     transition:.35s ease;
 
-}
+    z-index:10;
 
+}
 
 
 .trip-card.active .trip-summary-overlay{
 
     opacity:1;
+
+    pointer-events:auto;
 
 }
 
@@ -601,7 +605,7 @@
 
 .partner-content h2{
 
-    color:#fff;
+    color:#23415d;
 
     font-size:2.6rem;
 
@@ -750,7 +754,46 @@
 
 
 
+/* BUTTON */
 
+.trip-button{
+
+    width:190px;
+
+    background:white;
+
+    color:#23415d;
+
+    border:none;
+
+    border-radius:40px;
+
+    padding:14px;
+
+    font-family:"Poppins",sans-serif;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+    position:relative;
+
+    z-index:20;
+
+}
+
+
+.trip-button:hover{
+
+    background:#d58b5b;
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
 
 /* MOBILE */
 

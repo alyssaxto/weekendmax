@@ -155,7 +155,7 @@ export default function Itinerary(){
 
 
                     <Link
-                        to="/destinations"
+                        to="/itineraries"
                         className="view-all"
                     >
                         View All →
@@ -192,9 +192,10 @@ export default function Itinerary(){
             {trips.map((trip,index)=>(
 
 
-                <div
-
-                    className="itinerary-card"
+<div
+className={`itinerary-card ${
+    activeCard === index ? "active" : ""
+}`}
 
                     key={index}
 
@@ -203,11 +204,15 @@ export default function Itinerary(){
                     }}
 
 
-                    onClick={() => 
-                        setActiveCard(
-                            activeCard === index ? null : index
-                        )
-                    }
+onClick={(e) => {
+
+    if(e.target.closest("button")) return;
+
+    setActiveCard(
+        activeCard === index ? null : index
+    );
+
+}}
 
                 >
 
@@ -269,29 +274,25 @@ export default function Itinerary(){
 
 
 
-                    {activeCard === index && (
+<div className="itinerary-summary">
 
-                        <div className="itinerary-summary">
+    <h3>
+        {trip.location}
+    </h3>
 
+    <p>
+        {trip.description}
+    </p>
 
-                            <h3>
-                                {trip.location}
-                            </h3>
+    <span>
+        ✈ {trip.points}
+    </span>
 
+    <small>
+        Click again to close
+    </small>
 
-                            <p>
-                                {trip.description}
-                            </p>
-
-
-                            <span>
-                                ✈ {trip.points}
-                            </span>
-
-
-                        </div>
-
-                    )}
+</div>
 
 
 

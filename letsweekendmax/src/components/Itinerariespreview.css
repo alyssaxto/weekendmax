@@ -8,35 +8,9 @@
 
 }
 
-/* ================= CLICK SUMMARY ================= */
 
 
-.itinerary-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(0,0,0,.75);
-
-    opacity:0;
-
-    transition:.35s ease;
-
-    pointer-events:none;
-
-}
-
-
-
-.itinerary-card.summary-open::after{
-
-    opacity:1;
-
-}
-
+/* ================= CLICK OVERLAY ================= */
 
 
 .itinerary-summary{
@@ -44,6 +18,8 @@
     position:absolute;
 
     inset:0;
+
+    background:rgba(0,0,0,.75);
 
     display:flex;
 
@@ -59,12 +35,69 @@
 
     color:white;
 
-    background:rgba(0,0,0,.75);
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.35s ease;
 
     z-index:5;
 
 }
 
+
+.itinerary-card.active .itinerary-summary{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+
+.itinerary-card.active .itinerary-overlay{
+
+    opacity:0;
+
+}
+
+
+.itinerary-summary h3{
+
+    color:white;
+
+    font-size:2rem;
+
+}
+
+
+.itinerary-summary p{
+
+    max-width:260px;
+
+    line-height:1.7;
+
+}
+
+
+.itinerary-summary span{
+
+    color:#F2B880;
+
+    margin-top:15px;
+
+    font-weight:700;
+
+}
+
+
+.itinerary-summary small{
+
+    margin-top:20px;
+
+    opacity:.7;
+
+}
 
 
 .itinerary-summary h3{

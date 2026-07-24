@@ -5,8 +5,7 @@ export default function ItineraryTemplate({ trip }) {
 
     const [selectedPhoto, setSelectedPhoto] = useState(null);
 
-    const [navOpen, setNavOpen] = useState(false);
-
+const [navOpen, setNavOpen] = useState(true);
     return (
 
         <>
@@ -421,35 +420,55 @@ export default function ItineraryTemplate({ trip }) {
 
                         </div>
 
+<div className="day-photo-grid">
+
+    {day.photos.map((photo,i)=>{
+
+        const imageSrc = typeof photo === "string"
+            ? photo
+            : photo.src;
 
 
+        const overlayText = typeof photo === "object"
+            ? photo.overlayText
+            : null;
 
 
+        return (
 
-                        <div className="day-photo-grid">
+            <div
+                className="photo-wrapper"
+                key={i}
+                onClick={() =>
+                    setSelectedPhoto(imageSrc)
+                }
+            >
 
-
-                            {day.photos.map((photo,i)=>(
-
-                                <img
-
-                                    key={i}
-
-                                    src={photo}
-
-                                    alt={`${trip.destination} day ${index+1}`}
-
-                                    onClick={() =>
-                                        setSelectedPhoto(photo)
-                                    }
-
-                                />
+                <img
+                    src={imageSrc}
+                    alt={`${trip.destination} day ${index+1}`}
+                />
 
 
-                            ))}
+                {overlayText && (
 
+                    <div className="photo-hover-overlay">
 
-                        </div>
+                        <p>
+                            {overlayText}
+                        </p>
+
+                    </div>
+
+                )}
+
+            </div>
+
+        );
+
+    })}
+
+</div>
 
 
 

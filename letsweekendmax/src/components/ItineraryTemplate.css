@@ -70,49 +70,65 @@
     margin:10px;
 
 }
-
 /* ================= TRIP PASSPORT NAV ================= */
 
 .trip-nav{
 
     position:fixed;
 
-    left:-185px;
+    left:25px;
 
     top:140px;
 
-    width:185px;
+    width:230px;
 
     background:#fffaf0;
 
-    padding:18px 16px;
+    padding:25px 22px;
 
     border:1px solid #e6d8c5;
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
+    0 15px 35px rgba(0,0,0,.12);
 
     z-index:100;
 
-    border-radius:0 10px 10px 0;
+    border-radius:12px;
 
     transition:.35s ease;
 
 }
 
 
-/* pull tab */
+/* CLOSED STATE */
+
+.trip-nav:not(.open){
+
+    left:-230px;
+
+}
+
+
+
+/* TOGGLE */
+
 .nav-toggle{
+
+    display:flex;
 
     position:absolute;
 
-    right:-35px;
+    right:-38px;
 
     top:18px;
 
-    width:35px;
+    width:38px;
 
-    height:38px;
+    height:42px;
+
+    align-items:center;
+
+    justify-content:center;
 
     border:1px solid #e6d8c5;
 
@@ -122,25 +138,11 @@
 
     color:#d58b5b;
 
-    border-radius:0 8px 8px 0;
+    border-radius:0 10px 10px 0;
 
     cursor:pointer;
 
-    font-size:.8rem;
-
-}
-
-
-.trip-nav:hover{
-
-    left:-185px;
-
-}
-
-
-.trip-nav.open{
-
-    left:15px;
+    font-size:1rem;
 
 }
 
@@ -148,15 +150,15 @@
 
 .trip-nav h3{
 
-    margin:0 0 14px;
+    margin:0 0 18px;
 
     color:#23415d;
 
-    font-size:1rem;
+    font-size:1.15rem;
 
     border-bottom:1px dashed #d8c7ad;
 
-    padding-bottom:10px;
+    padding-bottom:12px;
 
 }
 
@@ -170,31 +172,31 @@
 
     color:#536273;
 
-    font-size:.75rem;
+    font-size:.85rem;
 
-    line-height:1.35;
+    line-height:1.5;
 
-    margin:9px 0;
+    margin:12px 0;
+
+    transition:.2s ease;
 
 }
-
 
 
 .trip-nav a:hover{
 
     color:#d58b5b;
 
-    transform:translateX(4px);
+    transform:translateX(5px);
 
 }
 
 
-
 .trip-nav .day-link{
 
-    padding-left:10px;
+    padding-left:12px;
 
-    font-size:.7rem;
+    font-size:.78rem;
 
 }
 
@@ -227,26 +229,72 @@ html{
 
 
 
-
 /* ================= TABLET + MOBILE ================= */
 
-
-@media(max-width:1200px){
+@media(max-width:1600px){
 
     .trip-nav{
 
-        left:-145px;
-        width:145px;
-        padding:14px 12px;
+        width:185px;
+
+        padding:18px 16px;
 
     }
 
 
-.trip-nav.open{
+    .trip-nav:not(.open){
 
-    left:5px;
+        left:-185px;
+
+    }
+
+
+    .trip-nav a{
+
+        font-size:.75rem;
+
+    }
+
 
 }
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .trip-nav{
+
+        width:150px;
+
+        padding:14px 12px;
+
+        top:120px;
+
+    }
+
+
+    .trip-nav:not(.open){
+
+        left:-150px;
+
+    }
+
+
+    .trip-nav h3{
+
+        font-size:.85rem;
+
+    }
+
+
+    .trip-nav a{
+
+        font-size:.65rem;
+
+        margin:7px 0;
+
+    }
 
 }
 
@@ -533,8 +581,6 @@ html{
 
 
 /* ================= DAY PHOTOS ================= */
-/* ================= DAY PHOTOS MASONRY ================= */
-
 .day-photo-grid{
 
     width:100%;
@@ -544,7 +590,6 @@ html{
     column-gap:20px;
 
 }
-
 
 
 .day-photo-grid img{
@@ -568,16 +613,95 @@ html{
 }
 
 
-
 .day-photo-grid img:hover{
 
     transform:scale(1.03);
 
 }
 
+/* ================= PHOTO HOVER OVERLAY ================= */
+
+.photo-wrapper{
+
+    position:relative;
+
+    break-inside:avoid;
+
+    margin-bottom:20px;
+
+    overflow:hidden;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
 
 
+.photo-wrapper img{
 
+    margin-bottom:0;
+
+    transition:.3s ease;
+
+}
+
+
+.photo-hover-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.75)
+    );
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:flex-start;
+
+    text-align:left;
+
+    padding:25px;
+
+    opacity:0;
+
+    transition:.3s ease;
+
+}
+
+
+.photo-hover-overlay p{
+
+    color:white;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+    margin:0;
+
+}
+
+
+.photo-wrapper:hover .photo-hover-overlay{
+
+    opacity:1;
+
+}
+
+
+.photo-wrapper:hover img{
+
+    transform:scale(1.03);
+
+}
 
 /* ================= TABLET ================= */
 

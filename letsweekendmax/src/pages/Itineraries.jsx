@@ -163,14 +163,15 @@ export default function Destinations() {
         </div>
 
 
-        <button
-            onClick={(e)=>{
-                e.stopPropagation();
-                navigate(trip.link);
-            }}
-        >
-            View Itinerary →
-        </button>
+<button
+    className="trip-button"
+    onClick={(e)=>{
+        e.stopPropagation();
+        navigate(trip.link);
+    }}
+>
+    View Itinerary →
+</button>
 
 
     </div>

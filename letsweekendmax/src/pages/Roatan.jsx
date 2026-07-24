@@ -153,14 +153,30 @@ days: [
         </>
     ],
 
-    photos:[
-        "/roatan/1.jpg",
-        "/roatan/18.jpg",
-        "/roatan/2.jpg",
-        "/roatan/3.jpg",
-        "/roatan/6.jpg",
-        "/roatan/5.5.jpg",
-    ]
+photos:[
+    {
+        src:"/roatan/1.jpg",
+        overlayText:"Arriving in paradise "
+    },
+    
+    "/roatan/18.jpg",
+            {
+        src:"/roatan/6.png",
+        overlayText:"Ricas Pupusas al Paso Roatán for lunch"
+    },
+    {
+        src:"/roatan/2.jpg",
+        overlayText:"West Bay Beach sunset"
+    },
+    "/roatan/3.jpg",
+
+
+    
+    {
+        src:"/roatan/5.5.jpg",
+        overlayText:"Frank's Hideaway Bar"
+    }
+]
 },
 
     {
@@ -188,15 +204,23 @@ days: [
             "/roatan/4.jpg",
             "/roatan/6.9.jpg",
             "/roatan/6.8.jpg",
-            "/roatan/6.7.jpg",
+                        {
+    src:"/roatan/6.7.jpg",
+    overlayText:"Hotel Arca"
+},
             "/roatan/7.8.jpg",
-            "/roatan/7.7.png",
+{
+    src:"/roatan/7.7.png",
+    overlayText:"$5 banana boat"
+},
             "/roatan/7.jpg",
-            "/roatan/6.jpg",
+            {
+    src:"/roatan/6.jpg",
+    overlayText:"Gypsy Restaurant & Cocktails"
+},
             "/roatan/8.jpg",
-        ]
-    },
-
+]
+},
 
 {
     title:"Snorkeling on a Private Boat",
