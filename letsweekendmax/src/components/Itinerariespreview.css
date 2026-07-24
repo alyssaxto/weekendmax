@@ -8,7 +8,94 @@
 
 }
 
+/* ================= CLICK SUMMARY ================= */
 
+
+.itinerary-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    opacity:0;
+
+    transition:.35s ease;
+
+    pointer-events:none;
+
+}
+
+
+
+.itinerary-card.summary-open::after{
+
+    opacity:1;
+
+}
+
+
+
+.itinerary-summary{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    color:white;
+
+    background:rgba(0,0,0,.75);
+
+    z-index:5;
+
+}
+
+
+
+.itinerary-summary h3{
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.itinerary-summary p{
+
+    line-height:1.7;
+
+    max-width:260px;
+
+}
+
+
+
+.itinerary-summary span{
+
+    color:#F2B880;
+
+    margin-top:15px;
+
+    font-weight:700;
+
+}
 
 /* HEADER */
 

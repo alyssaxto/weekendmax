@@ -5,7 +5,11 @@ import { useRef, useState } from "react";
 
 export default function Itinerary(){
 
+
     const sliderRef = useRef(null);
+
+
+    const [activeCard, setActiveCard] = useState(null);
 
     const [isDown, setIsDown] = useState(false);
     const [startX, setStartX] = useState(0);
@@ -73,16 +77,15 @@ export default function Itinerary(){
             points:"30,000 points",
             image:"./roatan/11.jpg",
             description:"A weekend escape for beaches, snorkeling, and relaxation.",
-              link:"/roatan"
-            
+            link:"/roatan"
         },
+
         {
             location:"Iceland",
             points:"45,000 points",
             image:"/iceland.jpg",
             description:"Chasing waterfalls, glaciers, and the northern lights.",
             link:"/iceland"
-
         },
 
 
@@ -91,31 +94,34 @@ export default function Itinerary(){
             points:"12,000 points",
             image:"/seattle.jpg",
             description:"Coffee shops, mountain views, and city adventures.",
-              link:"/filler"
+            link:"/filler"
         },
+
 
         {
             location:"El Salvador",
             points:"10,000 points",
             image:"/elsalvador.jpg",
             description:"A quick weekend getaway using credit card points.",
-              link:"/filler"
+            link:"/filler"
         },
+
 
         {
             location:"Puerto Rico",
             points:"10,000 points",
             image:"/puertorico.jpg",
             description:"Exploring beaches, food, and tropical adventures.",
-              link:"/filler"
+            link:"/filler"
         },
+
 
         {
             location:"Michigan",
             points:"10,000 points",
             image:"/michigan.jpg",
             description:"A scenic weekend escape filled with nature and views.",
-              link:"/filler"
+            link:"/filler"
         }
 
     ];
@@ -166,6 +172,7 @@ export default function Itinerary(){
 
 
             <div
+
                 className="itinerary-scroll"
 
                 ref={sliderRef}
@@ -177,77 +184,125 @@ export default function Itinerary(){
                 onMouseUp={handleMouseUp}
 
                 onMouseMove={handleMouseMove}
+
             >
 
 
 
-                {trips.map((trip,index)=>(
+            {trips.map((trip,index)=>(
 
 
-<Link
+                <div
 
-    to={trip.link}
+                    className="itinerary-card"
 
-    className="itinerary-card"
+                    key={index}
 
-    key={index}
-
-    style={{
-        backgroundImage:`url(${trip.image})`
-    }}
-
->
+                    style={{
+                        backgroundImage:`url(${trip.image})`
+                    }}
 
 
-                        <div className="itinerary-overlay">
+                    onClick={() => 
+                        setActiveCard(
+                            activeCard === index ? null : index
+                        )
+                    }
 
-
-                            <div className="itinerary-info">
-
-
-                                <div className="itinerary-title">
-
-
-                                    <h3>
-                                        {trip.location}
-                                    </h3>
-
-
-                                    <span>
-                                        {trip.points}
-                                    </span>
-
-
-                                </div>
+                >
 
 
 
-                                <p>
-                                    {trip.description}
-                                </p>
+                    <div className="itinerary-overlay">
 
 
+                        <div className="itinerary-info">
 
-                                <button>
-                                    Read More
-                                </button>
 
+                            <div className="itinerary-title">
+
+
+                                <h3>
+                                    {trip.location}
+                                </h3>
+
+
+                                <span>
+                                    {trip.points}
+                                </span>
 
 
                             </div>
 
 
+
+                            <p>
+                                {trip.description}
+                            </p>
+
+
+
+
+                            <Link
+
+                                to={trip.link}
+
+                                onClick={(e)=>e.stopPropagation()}
+
+                            >
+
+                                <button>
+                                    Read More →
+                                </button>
+
+
+                            </Link>
+
+
+
                         </div>
 
-</Link>
+
+                    </div>
 
 
-                ))}
+
+
+
+                    {activeCard === index && (
+
+                        <div className="itinerary-summary">
+
+
+                            <h3>
+                                {trip.location}
+                            </h3>
+
+
+                            <p>
+                                {trip.description}
+                            </p>
+
+
+                            <span>
+                                ✈ {trip.points}
+                            </span>
+
+
+                        </div>
+
+                    )}
+
+
+
+                </div>
+
+
+            ))}
 
 
 
             </div>
-
 
 
         </section>

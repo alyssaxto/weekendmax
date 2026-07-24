@@ -1,8 +1,12 @@
 import "./Itineraries.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function Destinations() {
 
+    const navigate = useNavigate();
+
+    const [activeCard, setActiveCard] = useState(null);
     const trips = [
         {
             image:"/roatan/11.jpg",
@@ -123,40 +127,94 @@ export default function Destinations() {
 
             <div className="destination-grid">
 
-                {trips.map((trip,index)=>(
+{trips.map((trip,index)=>(
 
-                    <div className="trip-card" key={index}>
+<div
+    className={`trip-card ${activeCard === index ? "active" : ""}`}
+    key={index}
+    onClick={() =>
+        setActiveCard(
+            activeCard === index ? null : index
+        )
+    }
+>
 
-                        <img
-                            src={trip.image}
-                            alt={trip.location}
-                        />
 
-                        <div className="trip-overlay">
+    <img
+        src={trip.image}
+        alt={trip.location}
+    />
 
-                            <h2>{trip.location}</h2>
 
-                            <div className="trip-details">
+    <div className="trip-overlay">
 
-                                <span>{trip.points}</span>
 
-                                <span>{trip.duration}</span>
+        <h2>
+            {trip.location}
+        </h2>
 
-                                <span>{trip.season}</span>
 
-                            </div>
+        <div className="trip-details">
 
-                      <Link to={trip.link}>
-    <button>
-        View Itinerary →
-    </button>
-</Link>
+            <span>{trip.points}</span>
+            <span>{trip.duration}</span>
+            <span>{trip.season}</span>
 
-                        </div>
+        </div>
 
-                    </div>
 
-                ))}
+        <button
+            onClick={(e)=>{
+                e.stopPropagation();
+                navigate(trip.link);
+            }}
+        >
+            View Itinerary →
+        </button>
+
+
+    </div>
+
+
+
+    {/* SUMMARY */}
+
+    <div className="trip-summary-overlay">
+
+        <h2>
+            {trip.location}
+        </h2>
+
+
+        <p>
+            A {trip.duration.toLowerCase()} escape in {trip.region}.
+        </p>
+
+
+        <div>
+
+            <span>
+                ✈ {trip.points}
+            </span>
+
+            <span>
+                🌎 {trip.season} travel
+            </span>
+
+        </div>
+
+
+        <small>
+            Click again to close
+        </small>
+
+    </div>
+
+
+</div>
+
+))}
+
 
             </div>
 <section className="partner-section">
