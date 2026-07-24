@@ -4,7 +4,7 @@ import "./ItineraryTemplate.css";
 export default function ItineraryTemplate({ trip }) {
 
     const [selectedPhoto, setSelectedPhoto] = useState(null);
-
+const closeNav = () => setNavOpen(false);
 const [navOpen, setNavOpen] = useState(true);
     return (
 
@@ -16,70 +16,74 @@ const [navOpen, setNavOpen] = useState(true);
             {/* ================= TRIP NAV ================= */}
 
 <nav className={`trip-nav ${navOpen ? "open" : ""}`}>
+
     <button
-    className="nav-toggle"
-    onClick={() => setNavOpen(!navOpen)}
->
-    ✈
-</button>
-
-                <h3>
-                    ✈ Trip Passport
-                </h3>
-<a href="#overview" onClick={() => setNavOpen(false)}>
-                    The Trip
-                </a>
+        className="nav-toggle"
+        onClick={() => setNavOpen(!navOpen)}
+    >
+        ✈
+    </button>
 
 
-                <a href="#cost">
-                    Cost Breakdown
-                </a>
+    <h3>
+        ✈ Trip Passport
+    </h3>
 
 
-                {trip.hotel && (
-
-                    <a href="#hotel">
-                        Where We Stayed
-                    </a>
-
-                )}
+    <a href="#overview" onClick={closeNav}>
+        The Trip
+    </a>
 
 
-                <a href="#itinerary">
-                    Itinerary
-                </a>
+    <a href="#cost" onClick={closeNav}>
+        Cost Breakdown
+    </a>
 
 
+    {trip.hotel && (
 
-                {trip.days.map((day,index)=>(
+        <a href="#hotel" onClick={closeNav}>
+            Where We Stayed
+        </a>
 
-                    <a
-                        key={index}
-                        href={`#day-${index+1}`}
-                        className="day-link"
-                    >
+    )}
 
-                        Day {index+1}: {day.title}
 
-                    </a>
-
-                ))}
+    <a href="#itinerary" onClick={closeNav}>
+        Itinerary
+    </a>
 
 
 
-                <a href="#tips">
-                    ✨ Weekendmax Tips
-                </a>
+    {trip.days.map((day,index)=>(
+
+        <a
+            key={index}
+            href={`#day-${index+1}`}
+            className="day-link"
+            onClick={closeNav}
+        >
+
+            Day {index+1}: {day.title}
+
+        </a>
+
+    ))}
 
 
 
-                <a href="#verdict">
-                    📝 Final Thoughts
-                </a>
+    <a href="#tips" onClick={closeNav}>
+        ✨ Weekendmax Tips
+    </a>
 
 
-            </nav>
 
+    <a href="#verdict" onClick={closeNav}>
+        📝 Final Thoughts
+    </a>
+
+
+</nav>
 
 
 
