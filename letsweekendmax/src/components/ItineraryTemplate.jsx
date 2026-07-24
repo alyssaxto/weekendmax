@@ -26,9 +26,7 @@ const [navOpen, setNavOpen] = useState(true);
                 <h3>
                     ✈ Trip Passport
                 </h3>
-
-
-                <a href="#overview">
+<a href="#overview" onClick={() => setNavOpen(false)}>
                     The Trip
                 </a>
 
