@@ -8,6 +8,7 @@ export default function About(){
             image:"/alyssa.jpeg",
 
             instagram:"https://instagram.com/alyssaa.to",
+            tiktok:"https://www.tiktok.com/@alyssaa.to",
             linkedin:"https://www.linkedin.com/in/alyssaxto",
             website:"https://alyssaxto.com",
 
@@ -158,7 +159,22 @@ alt="Instagram"
 Instagram
 </a>
 
+{creator.tiktok && (
 
+<a
+    href={creator.tiktok}
+    target="_blank"
+    rel="noreferrer"
+    className="social-icon-link"
+>
+    <img
+        src="/tiktok.png"
+        alt="TikTok"
+    />
+    TikTok
+</a>
+
+)}
 <a
 href={creator.linkedin}
 target="_blank"

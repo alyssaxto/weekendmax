@@ -128,6 +128,10 @@
 .resource-card button:hover{
 
     background:#D9784A;
+        transition:
+        background-color .35s ease,
+        color .35s ease,
+        box-shadow .35s ease;
 
 }
 
@@ -180,10 +184,9 @@
 
     gap:15px;
 
+    align-items:start;
+
 }
-
-
-
 
 
 /* CARD */
@@ -266,10 +269,13 @@
 
     font-size:1.4rem;
 
-    transition:.3s;
+    transition:
+        background-color .35s ease,
+        color .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
 
 }
-
 
 
 
@@ -279,10 +285,9 @@
 
     color:white;
 
+    transform:rotate(180deg);
+
 }
-
-
-
 
 
 /* ANSWER */
