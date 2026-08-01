@@ -2,30 +2,23 @@ import "./Alyssa.css";
 import { useState, useRef } from "react";
 
 
-function VideoCard({video, title}) {
-
+function VideoCard({ video, poster, title }) {
     const videoRef = useRef(null);
 
     const [playing, setPlaying] = useState(false);
     const [muted, setMuted] = useState(true);
 
-
-    const togglePlay = () => {
-
-        if(videoRef.current.paused){
-
-            videoRef.current.play();
-            setPlaying(true);
-
-        } else {
-
-            videoRef.current.pause();
-            setPlaying(false);
-
-        }
-
-    };
-
+const togglePlay = () => {
+    if (videoRef.current.paused) {
+        videoRef.current.muted = false;
+        videoRef.current.play();
+        setMuted(false);
+        setPlaying(true);
+    } else {
+        videoRef.current.pause();
+        setPlaying(false);
+    }
+};
 
     const toggleSound = () => {
 
@@ -67,12 +60,12 @@ return (
 <video
     ref={videoRef}
     src={video}
-    preload="auto"
-    playsInline
+    poster={poster}
+    preload="metadata"
     muted={muted}
     loop
+    playsInline
 />
-
 
     <div className="video-controls">
 
@@ -158,14 +151,20 @@ const hotels = [
 const tiktoks = [
     {
         video:"/alyssa/1.mp4",
+        poster: "/alyssa/thum1.png",
+
         title:"Travel Experience"
     },
     {
         video:"/alyssa/2.mp4",
+                poster: "/alyssa/thum2.png",
+
         title:"Hotel Experience"
     },
     {
         video:"/alyssa/3.mp4",
+                poster: "/alyssa/thum3.png",
+
         title:"Destination Content"
     }
 ];
@@ -364,6 +363,7 @@ tiktoks.map((video,index)=>(
 <VideoCard
     key={index}
     video={video.video}
+    poster={video.poster}
     title={video.title}
 />
 
