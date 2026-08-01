@@ -10,6 +10,7 @@ import Deals from "./pages/Deals.jsx";
 import Iceland from "./pages/Iceland";
 import Roatan from "./pages/Roatan";
 import Basics from "./pages/Basics";
+import Alyssa from "./pages/Alyssa";
 
 
 function App(){
@@ -40,7 +41,7 @@ return (
 <Route path="/itineraries" element={<Itineraries />} />
 
 <Route path="/flightdeals" element={<Deals />} />
-
+<Route path="/alyssaxto" element={<Alyssa />} />
 </Routes>
 
 
