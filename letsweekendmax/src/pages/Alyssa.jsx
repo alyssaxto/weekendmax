@@ -64,13 +64,14 @@ return (
     </h3>
 
 
-    <video
-        ref={videoRef}
-        src={video}
-        muted={muted}
-        loop
-        playsInline
-    />
+<video
+    ref={videoRef}
+    src={video}
+    preload="auto"
+    playsInline
+    muted={muted}
+    loop
+/>
 
 
     <div className="video-controls">
