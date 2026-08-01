@@ -1,5 +1,5 @@
 import "./us.css";
-
+import { Link } from "react-router-dom";
 export default function About(){
 
     const creators = [
@@ -10,7 +10,7 @@ export default function About(){
             instagram:"https://instagram.com/alyssaa.to",
             tiktok:"https://www.tiktok.com/@alyssaa.to",
             linkedin:"https://www.linkedin.com/in/alyssaxto",
-            website:"https://alyssaxto.com",
+  website:"/alyssaxto",
 
             bio:
             "Hi! I'm Alyssa, a designer, content creator, and travel lover who loves finding creative ways to make adventures more affordable. I created Let's Weekendmax to share my weekend trips, travel guides, and how I use credit card points to maximize every journey.",
