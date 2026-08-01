@@ -13,15 +13,14 @@
 
 }
 
-.ugc-hero {
+.ugc-hero{
 
     height:90vh;
     min-height:650px;
 
-    background-image: url("/alyssa/20.jpg");
-
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
 
     display:flex;
     align-items:center;

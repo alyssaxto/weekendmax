@@ -1,6 +1,6 @@
 import "./Alyssa.css";
 import { useState, useRef } from "react";
-const heroImage = "/alyssa/20.jpg";
+const heroImage = "/lauren.jpg";
 
 function VideoCard({ video, poster, title }) {
     const videoRef = useRef(null);
@@ -231,7 +231,7 @@ const photography = [
                 </p>
 
                 <h1>
-                    Alyssa To
+                    Lauren Hower
                 </h1>
 
                 <p className="hero-description">
@@ -243,7 +243,7 @@ const photography = [
 <div className="contact-links">
 
     <a
-        href="https://instagram.com/alyssaa.to"
+        href="https://instagram.com/laurenhower"
         target="_blank"
         rel="noopener noreferrer"
     >
@@ -251,12 +251,12 @@ const photography = [
             src="/instagram1.png"
             alt="Instagram"
         />
-        <span>@alyssaa.to</span>
+        <span>@laurenhower</span>
     </a>
 
 
     <a
-        href="https://tiktok.com/@alyssaa.to"
+        href="https://tiktok.com/@laurenhowerr"
         target="_blank"
         rel="noopener noreferrer"
     >
@@ -264,18 +264,18 @@ const photography = [
             src="/tiktok1.png"
             alt="TikTok"
         />
-        <span>@alyssaa.to</span>
+        <span>@laurenhowerr</span>
     </a>
 
 
-    <a href="mailto:alyssaxto@gmail.com">
+    <a href="mailto:lauren.hower.lh@gmail.com">
 
         <img
             src="/mail1.png"
             alt="Email"
         />
 
-        <span>alyssaxto@gmail.com</span>
+        <span>lauren.hower.lh@gmail.com</span>
 
     </a>
 

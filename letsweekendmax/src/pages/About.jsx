@@ -26,6 +26,7 @@ export default function About(){
 
             instagram:"https://instagram.com/lauren.hower",
             linkedin:"https://www.linkedin.com/in/laurenhower",
+              website:"/laurenhower",
 
             bio:
             "Hi! I'm Lauren, a travel enthusiast who loves exploring new destinations and finding smart ways to make trips happen. Together, Alyssa and I share our itineraries, points strategies, and experiences to help others travel more often.",
