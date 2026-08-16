@@ -1,136 +1,202 @@
-/* =========================
-   DEFINE
-========================= */
-
 .define {
     background: #FAF4E8;
-
     padding: 90px 8%;
-
     font-family: "Poppins", sans-serif;
 }
 
 
 /* =========================
-   WEEKENDMAX CARD
+   HEADER
+========================= */
+
+.define-header {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-label {
+    color: #D9784A;
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 0 0 15px;
+}
+
+.define-header h2 {
+    color: #2B4C6D;
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin: 0 0 15px;
+}
+
+.define-intro {
+    color: #536273;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+/* =========================
+   CREATOR CARDS
+========================= */
+
+.creator-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.creator-card {
+    position: relative;
+
+    display: block;
+
+    height: 540px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    border-radius: 14px;
+
+    background: #ddd;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .08);
+}
+
+
+.creator-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform .45s ease;
+}
+
+
+.creator-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   CARD OVERLAY
+========================= */
+
+.creator-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 70px 30px 30px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, .72),
+            rgba(0, 0, 0, 0)
+        );
+}
+
+
+.creator-overlay p {
+    margin: 0 0 5px;
+
+    font-size: .65rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.creator-overlay h3 {
+    margin: 0;
+
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+
+.creator-overlay span {
+    flex-shrink: 0;
+
+    font-size: .8rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+/* =========================
+   WEEKENDMAX DESCRIPTION
 ========================= */
 
 .weekendmax-description {
-
-    position: relative;
-
-    max-width: 850px;
-
-    margin: 20px auto;
-
-    padding: 60px 70px;
-
+    max-width: 750px;
+    margin: 80px auto 0;
     text-align: center;
-
-    background: #FFFFFF;
-
-    border: 1px solid #E5D8C6;
-
-    border-radius: 8px;
-
-    box-shadow:
-        8px 8px 0 #E6D6C0,
-        0 15px 35px rgba(0, 0, 0, .06);
-
-    box-sizing: border-box;
 }
-
-
-/* subtle corner detail */
-
-.weekendmax-description::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 18px;
-    left: 18px;
-
-    width: 14px;
-    height: 14px;
-
-    border-top: 2px solid #D9784A;
-    border-left: 2px solid #D9784A;
-}
-
-
-.weekendmax-description::after {
-
-    content: "";
-
-    position: absolute;
-
-    bottom: 18px;
-    right: 18px;
-
-    width: 14px;
-    height: 14px;
-
-    border-bottom: 2px solid #D9784A;
-    border-right: 2px solid #D9784A;
-}
-
-
-/* =========================
-   LABEL
-========================= */
-
-.section-label {
-
-    color: #D9784A;
-
-    font-size: .7rem;
-
-    font-weight: 800;
-
-    letter-spacing: 3px;
-
-    margin: 0 0 14px;
-}
-
-
-/* =========================
-   TITLE
-========================= */
 
 .weekendmax-description h3 {
-
     color: #2B4C6D;
 
-    font-size: 2.4rem;
+    font-size: 2rem;
+    line-height: 1.2;
 
-    line-height: 1.15;
-
-    margin: 0 0 20px;
-
-    font-weight: 700;
+    margin: 0 0 18px;
 }
 
-
-/* =========================
-   DESCRIPTION
-========================= */
-
-.weekendmax-description p:last-child {
-
+.weekendmax-description p {
     color: #536273;
 
     max-width: 680px;
-
-    margin: 0 auto;
+    margin: auto;
 
     font-size: 1rem;
-
     line-height: 1.8;
 }
 
 
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .weekendmax-description {
+        margin-top: 60px;
+    }
+
+    .weekendmax-description h3 {
+        font-size: 1.6rem;
+    }
+
+    .weekendmax-description p {
+        font-size: .9rem;
+        line-height: 1.7;
+    }
+
+}
 /* =========================
    TABLET
 ========================= */
@@ -138,23 +204,27 @@
 @media (max-width: 800px) {
 
     .define {
-
         padding: 75px 5%;
-
     }
 
 
-    .weekendmax-description {
-
-        padding: 50px 45px;
-
+    .creator-card {
+        height: 480px;
     }
 
 
-    .weekendmax-description h3 {
+    .creator-overlay {
+        padding: 60px 25px 25px;
+    }
 
-        font-size: 2.1rem;
 
+    .creator-overlay h3 {
+        font-size: 1.7rem;
+    }
+
+
+    .focus-items {
+        gap: 30px;
     }
 
 }
@@ -167,111 +237,112 @@
 @media (max-width: 700px) {
 
     .define {
-
-        padding: 60px 20px;
-
+        padding: 65px 20px;
+        overflow: hidden;
     }
 
 
-    .weekendmax-description {
+    /* Header */
 
-        margin: 10px auto;
-
-        padding: 45px 25px;
-
-        border-radius: 7px;
-
-        box-shadow:
-            5px 5px 0 #E6D6C0,
-            0 12px 28px rgba(0, 0, 0, .06);
-
-    }
-
-
-    .weekendmax-description::before {
-
-        top: 14px;
-        left: 14px;
-
-        width: 11px;
-        height: 11px;
-
-    }
-
-
-    .weekendmax-description::after {
-
-        bottom: 14px;
-        right: 14px;
-
-        width: 11px;
-        height: 11px;
-
+    .define-header {
+        margin-bottom: 35px;
     }
 
 
     .section-label {
-
-        font-size: .6rem;
-
+        font-size: .65rem;
         letter-spacing: 2px;
-
         margin-bottom: 12px;
-
     }
 
 
-    .weekendmax-description h3 {
-
-        font-size: 1.7rem;
-
-        margin-bottom: 16px;
-
+    .define-header h2 {
+        font-size: 2.4rem;
     }
 
 
-    .weekendmax-description p:last-child {
-
+    .define-intro {
         font-size: .9rem;
-
-        line-height: 1.7;
-
-    }
-
-}
-
-
-/* =========================
-   SMALL PHONES
-========================= */
-
-@media (max-width: 400px) {
-
-    .define {
-
-        padding: 50px 15px;
-
+        line-height: 1.6;
     }
 
 
-    .weekendmax-description {
+    /* Creator cards */
 
-        padding: 40px 20px;
+    .creator-grid {
+        grid-template-columns: 1fr;
 
+        gap: 18px;
     }
 
 
-    .weekendmax-description h3 {
+    .creator-card {
+        height: 430px;
 
-        font-size: 1.5rem;
-
+        border-radius: 12px;
     }
 
 
-    .weekendmax-description p:last-child {
+    .creator-card:hover img {
+        transform: none;
+    }
 
-        font-size: .85rem;
 
+    .creator-overlay {
+        padding: 70px 20px 22px;
+
+        align-items: flex-end;
+    }
+
+
+    .creator-overlay p {
+        font-size: .6rem;
+        letter-spacing: 1.5px;
+    }
+
+
+    .creator-overlay h3 {
+        font-size: 1.6rem;
+    }
+
+
+    .creator-overlay span {
+        font-size: .7rem;
+    }
+
+
+    /* Focus */
+
+    .focus-section {
+        margin-top: 60px;
+    }
+
+
+    .focus-section > h3 {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+
+
+    .focus-items {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .focus-items > div {
+        gap: 15px;
+    }
+
+
+    .focus-items p {
+        font-size: .9rem;
+    }
+
+
+    .focus-items strong {
+        font-size: 1rem;
     }
 
 }
