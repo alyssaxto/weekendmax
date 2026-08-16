@@ -31,7 +31,7 @@
 
     font-size:2.2rem;
 
-    color:#2B4C6D;
+    color:#7399A8;
 
     margin:0 0 15px;
 
@@ -99,7 +99,7 @@
 
     background:#fffdf9;
 
-    color:#2B4C6D;
+    color:#7399A8;
 
     font-size:.75rem;
 
@@ -126,7 +126,7 @@
 
     background:white;
 
-    color:#2B4C6D;
+    color:#7399A8;
 
     padding:0 15px;
 
@@ -145,7 +145,7 @@
 .search-field input:focus,
 .search-field select:focus{
 
-    border-color:#d58b5b;
+    border-color:#AFC8C2;
 
     box-shadow:
 
@@ -211,7 +211,7 @@
 
     border-radius:12px;
 
-    background:#2B4C6D;
+    background:#7399A8;
 
     color:white;
 
@@ -231,7 +231,7 @@
 
 .search-button:hover{
 
-    background:#d58b5b;
+    background:#AFC8C2;
 
     transform:translateY(-3px);
 

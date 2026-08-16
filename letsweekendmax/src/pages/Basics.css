@@ -12,7 +12,7 @@
 
 .learn-header span{
 
-    color:#D9784A;
+    color:#8C8175;
 
     font-size:.85rem;
 
@@ -26,7 +26,7 @@
 
 .learn-header h1{
 
-    color:#23415d;
+    color:#7399A8;
 
     font-size:3.5rem;
 
@@ -87,7 +87,7 @@
 
 .resource-card h2{
 
-    color:#23415d;
+    color:#7399A8;
 
     margin-bottom:15px;
 
@@ -109,7 +109,7 @@
 
     margin-top:25px;
 
-    background:#23415d;
+    background:#7399A8;
 
     color:white;
 
@@ -127,7 +127,7 @@
 
 .resource-card button:hover{
 
-    background:#D9784A;
+    background:#8C8175;
         transition:
         background-color .35s ease,
         color .35s ease,
@@ -153,7 +153,7 @@
 
 .faq-header h2{
 
-    color:#23415d;
+    color:#7399A8;
 
     font-size:2rem;
 
@@ -234,7 +234,7 @@
 
 .faq-question span{
 
-    color:#23415d;
+    color:#7399A8;
 
     font-weight:600;
 
@@ -265,7 +265,7 @@
 
     background:#F7F5FA;
 
-    color:#23415d;
+    color:#7399A8;
 
     font-size:1.4rem;
 
@@ -281,7 +281,7 @@
 
 .faq-item.open .faq-icon{
 
-    background:#D9784A;
+    background:#8C8175;
 
     color:white;
 

@@ -2,7 +2,7 @@ import Hero from "../components/Hero";
 import Itineraries from "../components/Itinerariespreview";
 import FlightDeals from "../components/FlightDeals";
 import AboutPreview from "../components/AboutPreview";
-import Newsletter from "../components/Newsletter";
+import Us from "../components/Us";
 import Define from "../components/Define.jsx";
 import { useEffect } from "react";
 
@@ -16,6 +16,7 @@ return(
 <>
 
 <Hero />
+<Us />
 <Define />
 <Itineraries />
 

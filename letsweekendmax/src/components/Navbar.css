@@ -1,223 +1,420 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 
+/* =========================
+   NAVBAR
+========================= */
 
-/* ---------------- Navbar ---------------- */
 .navbar {
-  background: #ffffff;
-  height: 65px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 40px;
-  border: 1px solid #ccc;
-  padding: 0 40px;
-  width: auto;
-  z-index: 9000; /* always above doodles */
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    top: 15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+
+    border-radius: 40px;
+
+    padding: 0 20px;
+
+    width: auto;
+
+    z-index: 9000;
+
 }
+
+
+/* =========================
+   MENU
+========================= */
 
 .navbar__menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  font-size: 1.2rem;
-  gap: 30px;
-  margin-right: 20px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+
+    font-size: 1rem;
+
+    gap: 30px;
+
+    margin: 0 20px 0 0;
+    padding: 0;
 }
+
+
+/* =========================
+   LINKS
+========================= */
 
 .navbar__links {
+    position: relative;
 
-  font-family:"poppins",sans-serif;
+    display: inline-block;
 
-  font-weight:400;
+    padding: 10px;
 
-  color:#2B4C6D;
+    font-family: "Poppins", sans-serif;
 
-  text-decoration:none;
+    font-size: .9rem;
 
-  padding:10px;
+    font-weight: 500;
 
-  position:relative;
+    letter-spacing: .04em;
 
-  transition:
-  color .3s ease,
-  font-weight .3s ease,
-  transform .3s ease;
+    color: #8C8175;
 
-  display:inline-block;
+    text-decoration: none;
 
-  white-space:nowrap;
+    white-space: nowrap;
 
+    transition:
+        color .25s ease,
+        transform .25s ease;
 }
+
+
+/* =========================
+   UNDERLINE
+========================= */
 
 .navbar__links::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 4px;
-  width: 100%;
-  height: 2px;
-  background-color: #d58b5b;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    bottom: 4px;
+
+    width: calc(100% - 20px);
+
+    height: 1.5px;
+
+    background: #7399A8;
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition:
+        transform .25s ease;
 }
+
+
+/* =========================
+   HOVER
+========================= */
 
 .navbar__links:hover {
+    color: #7399A8;
 
-  color:#d58b5b;
-
-  font-weight:600;
-
-  transform:scale(1.04);
-
+    transform: translateY(-1px);
 }
+
 
 .navbar__links:hover::after {
-  transform: scaleX(1);
+    transform: scaleX(1);
 }
 
-/* Fixing underline hover effect for vertical monitors */
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 1200px) {
 
-  .navbar__links:hover {
-    color: #d58b5b;
-    font-weight: 600;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+    .navbar__links:hover {
+        color: #7399A8;
+
+        transform: none;
+    }
 
 }
 
 
-/* Media query for mobile */
+/* =========================
+   MOBILE NAVBAR
+========================= */
+
 @media (max-width: 1025px) {
 
-  .navbar__menu {
-    display: none; /* Hide the menu by default on mobile */
-    flex-direction: column;
-    gap: 20px;
-    width: 250px;  /* Set width of the menu */
-    position: absolute;
-    top: 20px;  /* Move it lower from the top */
-    right: 20px;  /* Align the menu to the right */
-    align-items: flex-end;  /* Align menu items to the right */
-    padding: 20px;  /* Add some padding inside the menu */
-    border: 1px solid #ccc; /* Grey outline */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Optional shadow */
-    border-radius: 8px;  /* Optional rounded corners */
+    .navbar {
 
-  }
+        left: auto;
+        right: 20px;
 
-  .navbar{
+        transform: none;
 
-    left:auto;
+        width: 65px;
+        height: 65px;
 
-    right:20px;
+        padding: 0;
 
-    transform:none;
+        margin: 0;
 
-    width:65px;
+        justify-content: center;
 
-    height:65px;
+        border-radius: 50%;
+    }
 
-    padding:0;
 
-    margin:0;
+    /* =========================
+       HAMBURGER
+    ========================= */
 
-    justify-content:center;
+    .navbar__hamburger {
 
-    border-radius:50%;
+        display: flex;
 
-  }
-/* Hamburger menu default state */
-.navbar__hamburger{
+        flex-direction: column;
 
-    display:flex;
+        justify-content: space-between;
 
-    flex-direction:column;
+        width: 28px;
+        height: 20px;
 
-    justify-content:space-between;
+        cursor: pointer;
 
-    width:28px;
+        position: relative;
+    }
 
-    height:20px;
 
-    cursor:pointer;
+    .navbar__hamburger div {
 
-    position:relative;
+        width: 100%;
+        height: 2px;
 
-    right:auto;
+        background-color: #8C8175;
 
-    top:auto;
+        border-radius: 50px;
+
+        transition:
+            transform .3s ease,
+            opacity .3s ease;
+    }
+
+
+    /* =========================
+       HAMBURGER X
+    ========================= */
+
+    .navbar__hamburger.active div:nth-child(1) {
+
+        transform:
+            translateY(9px)
+            rotate(45deg);
+    }
+
+
+    .navbar__hamburger.active div:nth-child(2) {
+
+        opacity: 0;
+    }
+
+
+    .navbar__hamburger.active div:nth-child(3) {
+
+        transform:
+            translateY(-9px)
+            rotate(-45deg);
+    }
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    .navbar__menu {
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        width: 180px;
+
+        position: absolute;
+
+        top: 75px;
+        right: 0;
+
+        align-items: stretch;
+
+        padding: 10px;
+
+        background: rgba(253, 251, 247, .94);
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        border: 1px solid rgba(255, 255, 255, .7);
+
+        box-shadow:
+            0 12px 35px rgba(52, 55, 53, .12);
+
+        border-radius: 12px;
+
+        opacity: 0;
+
+        transform: translateY(-10px);
+
+        transition:
+            transform .3s ease,
+            opacity .3s ease;
+    }
+
+
+    /* =========================
+       ACTIVE MENU
+    ========================= */
+
+    .navbar__menu.active {
+
+        display: flex;
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+
+    /* =========================
+       MOBILE ITEMS
+    ========================= */
+
+    .navbar__item {
+
+        width: 100%;
+
+        text-align: left;
+    }
+
+
+    .navbar__links {
+
+        display: block;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 12px 15px;
+
+        font-size: .9rem;
+
+        color: #8C8175;
+    }
+
+
+    .navbar__links::after {
+
+        display: none;
+    }
+
+
+    .navbar__links:hover {
+
+        color: #7399A8;
+
+        transform: none;
+
+        background: rgba(115, 153, 168, .08);
+
+        border-radius: 7px;
+    }
 
 }
-/* Ensure no background appears behind the hamburger menu */
-.navbar__hamburger.active {
-  background-color: white; /* Set background to white */
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        right: 15px;
+
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .navbar__menu {
+
+        top: 70px;
+
+        right: 0;
+
+        width: 180px;
+    }
+
 }
 
-/* Hamburger bars */
-.navbar__hamburger div {
-  width: 100%;
-  height: 4px;
-  background-color: #2B4C6D;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  border-radius: 50px; /* Makes the edges rounded */
 
-  
-}
+/* =========================
+   WHITE TEXT PAGES
+   HOME / LAUREN / ALYSSA
+========================= */
 
-/* Transform bars into an "X" when active */
-.navbar__hamburger.active div:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-  
-}
+.navbar-white {
+    background: transparent;
 
-.navbar__hamburger.active div:nth-child(2) {
-  opacity: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    border-color: transparent;
+
+    box-shadow: none;
 }
 
-.navbar__hamburger.active div:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+
+.navbar-white .navbar__links {
+    color: #FFFFFF;
+
+    text-shadow:
+        0 1px 4px rgba(0, 0, 0, .18);
 }
 
-/* Navbar menu styling */
-.navbar__menu {
-  display: none;
-  flex-direction: column;
-  gap: 20px;
-  width: 180px;
-  position: absolute;
-  top: 60px; /* Moved lower to avoid covering the "X" */
-  right: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  transition: transform 0.3s ease-out, opacity 0.3s ease;
-  opacity: 0;
-  transform: translateY(-10px);
+
+.navbar-white .navbar__links:hover {
+    color: #FFFFFF;
+
+    transform: translateY(-1px);
 }
 
-/* Show menu when active */
-.navbar__menu.active {
-  display: flex;
-  opacity: 1;
-  transform: translateY(0);
-  background-color: white;
-  
-}
-.navbar__item {
-  width: 100%;
-  text-align: center;
-}
+
+.navbar-white .navbar__links::after {
+    background: #FFFFFF;
 }
 
-.navbar__menu {
-  transition: transform 0.3s ease-out;
+
+/* =========================
+   BROWN TEXT PAGES
+   ITINERARIES / BASICS
+========================= */
+
+.navbar-brown .navbar__links {
+    color: #8C8175;
+}
+
+
+.navbar-brown .navbar__links:hover {
+    color: #7399A8;
+}
+
+
+.navbar-brown .navbar__links::after {
+    background: #7399A8;
 }

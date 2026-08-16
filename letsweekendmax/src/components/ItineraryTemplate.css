@@ -136,7 +136,7 @@
 
     background:#fffaf0;
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     border-radius:0 10px 10px 0;
 
@@ -185,7 +185,7 @@
 
 .trip-nav a:hover{
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     transform:translateX(5px);
 
@@ -326,7 +326,7 @@ html{
 
 .trip-summary label{
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     font-size:.8rem;
 
@@ -372,7 +372,7 @@ html{
 
     text-decoration:none;
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     font-size:1rem;
 
@@ -497,7 +497,7 @@ html{
 
 .cost-card strong{
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     font-size:1.3rem;
 
@@ -533,7 +533,7 @@ html{
 
 .day-header span{
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     font-size:.85rem;
 
@@ -885,7 +885,7 @@ html{
 
     right:35px;
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     font-size:.8rem;
 
@@ -1144,7 +1144,7 @@ html{
 
     padding:40px;
 
-    border-left:5px solid #d58b5b;
+    border-left:5px solid #AFC8C2;
 
 }
 
@@ -1176,7 +1176,7 @@ html{
 
 .hotel-card a{
 
-    color:#2B4C6D;
+    color:#7399A8;
 
     font-weight:700;
 
@@ -1274,7 +1274,7 @@ html{
 .day-description a,
 .trip-description a{
 
-    color:#2B4C6D;
+    color:#7399A8;
     font-weight:700;
     text-decoration:underline;
     text-underline-offset:3px;

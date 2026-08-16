@@ -224,7 +224,7 @@ const photography = [
     }}
 >
 
-            <div className="hero-overlay">
+<div className="ugc-hero-content">
 
                 <p className="hero-tag">
                     TRAVEL CONTENT CREATOR

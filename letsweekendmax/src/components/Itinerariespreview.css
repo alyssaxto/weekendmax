@@ -82,7 +82,7 @@
 
 .itinerary-summary span{
 
-    color:#F2B880;
+    color:#8C8175;
 
     margin-top:15px;
 
@@ -122,7 +122,7 @@
 
 .itinerary-summary span{
 
-    color:#F2B880;
+    color:#8C8175;
 
     margin-top:15px;
 
@@ -148,7 +148,7 @@
 
     font-size:3rem;
 
-    color:#2B4C6D;
+    color:#7C8063;
 
     margin-bottom:15px;
 
@@ -160,7 +160,7 @@
 
     font-size:1.1rem;
 
-    color:#2B4C6D;
+    color:#7C8063;
 
     max-width:650px;
 
@@ -182,7 +182,7 @@
 
 .view-all{
 
-    background:#D9784A;
+    background:#8C8175;
 
     color:white;
 
@@ -202,7 +202,7 @@
 
     transform:translateY(-3px);
 
-    background:#2B4C6D;
+    background:#7C8063;
 
 }
 
@@ -373,7 +373,7 @@
 
 .itinerary-title span{
 
-    color:#F2B880;
+    color:#8C8175;
 
     font-size:1.1rem;
 
@@ -436,7 +436,7 @@
 
 .itinerary-info button:hover{
 
-    background:#d58b5b;
+    background:#AFC8C2;
 
 }
 

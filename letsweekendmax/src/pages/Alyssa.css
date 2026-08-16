@@ -1,7 +1,18 @@
 *{
     box-sizing:border-box;
 }
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
 
+* {
+    box-sizing: border-box;
+}
 
 .ugc-page{
 
@@ -12,25 +23,36 @@
     overflow-x:hidden;
 
 }
+.ugc-hero {
+    position: relative;
 
-.ugc-hero{
+    width: 100%;
+    height: 90vh;
+    min-height: 650px;
 
-    height:90vh;
-    min-height:650px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    text-align: center;
 
-    text-align:center;
+    color: white;
 
-    color:white;
+    overflow: hidden;
 
+    margin: 0;
+
+    /* Account for fixed navbar */
+    padding: 80px 30px 40px;
+
+    box-sizing: border-box;
 }
+
+
 .hero-tag{
 
     letter-spacing:4px;
@@ -38,12 +60,19 @@
 
 }
 
+.ugc-hero-content {
+    position: relative;
+    z-index: 2;
 
-.hero-overlay h1{
+    width: 100%;
+    max-width: 1000px;
 
-    font-size:90px;
-    margin:0px 0;
+    padding: 0 20px;
+}
 
+.ugc-hero-content h1 {
+    font-size: 90px;
+    margin: 0;
 }
 
 

@@ -124,7 +124,7 @@
 
     outline:none;
 
-    border-color:#d58b5b;
+    border-color:#AFC8C2;
 
     box-shadow:0 0 0 3px rgba(213,139,91,.15);
 
@@ -296,7 +296,7 @@
 
 .deal-bottom h3{
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     font-size:1.6rem;
 
@@ -327,7 +327,7 @@
 
 .deal-bottom button:hover{
 
-    background:#d58b5b;
+    background:#AFC8C2;
 
 }
 
@@ -371,7 +371,7 @@
 
     letter-spacing:2px;
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     font-weight:700;
 
@@ -391,7 +391,7 @@
 
 .route-plane{
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     font-size:1.3rem;
 

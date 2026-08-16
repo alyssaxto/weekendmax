@@ -77,7 +77,7 @@
 
     letter-spacing:.15rem;
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     font-weight:600;
 
@@ -173,7 +173,7 @@
 
     letter-spacing:.2rem;
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     margin:15px 0 5px;
 
@@ -230,7 +230,7 @@
 
 .meet-button:hover{
 
-    background:#d58b5b;
+    background:#AFC8C2;
 
     transform:translateY(-3px);
 
@@ -252,7 +252,7 @@
 
     margin-top:20px;
 
-    color:#d58b5b;
+    color:#AFC8C2;
 
     text-decoration:none;
 
