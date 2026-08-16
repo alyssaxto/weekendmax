@@ -1,97 +1,76 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Define.css";
 
+export default function Define() {
+    return (
+        <section className="define">
 
-export default function Define(){
+            <div className="define-header">
+                <p className="section-label">INTERESTED?</p>
 
-return (
+                <h2>
+                    See our portfolios
+                </h2>
 
-<section className="define">
-
-
-<div className="define-box">
-
-
-<p className="dictionary-label">
-    TRAVEL DICTIONARY
-</p>
-
-
-
-<div className="dictionary-word">
-
-<h2>
-    weekendmax
-</h2>
-
-<span>
-    /ˈweek·end·mæks/
-</span>
+                <p className="define-intro">
+                    We're travel creators who love turning limited PTO
+                    into unforgettable adventures.
+                </p>
+            </div>
 
 
-</div>
+            <div className="creator-grid">
+
+                <Link to="/alyssaxto" className="creator-card">
+
+                    <img
+                        src="/alyssa.jpeg"
+                        alt="Alyssa To"
+                    />
+
+                    <div className="creator-overlay">
+                        <div>
+                            <p>TRAVEL UGC</p>
+                            <h3>Alyssa To</h3>
+                        </div>
+
+                        <span>View Portfolio →</span>
+                    </div>
+
+                </Link>
 
 
+                <Link to="/laurenhower" className="creator-card">
 
+                    <img
+                        src="/lauren.jpg"
+                        alt="Lauren Hower"
+                    />
 
-<div className="dictionary-definition">
+                    <div className="creator-overlay">
+                        <div>
+                            <p>TRAVEL UGC</p>
+                            <h3>Lauren Hower</h3>
+                        </div>
 
+                        <span>View Portfolio →</span>
+                    </div>
 
-<h3>
-    noun
-</h3>
+                </Link>
 
+            </div>
 
-<p>
-    The art of maximizing your travel experiences
-    within a limited amount of time.
-</p>
+<div className="weekendmax-description">
 
+    <h3>How Do You Weekendmax?</h3>
 
-
-<p>
-    A mindset created by two friends who love cheap
-    flights, exploring new places, and making the most
-    of limited PTO.
-</p>
-
-
-
-</div>
-
-
-
-
-<div className="dictionary-divider"></div>
-
-
-
-
-<div className="dictionary-example">
-
-
-<h4>
-    weekendmaxxing in action:
-</h4>
-
-
-<p>
-    Turning a 3-day weekend into a new city,
-    a quick getaway into a core memory,
-    and limited vacation days into more adventures.
-</p>
-
+    <p>
+  Who says you need two weeks off to go somewhere new? We are all about making the most of limited PTO, finding quick getaways, maximizing long weekends, and squeezing every adventure possible out of your 9 to 5 schedule.
+    </p>
 
 </div>
 
-
-
-</div>
-
-
-
-</section>
-
-)
-
+        </section>
+    );
 }

@@ -19,11 +19,6 @@ return(
 <Define />
 <Itineraries />
 
-<FlightDeals />
-
-<AboutPreview />
-
-<Newsletter />
 
 </>
 

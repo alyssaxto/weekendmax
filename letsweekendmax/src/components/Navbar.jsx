@@ -26,6 +26,18 @@ export default function Navbar() {
           </li>
 
           <li>
+            <Link to="/laurenhower" className="navbar__links">
+              Lauren
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/alyssaxto" className="navbar__links">
+              Alyssa
+            </Link>
+          </li>
+
+                    <li>
             <Link to="/itineraries" className="navbar__links">
               Itineraries
             </Link>
@@ -34,17 +46,6 @@ export default function Navbar() {
           <li>
             <Link to="/Basics" className="navbar__links">
               Basics
-            </Link>
-          </li>
-          <li>
-            <Link to="/flightdeals" className="navbar__links">
-              Flight Deals
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/about" className="navbar__links">
-              About Us
             </Link>
           </li>
         </ul>
