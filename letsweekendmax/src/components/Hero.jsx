@@ -1,23 +1,11 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Hero.css";
 
-export default function Hero(){
-
-    const [flipped,setFlipped] = useState(false);
-
-    return(
+export default function Hero() {
+    return (
         <section className="hero">
 
-            <div className="hero-scene">
-                <img 
-                    src="/herobg.png"
-                    className="hero-background"
-                    alt=""
-                />
-            </div>
-
-
+            {/* Hero Content */}
             <div className="hero__content">
 
                 <p className="hero-small">
@@ -29,46 +17,74 @@ export default function Hero(){
                 </h1>
 
                 <p className="hero-description">
-                    Make every weekend count with award travel, curated itineraries,
-                    and smart points strategies to help you travel farther for less.
+                    Making the most of limited PTO, finding quick getaways,
+                    and squeezing every adventure possible out of your 9 to 5.
                 </p>
 
-                <Link to="/itineraries">
-                    <button className="hero-button">
-                        Explore Itineraries →
-                    </button>
-                </Link>
+                {/* Creator Portfolio Cards */}
+                <div className="hero-creators">
+
+                    <Link
+                        to="/alyssaxto"
+                        className="hero-creator-card"
+                    >
+
+                        <img
+                            src="/alyssa.jpeg"
+                            alt="Alyssa To"
+                        />
+
+                        <div className="hero-creator-overlay">
+
+                            <div>
+                                <p>TRAVEL UGC</p>
+
+                                <h2>
+                                    Alyssa To
+                                </h2>
+                            </div>
+
+                            <span>
+                                View Portfolio →
+                            </span>
+
+                        </div>
+
+                    </Link>
 
 
-<div className="postcard-wrapper">
+                    <Link
+                        to="/laurenhower"
+                        className="hero-creator-card"
+                    >
 
-    <div 
-        className={`postcard ${flipped ? "flipped" : ""}`}
-        onClick={()=>setFlipped(!flipped)}
-    >
+                        <img
+                            src="/lauren.jpg"
+                            alt="Lauren Hower"
+                        />
 
-        <div className="postcard-face postcard-front">
-            <img 
-                src="/front.png" 
-                alt="front postcard"
-            />
-        </div>
+                        <div className="hero-creator-overlay">
 
+                            <div>
+                                <p>TRAVEL UGC</p>
 
-        <div className="postcard-face postcard-back">
-            <img 
-                src="/back.png" 
-                alt="back postcard"
-            />
-        </div>
+                                <h2>
+                                    Lauren Hower
+                                </h2>
+                            </div>
 
-    </div>
+                            <span>
+                                View Portfolio →
+                            </span>
 
-</div>
+                        </div>
 
+                    </Link>
+
+                </div>
 
             </div>
 
         </section>
-    )
+    );
 }

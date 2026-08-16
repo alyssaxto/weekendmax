@@ -1,508 +1,511 @@
-.hero{
+/* =========================
+   HERO
+========================= */
 
-    min-height:80vh;
+.hero {
+    min-height: 80vh;
 
-    display:flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 
-    justify-content:flex-start;
+    text-align: center;
 
-    align-items:center;
+    padding-top: 120px;
 
-    flex-direction:column;
+    position: relative;
 
-    text-align:center;
+    overflow: hidden;
 
-    padding-top:120px;
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-
-.hero-scene{
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    z-index:0;
-
+    font-family: "Poppins", sans-serif;
 }
 
 
-.hero-background{
+/* =========================
+   BACKGROUND
+========================= */
 
-    width:100%;
+.hero-scene {
+    position: absolute;
 
-    height:100%;
+    top: 0;
+    left: 0;
 
-    object-fit:cover;
+    width: 100%;
+    height: 100%;
 
-    transform:scale(1.1);
-
-    display:block;
-
+    z-index: 0;
 }
 
 
-.hero-scene::after{
+.hero-background {
+    width: 100%;
+    height: 100%;
 
-    content:"";
+    object-fit: cover;
 
-    position:absolute;
+    transform: scale(1.1);
 
-    bottom:0;
+    display: block;
+}
 
-    left:0;
 
-    width:100%;
+/* Fade image into cream section */
 
-    height:20%;
+.hero-scene::after {
+    content: "";
 
-    background:linear-gradient(
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 25%;
+
+    background: linear-gradient(
+        to bottom,
         transparent,
         #FAF4E8
     );
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero__content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1100px;
+
+    padding: 0 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.hero-small {
+    color: #d58b5b;
+
+    font-size: 2rem;
+
+    letter-spacing: .45rem;
+
+    margin: 0 0 5px;
+
+    font-weight: 500;
+}
+
+
+.hero-title {
+    color: #2B4C6D;
+
+    font-size: 6rem;
+
+    line-height: .95;
+
+    margin: 0;
+
+    font-weight: 700;
+}
+
+
+.hero-description {
+    color: #2B4C6D;
+
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   HERO BUTTON
+========================= */
+
+.hero-button {
+    display: inline-block;
+
+    background: #d58b5b;
+
+    color: white;
+
+    border: none;
+
+    padding: 18px 42px;
+
+    border-radius: 999px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        transform .3s ease;
+}
+
+
+.hero-button:hover {
+    background: #23415d;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   CREATOR PORTFOLIOS
+========================= */
+
+.hero-creators {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+.hero-creator-card {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 380px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: #ddd;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .15);
+}
+
+
+.hero-creator-card img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .45s ease;
+}
+
+
+.hero-creator-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   CARD OVERLAY
+========================= */
+
+.hero-creator-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 80px 28px 25px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    text-align: left;
+
+    color: white;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, .75),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+
+.hero-creator-overlay p {
+    margin: 0 0 5px;
+
+    color: white;
+
+    font-size: .6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.hero-creator-overlay h2 {
+    color: white;
+
+    margin: 0;
+
+    font-size: 1.8rem;
+
+    line-height: 1.1;
+}
+
+
+.hero-creator-overlay span {
+    flex-shrink: 0;
+
+    color: white;
+
+    font-size: .75rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding-top: 100px;
+
+        min-height: 85vh;
+    }
+
+
+    .hero__content {
+        padding: 0 25px;
+    }
+
+
+    .hero-small {
+        font-size: 1.5rem;
+
+        letter-spacing: .35rem;
+    }
+
+
+    .hero-title {
+        font-size: 4rem;
+
+        line-height: 1;
+    }
+
+
+    .hero-description {
+        font-size: 1rem;
+
+        line-height: 1.7;
+
+        margin: 25px auto;
+
+        max-width: 500px;
+    }
+
+
+    .hero-button {
+        padding: 15px 35px;
+
+        font-size: .95rem;
+    }
+
+
+    .hero-creators {
+        margin-top: 45px;
+    }
+
+
+    .hero-creator-card {
+        height: 350px;
+    }
+
+
+    .hero-creator-overlay {
+        padding: 65px 22px 22px;
+    }
+
+
+    .hero-creator-overlay h2 {
+        font-size: 1.6rem;
+    }
 
 }
 
 
+/* =========================
+   MOBILE
+========================= */
 
-.hero__content{
+@media (max-width: 600px) {
 
-    position:relative;
+    .hero {
+        min-height: auto;
 
-    z-index:2;
+        padding-top: 90px;
 
-    max-width:850px;
-
-}
-
-
-
-.hero-small{
-
-    color:white;
-
-    font-size:2rem;
-
-    letter-spacing:.45rem;
-
-}
-
-
-
-.hero-title{
-
-    color:white;
-
-    font-size:6rem;
-
-    line-height:.95;
-
-}
-
-
-
-.hero-description{
-
-    color:white;
-
-    max-width:700px;
-
-    margin:30px auto;
-
-}
-
-
-/* ---------- POSTCARD ---------- */
-.postcard{
-
-    width:min(650px,85vw);
-
-    position:relative;
-
-    aspect-ratio:3/2;
-
-    perspective:2200px;
-
-    margin:60px auto 0;
-
-
-
-}
-
-/* ---------- FLOATING EFFECT ---------- */
-
-.postcard-wrapper{
-
-    animation:floatCard 4s ease-in-out infinite;
-
-}
-
-
-
-@keyframes floatCard{
-
-    0%,100%{
-
-        transform:translateY(0);
-
+        padding-bottom: 60px;
     }
 
 
-    50%{
-
-        transform:translateY(-12px);
-
-    }
-
-}
-
-
-
-/* CLICK HINT */
-
-.postcard-wrapper::after{
-
-    content:"Click to flip ✦";
-
-    position:absolute;
-
-    left:50%;
-
-    bottom:-35px;
-
-    transform:translateX(-50%);
-
-    color:#23415d;
-
-    font-size:.9rem;
-
-    font-weight:600;
-
-    opacity:.7;
-
-    animation:pulseHint 2s ease-in-out infinite;
-
-}
-
-
-
-@keyframes pulseHint{
-
-    0%,100%{
-
-        opacity:.5;
-
+    .hero__content {
+        padding: 0 20px;
     }
 
 
-    50%{
+    .hero-small {
+        font-size: 1.1rem;
 
-        opacity:1;
+        letter-spacing: .25rem;
 
+        margin-bottom: 5px;
+    }
+
+
+    .hero-title {
+        font-size: 2.8rem;
+
+        line-height: 1.05;
+
+        letter-spacing: .05rem;
+    }
+
+
+    .hero-description {
+        font-size: .95rem;
+
+        line-height: 1.6;
+
+        margin: 20px auto 30px;
+    }
+
+
+    .hero-button {
+        padding: 14px 28px;
+
+        font-size: .9rem;
+    }
+
+
+    /* Portfolio cards */
+
+    .hero-creators {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-top: 40px;
+    }
+
+
+    .hero-creator-card {
+        height: 400px;
+
+        border-radius: 12px;
+    }
+
+
+    .hero-creator-card:hover img {
+        transform: none;
+    }
+
+
+    .hero-creator-overlay {
+        padding: 75px 20px 22px;
+    }
+
+
+    .hero-creator-overlay p {
+        font-size: .58rem;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .hero-creator-overlay h2 {
+        font-size: 1.6rem;
+    }
+
+
+    .hero-creator-overlay span {
+        font-size: .7rem;
     }
 
 }
-.postcard-face{
-
-    position:absolute;
-
-    inset:0;
-
-    overflow:hidden;
-
-    backface-visibility:hidden;
-
-    transition:transform .9s ease;
-
-}
-
-.postcard-face img{
-
-    width:100%;
-
-    height:100%;
-
-    display:block;
-
-    object-fit:contain;
-
-}
 
 
-/* FRONT */
+/* =========================
+   SMALL PHONES
+========================= */
 
-.postcard-front{
+@media (max-width: 400px) {
 
-    transform:rotateY(0deg);
-
-}
-
-
-
-/* BACK */
-
-.postcard-back{
-
-    transform:rotateY(180deg);
-
-}
-
-
-
-/* FLIP */
-
-.postcard.flipped .postcard-front{
-
-    transform:rotateY(180deg);
-
-}
-
-
-
-.postcard.flipped .postcard-back{
-
-    transform:rotateY(360deg);
-
-}
-
-.hero-button{
-
-    background:#d58b5b;
-
-    color:white;
-
-    border:none;
-
-    padding:18px 42px;
-
-    border-radius:999px;
-
-    font-size:1rem;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-
-.hero-button:hover{
-
-    background:#23415d;
-
-    transform:translateY(-4px);
-
-}
-/* ---------- TABLET ---------- */
-
-@media(max-width:900px){
-
-
-    .hero{
-
-        padding-top:100px;
-
-        min-height:85vh;
-
+    .hero {
+        padding-top: 80px;
     }
 
 
-
-    .hero__content{
-
-        width:100%;
-
-        padding:0 25px;
-
-        box-sizing:border-box;
-
+    .hero-small {
+        font-size: 1rem;
     }
 
 
-
-    .hero-small{
-
-        font-size:1.5rem;
-
-        letter-spacing:.35rem;
-
+    .hero-title {
+        font-size: 2.3rem;
     }
 
 
-
-    .hero-title{
-
-        font-size:4rem;
-
-        line-height:1;
-
+    .hero-description {
+        font-size: .85rem;
     }
 
 
-
-    .hero-description{
-
-        font-size:1rem;
-
-        line-height:1.7;
-
-        margin:25px auto;
-
-        max-width:500px;
-
+    .hero-button {
+        padding: 13px 24px;
     }
 
 
-
-    .hero-button{
-
-        padding:15px 35px;
-
-        font-size:.95rem;
-
+    .hero-creator-card {
+        height: 360px;
     }
-
-
-}
-
-
-
-/* ---------- MOBILE ---------- */
-
-@media(max-width:600px){
-
-
-    .hero{
-
-        padding-top:90px;
-
-        min-height:90vh;
-
-    }
-
-
-
-    .hero__content{
-
-        padding:0 20px;
-
-    }
-
-
-
-    .hero-small{
-
-        font-size:1.1rem;
-
-        letter-spacing:.25rem;
-
-        margin-bottom:5px;
-
-    }
-
-
-
-    .hero-title{
-
-        font-size:2.8rem;
-
-        line-height:1.05;
-
-        letter-spacing:.05rem;
-
-    }
-
-
-
-    .hero-description{
-
-        font-size:.95rem;
-
-        line-height:1.6;
-
-        margin:20px auto 30px;
-
-    }
-
-
-
-    .hero-button{
-
-        width:auto;
-
-        padding:14px 28px;
-
-        font-size:.9rem;
-
-    }
-
-
-
-    .postcard{
-
-        width:90vw;
-
-        margin-top:35px;
-
-    }
-
-
-}
-
-
-
-/* ---------- SMALL PHONES ---------- */
-
-@media(max-width:400px){
-
-
-    .hero{
-
-        padding-top:80px;
-
-    }
-
-
-
-    .hero-small{
-
-        font-size:1rem;
-
-    }
-
-
-
-    .hero-title{
-
-        font-size:2.3rem;
-
-    }
-
-
-
-    .hero-description{
-
-        font-size:.85rem;
-
-    }
-
-
-
-    .hero-button{
-
-        padding:13px 24px;
-
-    }
-
 
 }
