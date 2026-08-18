@@ -3,7 +3,8 @@
 ========================= */
 
 .about {
-    width: 100%;
+    width: min(1250px, 92%);
+    margin: 0 auto;
 
     background: #FAF4E8;
 
@@ -11,9 +12,9 @@
 
     display: grid;
 
-    grid-template-columns: 52% 48%;
+    grid-template-columns: 42% 58%;
 
-    align-items: stretch;
+    align-items: center;
 
     overflow: hidden;
 }
@@ -25,6 +26,7 @@
 
 .about-image {
     width: 100%;
+    height: 600px;
 
     overflow: hidden;
 }
@@ -37,7 +39,6 @@
     display: block;
 
     object-fit: cover;
-
     object-position: center;
 }
 
@@ -50,12 +51,10 @@
     width: 100%;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
 
-    padding: 45px 6%;
+    padding: 55px 70px;
 
     box-sizing: border-box;
 }
@@ -66,7 +65,7 @@
 ========================= */
 
 .about-heading {
-    margin-bottom: 22px;
+    margin: 0 0 22px;
 }
 
 
@@ -75,8 +74,7 @@
 
     color: #7399A8;
 
-    font-size: .7rem;
-
+    font-size: 0.7rem;
     font-weight: 600;
 
     letter-spacing: 2.5px;
@@ -90,11 +88,10 @@
 
     color: #8C8175;
 
-    font-size: 3.1rem;
+    font-size: 3rem;
+    font-weight: 600;
 
     line-height: 1.05;
-
-    font-weight: 600;
 }
 
 
@@ -103,13 +100,13 @@
 ========================= */
 
 .about-content > p {
-    max-width: 600px;
+    max-width: 560px;
 
     margin: 0 0 16px;
 
     color: #6F6963;
 
-    font-size: .92rem;
+    font-size: 0.9rem;
 
     line-height: 1.7;
 }
@@ -124,7 +121,7 @@
 
     padding-top: 22px;
 
-    border-top: 1px solid rgba(140, 129, 117, .18);
+    border-top: 1px solid rgba(140, 129, 117, 0.18);
 }
 
 
@@ -133,8 +130,7 @@
 
     color: #7399A8;
 
-    font-size: .65rem;
-
+    font-size: 0.65rem;
     font-weight: 600;
 
     letter-spacing: 2.5px;
@@ -142,6 +138,10 @@
     text-transform: uppercase;
 }
 
+
+/* =========================
+   SOCIAL PERSON
+========================= */
 
 .social-person {
     margin-bottom: 20px;
@@ -158,8 +158,7 @@
 
     color: #8C8175;
 
-    font-size: .95rem;
-
+    font-size: 0.95rem;
     font-weight: 600;
 }
 
@@ -173,9 +172,9 @@
 
     align-items: center;
 
-    gap: 10px 18px;
-
     flex-wrap: wrap;
+
+    gap: 10px 18px;
 }
 
 
@@ -190,13 +189,13 @@
 
     text-decoration: none;
 
-    font-size: .73rem;
+    font-size: 0.73rem;
 
     white-space: nowrap;
 
     transition:
-        color .25s ease,
-        transform .25s ease;
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 
@@ -211,9 +210,9 @@
     width: 16px;
     height: 16px;
 
-    object-fit: contain;
-
     display: block;
+
+    object-fit: contain;
 }
 
 
@@ -224,35 +223,49 @@
 @media (min-width: 1400px) {
 
     .about {
-        grid-template-columns: 54% 46%;
+        width: min(1300px, 90%);
+
+        grid-template-columns: 44% 56%;
+    }
+
+
+    .about-image {
+        height: 620px;
     }
 
 
     .about-content {
-        padding: 50px 7%;
+        padding: 60px 80px;
     }
 
 
     .about-heading h1 {
-        font-size: 3.3rem;
+        font-size: 3.2rem;
     }
 
 }
 
 
 /* =========================
-   TABLET
+   TABLET / SMALL DESKTOP
 ========================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
 
     .about {
-        grid-template-columns: 50% 50%;
+        width: 94%;
+
+        grid-template-columns: 43% 57%;
+    }
+
+
+    .about-image {
+        height: 560px;
     }
 
 
     .about-content {
-        padding: 40px 6%;
+        padding: 45px 45px;
     }
 
 
@@ -262,7 +275,7 @@
 
 
     .about-content > p {
-        font-size: .87rem;
+        font-size: 0.87rem;
 
         line-height: 1.65;
     }
@@ -276,86 +289,181 @@
 
 
 /* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .about {
+        width: 96%;
+
+        grid-template-columns: 40% 60%;
+    }
+
+
+    .about-image {
+        height: 520px;
+    }
+
+
+    .about-content {
+        padding: 40px 32px;
+    }
+
+
+    .about-heading h1 {
+        font-size: 2.3rem;
+    }
+
+
+    .about-content > p {
+        font-size: 0.83rem;
+
+        line-height: 1.65;
+    }
+
+
+    .social-links {
+        gap: 9px 12px;
+    }
+
+
+    .social-links a {
+        font-size: 0.69rem;
+    }
+
+}
+
+
+/* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 700px) {
 
     .about {
-        display: flex;
+        width: 100%;
+        margin: 0;
 
+        display: flex;
         flex-direction: column;
 
-        width: 100%;
+        overflow: hidden;
     }
 
 
-    /* Image is no longer viewport-height */
+    /* =========================
+       MOBILE PHOTO
+    ========================= */
+
     .about-image {
         width: 100%;
-
         height: auto;
 
-        aspect-ratio: 16 / 10;
-
-        flex-shrink: 0;
+        overflow: visible;
     }
 
 
     .about-image img {
         width: 100%;
-        height: 100%;
+        height: auto;
 
-        object-fit: cover;
+        display: block;
 
-        object-position: center;
+        object-fit: contain;
     }
 
+
+    /* =========================
+       MOBILE CONTENT
+    ========================= */
 
     .about-content {
         width: 100%;
 
-        padding: 50px 25px 60px;
+        padding: 42px 25px 55px;
 
-        min-height: auto;
+        box-sizing: border-box;
     }
 
 
     .about-heading {
-        margin-bottom: 22px;
+        margin-bottom: 21px;
     }
 
 
     .about-eyebrow {
-        font-size: .65rem;
+        margin-bottom: 7px;
+
+        font-size: 0.63rem;
 
         letter-spacing: 2px;
     }
 
 
     .about-heading h1 {
-        font-size: 2.4rem;
+        font-size: 2.3rem;
+
+        line-height: 1.08;
     }
 
 
     .about-content > p {
-        font-size: .88rem;
-
-        line-height: 1.7;
+        max-width: none;
 
         margin-bottom: 16px;
+
+        font-size: 0.87rem;
+
+        line-height: 1.7;
     }
 
+
+    /* =========================
+       SOCIALS
+    ========================= */
 
     .about-socials {
         margin-top: 12px;
 
-        padding-top: 22px;
+        padding-top: 21px;
+    }
+
+
+    .social-label {
+        margin-bottom: 17px;
+
+        font-size: 0.62rem;
+
+        letter-spacing: 2px;
+    }
+
+
+    .social-person {
+        margin-bottom: 21px;
+    }
+
+
+    .social-person h3 {
+        margin-bottom: 9px;
+
+        font-size: 0.92rem;
     }
 
 
     .social-links {
-        gap: 10px 16px;
+        gap: 10px 15px;
+    }
+
+
+    .social-links a {
+        font-size: 0.72rem;
+    }
+
+
+    .social-links img {
+        width: 15px;
+        height: 15px;
     }
 
 }
@@ -367,23 +475,47 @@
 
 @media (max-width: 400px) {
 
+    .about {
+        width: 100%;
+    }
+
+
     .about-image {
-        aspect-ratio: 4 / 3;
+        width: 100%;
+        height: auto;
+    }
+
+
+    .about-image img {
+        width: 100%;
+        height: auto;
     }
 
 
     .about-content {
-        padding: 45px 20px 55px;
+        padding: 38px 20px 50px;
     }
 
 
     .about-heading h1 {
-        font-size: 2.15rem;
+        font-size: 2.1rem;
+    }
+
+
+    .about-content > p {
+        font-size: 0.84rem;
+
+        line-height: 1.68;
     }
 
 
     .social-links {
-        gap: 10px 14px;
+        gap: 10px 13px;
+    }
+
+
+    .social-links a {
+        font-size: 0.69rem;
     }
 
 }
