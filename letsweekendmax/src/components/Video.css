@@ -3,7 +3,6 @@
 ========================= */
 
 .video-section {
-
     width: 100%;
 
     padding: 80px 0;
@@ -21,7 +20,6 @@
 ========================= */
 
 .video-header {
-
     text-align: center;
 
     margin-bottom: 40px;
@@ -31,21 +29,21 @@
 
 
 .video-label {
-
     margin: 0 0 10px;
 
     color: #7399A8;
 
-    font-size: .65rem;
+    font-size: 0.65rem;
 
     font-weight: 600;
 
     letter-spacing: 2.5px;
+
+    text-transform: uppercase;
 }
 
 
 .video-header h2 {
-
     margin: 0;
 
     color: #8C8175;
@@ -63,13 +61,11 @@
 ========================= */
 
 .video-row {
-
     width: 100%;
 
     display: grid;
 
-    grid-template-columns:
-        repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(6, 1fr);
 
     gap: 14px;
 
@@ -77,11 +73,14 @@
 
     box-sizing: border-box;
 }
+
+
 /* =========================
    VIDEO CARD
 ========================= */
 
 .video-card {
+    position: relative;
 
     width: 100%;
 
@@ -91,25 +90,117 @@
 
     border-radius: 18px;
 
-    background: #E8E4DE;
+    background: #000;
 
     box-shadow:
-        0 8px 25px rgba(80, 70, 60, .10);
+        0 8px 25px rgba(80, 70, 60, 0.10);
 }
 
 
+/* =========================
+   VIDEO
+========================= */
+
 .video-card video {
-
     width: 100%;
-
     height: 100%;
 
     display: block;
 
+    /*
+     * Fill the entire card.
+     * No bottom gap.
+     */
     object-fit: cover;
 }
 
+/* =========================
+   CONTROLS
+========================= */
 
+.video-controls {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 6px;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0)
+    );
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity 0.2s ease;
+}
+
+
+/* Show when hovering */
+
+.video-card:hover .video-controls,
+
+/* Show briefly after clicking */
+
+.video-card.show-controls .video-controls {
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.video-button {
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.video-button:hover {
+    opacity: 0.7;
+}
 /* =========================
    TABLET
 ========================= */
@@ -117,20 +208,45 @@
 @media (max-width: 1100px) {
 
     .video-row {
-
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, 1fr);
 
         gap: 16px;
+
+        padding: 0 5%;
+    }
+
+
+    .video-header h2 {
+        font-size: 2.3rem;
     }
 
 }
 
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 700px) {
 
-    .video-row {
+    .video-section {
+        padding: 60px 0;
+    }
 
+
+    .video-header {
+        margin-bottom: 30px;
+
+        padding: 0 25px;
+    }
+
+
+    .video-header h2 {
+        font-size: 2rem;
+    }
+
+
+    .video-row {
         display: flex;
 
         overflow-x: auto;
@@ -146,18 +262,53 @@
 
 
     .video-row::-webkit-scrollbar {
-
         display: none;
     }
 
 
     .video-card {
+        flex: 0 0 180px;
 
-        flex: 0 0 170px;
+        width: 180px;
 
-        scroll-snap-align: start;
+        aspect-ratio: 9 / 16;
 
         border-radius: 15px;
+
+        scroll-snap-align: start;
+    }
+
+
+    .video-controls {
+        padding: 10px 12px;
+
+        gap: 4px;
+    }
+
+
+    .video-button {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+    .video-card {
+        flex: 0 0 165px;
+
+        width: 165px;
+    }
+
+
+    .video-header h2 {
+        font-size: 1.8rem;
     }
 
 }

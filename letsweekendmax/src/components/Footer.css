@@ -1,479 +1,393 @@
-.footer{
+/* =========================
+   FOOTER
+========================= */
 
-    background:#FAF4E8;
+.footer {
+    width: 100%;
 
-    padding:80px 7vw 40px;
+    background: #FAF4E8;
 
-    font-family:"Poppins",sans-serif;
+    padding: 65px 7vw 30px;
 
-    position:relative;
+    box-sizing: border-box;
 
-    border-top:1px solid rgba(35,65,93,.2);
+    font-family: "Poppins", sans-serif;
 
+    border-top: 1px solid rgba(35, 65, 93, 0.15);
 }
 
 
+/* =========================
+   MAIN
+========================= */
 
-.footer-stamp{
+.footer-main {
+    width: min(1200px, 100%);
 
-    position:absolute;
+    margin: 0 auto;
 
-    width:100px;
+    display: flex;
 
-    right:8%;
+    justify-content: space-between;
 
-    top:45px;
+    align-items: flex-start;
 
-    transform:rotate(8deg);
-
+    gap: 80px;
 }
 
 
+/* =========================
+   LEFT — BRAND
+========================= */
 
+.footer-brand {
+    flex: 1;
 
-.footer-main{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    max-width:1400px;
-
-    margin:auto;
-
-    gap:80px;
-
+    text-align: left;
 }
 
 
-.footer-brand{
+.footer-brand h2 {
+    margin: 0 0 10px;
 
-    text-align:left;
+    color: #7399A8;
 
-    align-items:flex-start;
-        color:#7399A8;
+    font-size: 1.9rem;
 
+    font-weight: 600;
+
+    line-height: 1.2;
 }
 
 
-.footer-brand h2{
+.footer-brand p {
+    max-width: 390px;
 
-    text-align:left;
-    color:#7399A8;
-    margin:0 0 12px;
+    margin: 0;
 
-    line-height:1.2;
+    color: #6F6963;
+
+    font-size: 0.83rem;
+
+    line-height: 1.65;
 }
 
 
-.footer-brand p{
+/* =========================
+   MAIN INSTAGRAM
+========================= */
 
-    text-align:left;
-    color:#7399A8;
-        margin:0;
+.footer-instagram {
+    display: inline-flex;
 
-    max-width:420px;
+    align-items: center;
 
-    line-height:1.6;
+    gap: 8px;
 
+    margin-top: 22px;
+
+    color: #7399A8;
+
+    text-decoration: none;
+
+    font-size: 0.78rem;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 
+.footer-instagram:hover {
+    color: #AFC8C2;
 
-/* NEWSLETTER */
-
-.newsletter{
-
-    text-align:left;
-    color:#7399A8;
-        margin-top:35px;
-
-
+    transform: translateY(-2px);
 }
 
 
-.newsletter h3{
+.footer-instagram img {
+    width: 17px;
+    height: 17px;
 
-    text-align:left;
-    color:#7399A8;
-        margin:0 0 8px;
+    display: block;
 
-    line-height:1.3;
-
+    object-fit: contain;
 }
 
 
-.newsletter p{
+/* =========================
+   RIGHT — SOCIALS
+========================= */
 
-    text-align:left;
-       margin:0 0 20px;
+.footer-socials {
+    flex: 1;
 
-    line-height:1.6;
-
-
+    text-align: left;
 }
 
 
-.newsletter-input{
+.footer-social-label {
+    margin: 0 0 20px;
 
-    display:flex;
+    color: #7399A8;
 
-    max-width:420px;
+    font-size: 0.65rem;
 
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
 }
 
 
+/* =========================
+   PERSON
+========================= */
 
-.newsletter-input input{
-
-    flex:1;
-
-    padding:15px 20px;
-
-    border:1px solid rgba(35,65,93,.3);
-
-    border-radius:30px 0 0 30px;
-
-    background:white;
-
-    font-size:1rem;
-
+.footer-person {
+    margin-bottom: 22px;
 }
 
 
-
-.newsletter-input button{
-
-    border:none;
-
-    padding:15px 25px;
-
-    border-radius:0 30px 30px 0;
-
-    background:#7399A8;
-
-    color:white;
-
-    cursor:pointer;
-
-    transition:.3s;
-
+.footer-person:last-child {
+    margin-bottom: 0;
 }
 
 
+.footer-person h3 {
+    margin: 0 0 9px;
 
-.newsletter-input button:hover{
+    color: #8C8175;
 
-    background:#AFC8C2;
+    font-size: 0.9rem;
 
+    font-weight: 600;
 }
 
 
+/* =========================
+   SOCIAL LINKS
+========================= */
 
+.footer-social-links {
+    display: flex;
 
+    flex-wrap: wrap;
 
-.footer-divider{
+    align-items: center;
 
-    width:1px;
-
-    background:rgba(35,65,93,.25);
-
+    gap: 8px 18px;
 }
 
 
+.footer-social-links a {
+    display: inline-flex;
 
+    align-items: center;
 
+    gap: 6px;
 
-.footer-message{
+    color: #6F6963;
 
-    padding-top:20px;
-        text-align:left;
-    align-items:flex-start;
-    color:#7399A8;
+    text-decoration: none;
 
+    font-size: 0.73rem;
 
+    white-space: nowrap;
 
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 
+.footer-social-links a:hover {
+    color: #7399A8;
 
-.footer-message p{
-
-   text-align:left;
-    color:#7399A8;
-
-    margin:0 0 8px;
-
-    line-height:1.3;
-
-    font-size:1.4rem;
-
-    font-weight:600;
+    transform: translateY(-2px);
 }
 
 
+.footer-social-links img {
+    width: 16px;
+    height: 16px;
 
-.footer-nav{
+    display: block;
 
-    display:flex;
-
-    gap:25px;
-
-    flex-wrap:wrap;
-        justify-content:flex-start;
-
-    align-items:flex-start;
-
+    object-fit: contain;
 }
 
 
+/* =========================
+   BOTTOM
+========================= */
 
-.footer-nav a{
+.footer-bottom {
+    width: min(1200px, 100%);
 
-    color:#7399A8;
+    margin: 45px auto 0;
 
-    text-decoration:none;
+    padding-top: 20px;
 
+    border-top: 1px dashed rgba(35, 65, 93, 0.25);
+
+    color: #536273;
+
+    font-size: 0.7rem;
+
+    text-align: left;
 }
 
 
+/* =========================
+   TABLET
+========================= */
 
-.footer-nav a:hover{
+@media (max-width: 850px) {
 
-    color:#AFC8C2;
-
-}
-
-
-
-.instagram{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    margin-top:35px;
-
-    color:#23415d;
-
-    text-decoration:none;
-
-}
-
-
-
-.instagram img{
-
-    width:24px;
-
-}
-
-
-
-.footer-bottom{
-
-    max-width:1400px;
-
-    margin:50px auto 0;
-
-    padding-top:25px;
-
-    border-top:1px dashed rgba(35,65,93,.3);
-
-    color:#536273;
-
-}
-
-
-
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-
-    .footer{
-
-        padding:60px 25px 35px;
-
+    .footer {
+        padding: 55px 40px 28px;
     }
 
 
-
-    .footer-main{
-
-        flex-direction:column;
-
-        gap:35px;
-
-        align-items:flex-start;
-
+    .footer-main {
+        gap: 50px;
     }
 
 
-
-    .footer-brand{
-
-        width:100%;
-
-        text-align:left;
-
+    .footer-brand h2 {
+        font-size: 1.7rem;
     }
 
 
+    .footer-social-links {
+        gap: 8px 13px;
+    }
 
-    .footer-brand h2{
+}
 
-        font-size:2.2rem;
 
-        line-height:1.2;
+/* =========================
+   MOBILE
+========================= */
 
+@media (max-width: 700px) {
+
+    .footer {
+        padding: 50px 25px 25px;
     }
 
 
+    .footer-main {
+        width: 100%;
 
-    .footer-brand p{
+        flex-direction: column;
 
-        font-size:.95rem;
+        gap: 40px;
 
-        max-width:320px;
-
+        align-items: flex-start;
     }
 
 
+    /* LEFT */
 
-    .newsletter{
-
-        margin-top:35px;
-
-        width:100%;
-
+    .footer-brand {
+        width: 100%;
     }
 
 
-
-    .newsletter h3{
-
-        font-size:1.2rem;
-
+    .footer-brand h2 {
+        font-size: 1.75rem;
     }
 
 
+    .footer-brand p {
+        max-width: 330px;
 
-    .newsletter p{
-
-        font-size:.95rem;
-
-        max-width:320px;
-
+        font-size: 0.8rem;
     }
 
 
+    .footer-instagram {
+        margin-top: 20px;
 
-    .newsletter-input{
-
-        width:100%;
-
-        max-width:100%;
-
+        font-size: 0.75rem;
     }
 
 
+    /* RIGHT */
 
-    .newsletter-input input{
-
-        min-width:0;
-
-        padding:14px 16px;
-
-        font-size:.9rem;
-
+    .footer-socials {
+        width: 100%;
     }
 
 
+    .footer-social-label {
+        margin-bottom: 18px;
 
-    .newsletter-input button{
-
-        padding:14px 18px;
-
-        font-size:.9rem;
-
+        font-size: 0.62rem;
     }
 
 
-
-    .footer-divider{
-
-        width:100%;
-
-        height:1px;
-
-        margin:10px 0;
-
+    .footer-person {
+        margin-bottom: 22px;
     }
 
 
-
-    .footer-message{
-
-        width:100%;
-
-        padding-top:0;
-
-        text-align:left;
-
+    .footer-person h3 {
+        font-size: 0.88rem;
     }
 
 
-
-    .footer-nav{
-
-        display:flex;
-
-        flex-direction:column;
-
-        gap:15px;
-
+    .footer-social-links {
+        gap: 10px 15px;
     }
 
 
-
-    .footer-nav a{
-
-        font-size:1rem;
-
+    .footer-social-links a {
+        font-size: 0.7rem;
     }
 
 
+    /* BOTTOM */
 
-    .instagram{
+    .footer-bottom {
+        width: 100%;
 
-        margin-top:25px;
+        margin-top: 35px;
 
+        padding-top: 18px;
+
+        font-size: 0.68rem;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+    .footer {
+        padding: 45px 20px 25px;
     }
 
 
-
-    .footer-bottom{
-
-        margin-top:35px;
-
-        font-size:.85rem;
-
+    .footer-brand h2 {
+        font-size: 1.6rem;
     }
 
 
+    .footer-brand p {
+        font-size: 0.77rem;
+    }
 
-    .footer-stamp{
 
-        width:65px;
-
-        right:20px;
-
-        top:20px;
-
+    .footer-social-links {
+        gap: 9px 13px;
     }
 
 }

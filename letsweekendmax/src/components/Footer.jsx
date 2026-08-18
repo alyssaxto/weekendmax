@@ -6,12 +6,8 @@ export default function Footer() {
 
             <div className="footer-main">
 
+                {/* LEFT */}
                 <div className="footer-brand">
-                    <img
-                        src="/stamp.png"
-                        className="footer-stamp"
-                        alt="stamp"
-                    />
 
                     <h2>Let's Weekendmax</h2>
 
@@ -19,22 +15,9 @@ export default function Footer() {
                         Turning credit card points into
                         unforgettable weekend adventures.
                     </p>
-                </div>
-
-
-                <div className="footer-message">
-
-                    <h3>Explore</h3>
-
-                    <div className="footer-nav">
-                        <a href="/">Home</a>
-                        <a href="/itineraries">Itineraries</a>
-                        <a href="/flightdeals">Flight Deals</a>
-                        <a href="/about">About Us</a>
-                    </div>
 
                     <a
-                        className="instagram"
+                        className="footer-instagram"
                         href="https://instagram.com/letsweekendmax"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -43,8 +26,121 @@ export default function Footer() {
                             src="/instagram.png"
                             alt="Instagram"
                         />
+
                         @letsweekendmax
                     </a>
+
+                </div>
+
+
+                {/* RIGHT */}
+                <div className="footer-socials">
+
+                    <p className="footer-social-label">
+                        FIND US ONLINE
+                    </p>
+
+
+                    {/* ALYSSA */}
+
+                    <div className="footer-person">
+
+                        <h3>Alyssa</h3>
+
+                        <div className="footer-social-links">
+
+                            <a
+                                href="https://instagram.com/alyssaa.to"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    src="/instagram.png"
+                                    alt=""
+                                />
+                                Instagram
+                            </a>
+
+                            <a
+                                href="https://www.tiktok.com/@alyssaa.to"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    src="/tiktok.png"
+                                    alt=""
+                                />
+                                TikTok
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/in/alyssaxto"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    src="/linkedin.png"
+                                    alt=""
+                                />
+                                LinkedIn
+                            </a>
+
+                            <a href="/alyssaxto">
+                                <img
+                                    src="/website.png"
+                                    alt=""
+                                />
+                                Portfolio
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    {/* LAUREN */}
+
+                    <div className="footer-person">
+
+                        <h3>Lauren</h3>
+
+                        <div className="footer-social-links">
+
+                            <a
+                                href="https://instagram.com/lauren.hower"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    src="/instagram.png"
+                                    alt=""
+                                />
+                                Instagram
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/in/laurenhower"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    src="/linkedin.png"
+                                    alt=""
+                                />
+                                LinkedIn
+                            </a>
+
+                            <a href="/laurenhower">
+                                <img
+                                    src="/website.png"
+                                    alt=""
+                                />
+                                Portfolio
+                            </a>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
