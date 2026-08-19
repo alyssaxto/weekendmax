@@ -152,7 +152,7 @@
 
     margin:0 0 18px;
 
-    color:#23415d;
+    color:#6F6963;
 
     font-size:1.15rem;
 
@@ -170,7 +170,7 @@
 
     text-decoration:none;
 
-    color:#536273;
+    color:#6F6963;
 
     font-size:.85rem;
 
@@ -337,7 +337,7 @@ html{
 
 .trip-summary h2{
 
-    color:#23415d;
+    color:#6F6963;
 
     margin-top:10px;
 
@@ -499,7 +499,7 @@ html{
 
     top:45px;
 
-    background:#23415d;
+    background:#6F6963;
 
     color:white;
 
@@ -543,7 +543,7 @@ html{
 
     font-size:2.5rem;
 
-    color:#23415d;
+    color:#6F6963;
 
     margin-bottom:35px;
 
@@ -590,14 +590,14 @@ html{
 
 .cost-card h3{
 
-    color:#23415d;
+    color:#6F6963;
 
 }
 
 
 .cost-card p{
 
-    color:#536273;
+    color:#6F6963;
 
     line-height:1.7;
 
@@ -656,7 +656,7 @@ html{
 
 .day-header h3{
 
-    color:#23415d;
+    color:#6F6963;
 
     font-size:2.4rem;
 
@@ -671,7 +671,7 @@ html{
 
     max-width:1200px;
 
-    color:#536273;
+    color:#6F6963;
 
     font-size:1.05rem;
 
@@ -975,7 +975,7 @@ html{
 
     margin-top:0;
 
-    color:#23415d;
+    color:#6F6963;
 
     font-size:2rem;
 
@@ -1007,7 +1007,7 @@ html{
 
 .verdict-section .trip-description{
 
-    color:#536273;
+    color:#6F6963;
 
     line-height:1.9;
 
@@ -1032,7 +1032,7 @@ html{
 
     background:#fffaf0;
 
-    color:#23415d;
+    color:#6F6963;
 
     padding:45px;
 
@@ -1076,7 +1076,7 @@ html{
 
     margin-top:0;
 
-    color:#23415d;
+    color:#6F6963;
 
     font-size:2rem;
 
@@ -1261,7 +1261,7 @@ html{
 
 .hotel-card h3{
 
-    color:#23415d;
+    color:#6F6963;
 
     font-size:2rem;
 
@@ -1273,7 +1273,7 @@ html{
 
 .hotel-card p{
 
-    color:#536273;
+    color:#6F6963;
 
     line-height:2;
 
