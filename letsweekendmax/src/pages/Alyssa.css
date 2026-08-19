@@ -114,7 +114,6 @@ body,
 .contact-links a:hover{
 
     background:white;
-    color:#222;
 
 }
 
@@ -140,7 +139,7 @@ body,
 .section-header{
 
     text-align:center;
-
+    color:#6F6963;
     margin-bottom:50px;
 
 }
@@ -165,7 +164,7 @@ body,
 
 .section-header span{
 
-    color:#666;
+    color:#8B695E;
 
     font-size:18px;
 

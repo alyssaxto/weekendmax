@@ -2,22 +2,24 @@ import ItineraryTemplate from "../components/ItineraryTemplate";
 
 export default function Roatan() {
 
-    const trip = {
+const trip = {
 
-        cover: "/roatan/11.jpg",
+    cover: "/roatan/11.jpg",
 
-        destination: "Roatán, Honduras",
+    destination: "Roatán, Honduras",
 
-        duration: "3 Nights",
+    duration: "3 Nights",
 
-        season: "Spring",
+    season: "Spring",
 
-        totalCost: "Hotel Split Between 4",
+    totalCost: "Hotel Split Between 4",
 
-        points: "30k Capital One Miles",
+    points: {
+        type: "points",
+        value: "30k Capital One Miles"
+    },
 
-        travelers: "4 People",
-
+    travelers: "4 People",
     flightLink: "https://www.united.com/",
 
         description:
@@ -36,7 +38,7 @@ export default function Roatan() {
                 category: "Hotel",
                 description:
                     "Three nights at Arca Hotel split between four travelers.",
-                price: "Split Between 4"
+
             },
 
             {

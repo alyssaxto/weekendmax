@@ -79,50 +79,28 @@ export default function Itinerary(){
             description:"A weekend escape for beaches, snorkeling, and relaxation.",
             link:"/roatan"
         },
+        {
+    location:"Banff, Canada",
+    image:"/alyssa/16.jpg",
+    description:"Turquoise lakes, mountain views, scenic drives, and cozy alpine escapes.",
+    link:"/Canada"
+},
+{
+    location:"Stockholm, Sweden",
+
+    image:"/alyssa/sweden/4.jpg",
+    description:"Charming cafés, colorful streets, waterfront views, and Scandinavian charm.",
+    link:"/Sweden"
+},
+
 
         {
             location:"Iceland",
-            points:"45,000 points",
             image:"/iceland.jpg",
             description:"Chasing waterfalls, glaciers, and the northern lights.",
-            link:"/iceland"
-        },
-
-
-        {
-            location:"Seattle",
-            points:"12,000 points",
-            image:"/seattle.jpg",
-            description:"Coffee shops, mountain views, and city adventures.",
             link:"/filler"
         },
 
-
-        {
-            location:"El Salvador",
-            points:"10,000 points",
-            image:"/elsalvador.jpg",
-            description:"A quick weekend getaway using credit card points.",
-            link:"/filler"
-        },
-
-
-        {
-            location:"Puerto Rico",
-            points:"10,000 points",
-            image:"/puertorico.jpg",
-            description:"Exploring beaches, food, and tropical adventures.",
-            link:"/filler"
-        },
-
-
-        {
-            location:"Michigan",
-            points:"10,000 points",
-            image:"/michigan.jpg",
-            description:"A scenic weekend escape filled with nature and views.",
-            link:"/filler"
-        }
 
     ];
 

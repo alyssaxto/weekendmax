@@ -8,6 +8,7 @@ import About from "./pages/About.jsx";
 import Itineraries from "./pages/Itineraries.jsx";
 import Deals from "./pages/Deals.jsx";
 import Iceland from "./pages/Iceland";
+import Canada from "./pages/Canada.jsx";
 import Roatan from "./pages/Roatan";
 import Basics from "./pages/Basics";
 import Alyssa from "./pages/Alyssa";
@@ -29,10 +30,17 @@ return (
     path="/iceland" 
     element={<Iceland />} 
 />
+
 <Route 
     path="/Roatan" 
     element={<Roatan />} 
 />
+
+<Route 
+    path="/Canada" 
+    element={<Canada />} 
+/>
+
 <Route path="/" element={<Home />} />
 
 <Route path="/about" element={<About />} />

@@ -202,7 +202,7 @@
 
     transform:translateY(-3px);
 
-    background:#7C8063;
+    background:#D9784A;
 
 }
 
@@ -373,7 +373,7 @@
 
 .itinerary-title span{
 
-    color:#db9f44;
+    color:#D9784A;
 
     font-size:1.1rem;
 
@@ -435,8 +435,8 @@
 
 
 .itinerary-info button:hover{
-
-    background:#AFC8C2;
+color: white;
+    background:#D9784A;
 
 }
 

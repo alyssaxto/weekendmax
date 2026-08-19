@@ -7,83 +7,82 @@ export default function Destinations() {
     const navigate = useNavigate();
 
     const [activeCard, setActiveCard] = useState(null);
+
+
     const trips = [
+
         {
-            image:"/roatan/11.jpg",
-            location:"Roatan",
-            points:"30k Capital One",
-            season:"Spring",
-            region:"Caribbean",
-            duration:"4 Days",
-            link:"/roatan"
-        },
-        {
-            image:"/iceland.jpg",
-            location:"Iceland",
-            points:"65k Chase",
-            season:"Summer",
-            region:"Europe",
-            duration:"4 Days",
-            link:"/iceland"
+            image: "/roatan/11.jpg",
+            location: "Roatan",
+            points: "30k Capital One",
+            season: "Spring",
+            region: "Caribbean",
+            duration: "4 Days",
+            link: "/roatan"
         },
 
 
         {
-            image:"/seattle.jpg",
-            location:"Seattle",
-            points:"28k United",
-            season:"Fall",
-            region:"North America",
-            duration:"Weekend",
-            link:"/filler"
+            image: "/alyssa/16.jpg",
+            location: "Banff, Canada",
+            points: "$200–300 flight",
+            season: "Summer",
+            region: "North America",
+            duration: "3 PTO days",
+            link: "/Canada"
         },
 
+
         {
-            image:"/puertorico.jpg",
-            location:"Puerto Rico",
-            points:"18k Venture",
-            season:"Winter",
-            region:"North America",
-            duration:"Weekend",
-            link:"/filler"
+            image: "/alyssa/sweden/4.jpg",
+            location: "Sweden",
+            season: "Winter",
+            region: "Europe",
+            duration: "2 days PTO",
+            link: "/Sweden"
         },
 
-        {
-            image:"/michigan.jpg",
-            location:"Michigan",
-            points:"18k Venture",
-            season:"Winter",
-            region:"North America",
-            duration:"Weekend",
-            link:"/filler"
-          },
 
         {
-            image:"/elsalvador.jpg",
-            location:"El Salvador",
-            points:"18k Venture",
-            season:"Winter",
-            region:"North America",
-            duration:"Weekend",
-            link:"/filler"
+            image: "/iceland.jpg",
+            location: "Iceland",
+            season: "Spring",
+            region: "Europe",
+            duration: "2 days PTO",
+            link: "/filler"
         }
 
-        
     ];
 
-    return(
+
+    return (
 
         <section className="destinations">
 
+
+            {/* =========================
+                HEADER
+            ========================= */}
+
             <div className="destination-header">
 
-                <h1>Explore Our Itineraries</h1>
+                <h1>
+                    Explore Our Itineraries
+                </h1>
 
                 <p>
-                    Browse destination guides, discover how we booked flights with points and cheap cash deals, and see how we made the most of every adventure.
+                    Browse destination guides, discover how we booked flights
+                    with points and cheap cash deals, and see how we made the
+                    most of every adventure.
                 </p>
 
             </div>
+
+
+
+            {/* =========================
+                FILTERS
+            ========================= */}
 
             <div className="filters">
 
@@ -92,197 +91,313 @@ export default function Destinations() {
                     placeholder="Search destinations..."
                 />
 
-                <select>
-                    <option>All Seasons</option>
-                    <option>Spring</option>
-                    <option>Summer</option>
-                    <option>Fall</option>
-                    <option>Winter</option>
-                </select>
 
                 <select>
-                    <option>All Regions</option>
-                    <option>North America</option>
-                    <option>Europe</option>
-                    <option>Asia</option>
-                    <option>Caribbean</option>
+
+                    <option>
+                        All Seasons
+                    </option>
+
+                    <option>
+                        Spring
+                    </option>
+
+                    <option>
+                        Summer
+                    </option>
+
+                    <option>
+                        Fall
+                    </option>
+
+                    <option>
+                        Winter
+                    </option>
+
                 </select>
 
-                <select>
-                    <option>All Points Programs</option>
-                    <option>Chase</option>
-                    <option>Capital One</option>
-                    <option>Amex</option>
-                    <option>Bilt</option>
-                </select>
 
                 <select>
-                    <option>Trip Length</option>
-                    <option>Weekend</option>
-                    <option>4–5 Days</option>
-                    <option>One Week</option>
+
+                    <option>
+                        All Regions
+                    </option>
+
+                    <option>
+                        North America
+                    </option>
+
+                    <option>
+                        Europe
+                    </option>
+
+                    <option>
+                        Asia
+                    </option>
+
+                    <option>
+                        Caribbean
+                    </option>
+
+                </select>
+
+
+                <select>
+
+                    <option>
+                        All Points Programs
+                    </option>
+
+                    <option>
+                        Chase
+                    </option>
+
+                    <option>
+                        Capital One
+                    </option>
+
+                    <option>
+                        Amex
+                    </option>
+
+                    <option>
+                        Bilt
+                    </option>
+
+                </select>
+
+
+                <select>
+
+                    <option>
+                        Trip Length
+                    </option>
+
+                    <option>
+                        Weekend
+                    </option>
+
+                    <option>
+                        4–5 Days
+                    </option>
+
+                    <option>
+                        One Week
+                    </option>
+
                 </select>
 
             </div>
+
+
+
+            {/* =========================
+                DESTINATION GRID
+            ========================= */}
 
             <div className="destination-grid">
 
-{trips.map((trip,index)=>(
+                {trips.map((trip, index) => (
 
-<div
-    className={`trip-card ${activeCard === index ? "active" : ""}`}
-    key={index}
-    onClick={() =>
-        setActiveCard(
-            activeCard === index ? null : index
-        )
-    }
->
-
-
-    <img
-        src={trip.image}
-        alt={trip.location}
-    />
-
-
-    <div className="trip-overlay">
+                    <div
+                        className={`trip-card ${
+                            activeCard === index
+                                ? "active"
+                                : ""
+                        }`}
+                        key={index}
+                        onClick={() =>
+                            setActiveCard(
+                                activeCard === index
+                                    ? null
+                                    : index
+                            )
+                        }
+                    >
 
 
-        <h2>
-            {trip.location}
-        </h2>
-
-
-        <div className="trip-details">
-
-            <span>{trip.points}</span>
-            <span>{trip.duration}</span>
-            <span>{trip.season}</span>
-
-        </div>
-
-
-<button
-    className="trip-button"
-    onClick={(e)=>{
-        e.stopPropagation();
-        navigate(trip.link);
-    }}
->
-    View Itinerary →
-</button>
-
-
-    </div>
+                        <img
+                            src={trip.image}
+                            alt={trip.location}
+                        />
 
 
 
-    {/* SUMMARY */}
+                        {/* =========================
+                            MAIN OVERLAY
+                        ========================= */}
 
-    <div className="trip-summary-overlay">
+                        <div className="trip-overlay">
 
-        <h2>
-            {trip.location}
-        </h2>
-
-
-        <p>
-            A {trip.duration.toLowerCase()} escape in {trip.region}.
-        </p>
+                            <h2>
+                                {trip.location}
+                            </h2>
 
 
-        <div>
+                            <div className="trip-details">
 
-            <span>
-                ✈ {trip.points}
-            </span>
+                                {trip.points && (
 
-            <span>
-                🌎 {trip.season} travel
-            </span>
+                                    <span>
+                                        {trip.points}
+                                    </span>
 
-        </div>
+                                )}
 
 
-        <small>
-            Click again to close
-        </small>
-
-    </div>
+                                <span>
+                                    {trip.duration}
+                                </span>
 
 
-</div>
+                                <span>
+                                    {trip.season}
+                                </span>
 
-))}
+                            </div>
 
+
+
+                            <button
+                                className="trip-button"
+                                onClick={(e) => {
+
+                                    e.stopPropagation();
+
+                                    navigate(trip.link);
+
+                                }}
+                            >
+                                View Itinerary →
+                            </button>
+
+                        </div>
+
+
+
+                        {/* =========================
+                            SUMMARY OVERLAY
+                        ========================= */}
+
+                        <div className="trip-summary-overlay">
+
+                            <h2>
+                                {trip.location}
+                            </h2>
+
+
+                            <p>
+                                A {trip.duration.toLowerCase()} escape
+                                in {trip.region}.
+                            </p>
+
+
+                            <div>
+
+                                {trip.points && (
+
+                                    <span>
+                                        ✈ {trip.points}
+                                    </span>
+
+                                )}
+
+
+                                <span>
+                                    🌎 {trip.season} travel
+                                </span>
+
+                            </div>
+
+
+                            <small>
+                                Click again to close
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+                ))}
 
             </div>
-<section className="partner-section">
-
-    <div className="partner-card">
-
-        <img
-            src="/stamp.png"
-            className="partner-stamp"
-            alt="travel stamp"
-        />
 
 
-        <div className="partner-content">
 
-            <span className="partner-tag">
-                ✈ WORK WITH US
-            </span>
+            {/* =========================
+                PARTNER SECTION
+            ========================= */}
 
+            <section className="partner-section">
 
-            <h2>
-                Want your hotel or destination featured?
-            </h2>
+                <div className="partner-card">
 
 
-            <p>
-                We're always looking for unique hotels, boutique stays,
-                resorts, and unforgettable weekend destinations to share
-                with our audience. If you'd like us to feature your property,
-                collaborate on a trip, or create travel content, we'd love
-                to hear from you.
-            </p>
+                    <img
+                        src="/stamp.png"
+                        className="partner-stamp"
+                        alt="travel stamp"
+                    />
 
 
-            <a href="mailto:hello@letsweekendmax.com">
+                    <div className="partner-content">
 
-                <button>
-                    Contact Us →
-                </button>
-
-            </a>
-
-        </div>
+                        <span className="partner-tag">
+                            ✈ WORK WITH US
+                        </span>
 
 
-        <div className="partner-details">
-
-            <p>
-                FEATURED PARTNER
-            </p>
-
-            <h3>
-                LET'S WEEKENDMAX
-            </h3>
-
-            <span>
-                TRAVEL • HOTELS • EXPERIENCES
-            </span>
-
-        </div>
+                        <h2>
+                            Want your hotel or destination featured?
+                        </h2>
 
 
-    </div>
+                        <p>
+                            We're always looking for unique hotels,
+                            boutique stays, resorts, and unforgettable
+                            weekend destinations to share with our audience.
+                            If you'd like us to feature your property,
+                            collaborate on a trip, or create travel content,
+                            we'd love to hear from you.
+                        </p>
 
-</section>
+
+                        <a href="mailto:hello@letsweekendmax.com">
+
+                            <button>
+                                Contact Us →
+                            </button>
+
+                        </a>
+
+                    </div>
+
+
+                    <div className="partner-details">
+
+                        <p>
+                            FEATURED PARTNER
+                        </p>
+
+                        <h3>
+                            LET'S WEEKENDMAX
+                        </h3>
+
+                        <span>
+                            TRAVEL • HOTELS • EXPERIENCES
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
         </section>
 
-    )
+    );
 
 }

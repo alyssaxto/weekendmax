@@ -3,97 +3,144 @@ import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
 
-  const location = useLocation();
+    const [menuOpen, setMenuOpen] = useState(false);
 
-  const whitePages = [
-    "/",
-    "/laurenhower",
-    "/alyssaxto"
-  ];
+    const location = useLocation();
 
-  const isWhitePage = whitePages.includes(location.pathname);
+    /*
+    ========================================
+    BROWN NAVBAR PAGES
+    ========================================
 
-  return (
-    <nav
-      className={`navbar ${
-        isWhitePage ? "navbar-white" : "navbar-brown"
-      }`}
-    >
+    Everything else defaults to WHITE.
+    */
 
-      <div className="navbar__container">
+    const brownPages = [
+        "/itineraries",
+        "/Basics"
+    ];
 
-        <div
-          className={`navbar__hamburger ${menuOpen ? "active" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
+    /*
+    ========================================
+    INDIVIDUAL ITINERARY PAGES
+    ========================================
+
+    Any page under /itineraries/ will also
+    automatically use the brown navbar.
+    */
+
+    const isItineraryPage =
+        location.pathname.startsWith("/itineraries/");
+
+    const isBrownPage =
+        brownPages.includes(location.pathname) ||
+        isItineraryPage;
+
+
+    return (
+
+        <nav
+            className={`navbar ${
+                isBrownPage
+                    ? "navbar-brown"
+                    : "navbar-white"
+            }`}
         >
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+
+            <div className="navbar__container">
 
 
-        <ul className={`navbar__menu ${menuOpen ? "active" : ""}`}>
+                {/* =========================
+                    HAMBURGER
+                ========================= */}
 
-          <li>
-            <Link
-              to="/"
-              className="navbar__links"
-              onClick={() => setMenuOpen(false)}
-            >
-              Home
-            </Link>
-          </li>
+                <button
+                    className={`navbar__hamburger ${
+                        menuOpen ? "active" : ""
+                    }`}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    aria-label="Toggle navigation"
+                    aria-expanded={menuOpen}
+                >
 
+                    <div></div>
+                    <div></div>
+                    <div></div>
 
-          <li>
-            <Link
-              to="/laurenhower"
-              className="navbar__links"
-              onClick={() => setMenuOpen(false)}
-            >
-              Lauren
-            </Link>
-          </li>
+                </button>
 
 
-          <li>
-            <Link
-              to="/alyssaxto"
-              className="navbar__links"
-              onClick={() => setMenuOpen(false)}
-            >
-              Alyssa
-            </Link>
-          </li>
+                {/* =========================
+                    MENU
+                ========================= */}
+
+                <ul
+                    className={`navbar__menu ${
+                        menuOpen ? "active" : ""
+                    }`}
+                >
+
+                    <li>
+                        <Link
+                            to="/"
+                            className="navbar__links"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Home
+                        </Link>
+                    </li>
 
 
-          <li>
-            <Link
-              to="/itineraries"
-              className="navbar__links"
-              onClick={() => setMenuOpen(false)}
-            >
-              Itineraries
-            </Link>
-          </li>
+                    <li>
+                        <Link
+                            to="/laurenhower"
+                            className="navbar__links"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Lauren
+                        </Link>
+                    </li>
 
 
-          <li>
-            <Link
-              to="/Basics"
-              className="navbar__links"
-              onClick={() => setMenuOpen(false)}
-            >
-              Basics
-            </Link>
-          </li>
+                    <li>
+                        <Link
+                            to="/alyssaxto"
+                            className="navbar__links"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Alyssa
+                        </Link>
+                    </li>
 
-        </ul>
 
-      </div>
+                    <li>
+                        <Link
+                            to="/itineraries"
+                            className="navbar__links"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Itineraries
+                        </Link>
+                    </li>
 
-    </nav>
-  );
+
+                    <li>
+                        <Link
+                            to="/Basics"
+                            className="navbar__links"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Basics
+                        </Link>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+    );
+
 }

@@ -3,11 +3,11 @@ import { useState, useRef } from "react";
 
 const heroImage = "/alyssa/20.jpg";
 
-function VideoCard({ video, poster, title }) {
+function VideoCard({ video, title }) {
 
     const videoRef = useRef(null);
 
-    const [playing, setPlaying] = useState(false);
+    const [playing, setPlaying] = useState(true);
     const [muted, setMuted] = useState(true);
 
 
@@ -76,12 +76,14 @@ function VideoCard({ video, poster, title }) {
                 <video
                     ref={videoRef}
                     src={video}
-                    poster={poster}
-                    preload="metadata"
-                    muted={muted}
+                    autoPlay
+                    muted
                     loop
                     playsInline
+                    preload="auto"
                     onClick={togglePlay}
+                    onPlay={() => setPlaying(true)}
+                    onPause={() => setPlaying(false)}
                 />
 
 
@@ -120,7 +122,6 @@ function VideoCard({ video, poster, title }) {
     );
 
 }
-
 
 /* =========================
    MAIN PAGE
@@ -191,37 +192,37 @@ export default function Alyssa() {
         },
                {
             image: "/alyssa/sweden/5.jpg",
-            caption: "Memorable Moments",
+            caption: "Stockholm Airbnb",
             location: "Sweden"
         },
                {
             image: "/alyssa/sweden/6.jpg",
-            caption: "Memorable Moments",
+            caption: "Stockholm Airbnb",
             location: "Sweden"
         },
                {
             image: "/alyssa/sweden/7.jpg",
-            caption: "Memorable Moments",
+            caption: "Stockholm Airbnb",
             location: "Sweden"
         },
                {
             image: "/alyssa/sweden/8.jpg",
-            caption: "Memorable Moments",
+            caption: "Stockholm Airbnb",
             location: "Sweden"
         },
        {
             image: "/alyssa/sweden/9.jpg",
-            caption: "Memorable Moments",
+            caption: "Stockholm Airbnb",
             location: "Sweden"
         },
                {
             image: "/alyssa/sweden/10.jpg",
-            caption: "Memorable Moments",
+            caption: "Stockholm Airbnb",
             location: "Sweden"
         },
                {
             image: "/alyssa/sweden/11.jpg",
-            caption: "Memorable Moments",
+            caption: "Stockholm Airbnb",
             location: "Sweden"
         },
     ];
@@ -235,19 +236,36 @@ export default function Alyssa() {
 
         {
             video: "/alyssa/1.mp4",
-            poster: "/alyssa/thum1.png",
+        
             title: "Travel Experience"
         },
 
         {
             video: "/alyssa/2.mp4",
-            poster: "/alyssa/thum2.png",
+     
             title: "Hotel Experience"
         },
 
         {
             video: "/alyssa/3.mp4",
-            poster: "/alyssa/thum3.png",
+          
+            title: "Destination Content"
+        },
+                {
+            video: "/alyssa/sweden.mp4",
+      
+            title: "Travel Experience"
+        },
+
+        {
+            video: "/alyssa/stockholm.mp4",
+   
+            title: "Hotel Experience"
+        },
+
+        {
+            video: "/alyssa/nyc.mp4",
+          
             title: "Destination Content"
         }
 
@@ -262,20 +280,20 @@ export default function Alyssa() {
 
         {
             image: "/alyssa/10.jpg",
-            caption: "Mountain Landscapes",
+            caption: "Banff, Canada",
             location: "Canada"
         },
 
         {
             image: "/alyssa/13.jpg",
-            caption: "Travel Moments",
+            caption: "Banff, Canada",
             location: "Canada"
         },
 
 
         {
             image: "/alyssa/11.jpg",
-            caption: "Local Experiences",
+            caption: "Banff, Canada",
             location: "Canada"
         },
 
@@ -283,12 +301,12 @@ export default function Alyssa() {
 
         {
             image: "/alyssa/14.jpg",
-            caption: "Adventure & Culture",
+            caption: "Banff, Canada",
             location: "Canada"
         },
         {
             image: "/alyssa/12.jpg",
-            caption: "Scenic Views",
+            caption: "Banff, Canada",
             location: "Canada"
         },
 
@@ -296,43 +314,40 @@ export default function Alyssa() {
 
         {
             image: "/alyssa/16.jpg",
-            caption: "Destination Storytelling",
+            caption: "Banff, Canada",
             location: "Canada"
         },
         {
             image: "/alyssa/15.jpg",
-            caption: "Hidden Gems",
+            caption: "Banff, Canada",
             location: "Canada"
         },
         {
             image: "/alyssa/17.jpg",
-            caption: "Memorable Moments",
+            caption: "Banff, Canada",
             location: "Canada"
         },
                {
             image: "/alyssa/sweden/3.jpg",
-            caption: "Memorable Moments",
+            caption: "Stockholm, Sweden",
             location: "Sweden"
         },
         {
             image: "/alyssa/sweden/1.jpg",
-            caption: "Memorable Moments",
+            caption: "Stockholm, Sweden",
             location: "Sweden"
         },
         
         {
             image: "/alyssa/sweden/2.jpg",
-            caption: "Memorable Moments",
+            caption: "Stockholm, Sweden",
             location: "Sweden"
         },
         
         
- 
-        
-        
         {
             image: "/alyssa/sweden/4.jpg",
-            caption: "Memorable Moments",
+            caption: "Stockholm, Sweden",
             location: "Sweden"
         },
         
@@ -476,6 +491,50 @@ export default function Alyssa() {
 
 
 
+
+            {/* =========================
+                TRAVEL TIKTOKS
+            ========================= */}
+
+            <section className="ugc-section">
+
+                <div className="section-header">
+
+                    <p>
+                        SOCIAL CONTENT
+                    </p>
+
+
+                    <h2>
+                        Travel TikToks
+                    </h2>
+
+
+                    <span>
+                        Short-form videos designed to inspire,
+                        engage, and drive travel decisions.
+                    </span>
+
+                </div>
+
+<div className="portfolio-video-grid">
+
+    {tiktoks.map((video, index) => (
+
+        <VideoCard
+            key={index}
+            video={video.video}
+            poster={video.poster}
+            title={video.title}
+        />
+
+    ))}
+
+</div>
+
+            </section>
+
+
             {/* =========================
                 HOTEL PHOTOGRAPHY
             ========================= */}
@@ -556,50 +615,6 @@ export default function Alyssa() {
                     ))}
 
                 </div>
-
-            </section>
-
-
-
-            {/* =========================
-                TRAVEL TIKTOKS
-            ========================= */}
-
-            <section className="ugc-section">
-
-                <div className="section-header">
-
-                    <p>
-                        SOCIAL CONTENT
-                    </p>
-
-
-                    <h2>
-                        Travel TikToks
-                    </h2>
-
-
-                    <span>
-                        Short-form videos designed to inspire,
-                        engage, and drive travel decisions.
-                    </span>
-
-                </div>
-
-<div className="portfolio-video-grid">
-
-    {tiktoks.map((video, index) => (
-
-        <VideoCard
-            key={index}
-            video={video.video}
-            poster={video.poster}
-            title={video.title}
-        />
-
-    ))}
-
-</div>
 
             </section>
 

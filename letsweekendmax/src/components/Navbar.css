@@ -1,16 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 
-/* =========================
+/* =====================================================
    NAVBAR
-========================= */
+===================================================== */
 
 .navbar {
-    height: 40px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     position: absolute;
 
@@ -19,8 +14,11 @@
 
     transform: translateX(-50%);
 
+    height: 40px;
 
-    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     padding: 0 20px;
 
@@ -31,32 +29,45 @@
 }
 
 
-/* =========================
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.navbar__container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+
+/* =====================================================
    MENU
-========================= */
+===================================================== */
 
 .navbar__menu {
-    display: flex;
 
+    display: flex;
     align-items: center;
     justify-content: center;
 
     list-style: none;
 
-    font-size: 1rem;
-
     gap: 30px;
 
-    margin: 0 20px 0 0;
+    margin: 0;
     padding: 0;
 }
 
 
-/* =========================
+/* =====================================================
    LINKS
-========================= */
+===================================================== */
 
 .navbar__links {
+
     position: relative;
 
     display: inline-block;
@@ -71,8 +82,6 @@
 
     letter-spacing: .04em;
 
-    color: #8C8175;
-
     text-decoration: none;
 
     white-space: nowrap;
@@ -80,14 +89,71 @@
     transition:
         color .25s ease,
         transform .25s ease;
+
 }
 
 
-/* =========================
+/* =====================================================
+   DEFAULT NAVBAR
+   WHITE
+===================================================== */
+
+.navbar-white .navbar__links {
+
+    color: #FFFFFF;
+
+    text-shadow:
+        0 1px 4px rgba(0, 0, 0, .18);
+}
+
+
+.navbar-white .navbar__links:hover {
+
+    color: #FFFFFF;
+
+    transform: translateY(-1px);
+}
+
+
+.navbar-white .navbar__links::after {
+
+    background: #FFFFFF;
+}
+
+
+/* =====================================================
+   BROWN NAVBAR
+   ITINERARIES / BASICS
+===================================================== */
+
+.navbar-brown .navbar__links {
+
+    color: #8C8175;
+
+    text-shadow: none;
+}
+
+
+.navbar-brown .navbar__links:hover {
+
+    color: #7399A8;
+
+    transform: translateY(-1px);
+}
+
+
+.navbar-brown .navbar__links::after {
+
+    background: #7399A8;
+}
+
+
+/* =====================================================
    UNDERLINE
-========================= */
+===================================================== */
 
 .navbar__links::after {
+
     content: "";
 
     position: absolute;
@@ -99,8 +165,6 @@
 
     height: 1.5px;
 
-    background: #7399A8;
-
     transform: scaleX(0);
 
     transform-origin: center;
@@ -110,30 +174,19 @@
 }
 
 
-/* =========================
-   HOVER
-========================= */
-
-.navbar__links:hover {
-    color: #7399A8;
-
-    transform: translateY(-1px);
-}
-
-
 .navbar__links:hover::after {
+
     transform: scaleX(1);
 }
 
 
-/* =========================
+/* =====================================================
    TABLET
-========================= */
+===================================================== */
 
 @media (max-width: 1200px) {
 
     .navbar__links:hover {
-        color: #7399A8;
 
         transform: none;
     }
@@ -141,13 +194,102 @@
 }
 
 
-/* =========================
+/* =====================================================
+   HAMBURGER
+===================================================== */
+
+.navbar__hamburger {
+
+    display: none;
+
+    border: none;
+    background: none;
+
+    padding: 0;
+
+    width: 28px;
+    height: 20px;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+
+    z-index: 9001;
+}
+
+
+.navbar__hamburger div {
+
+    width: 100%;
+    height: 2px;
+
+    border-radius: 50px;
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease,
+        background-color .25s ease;
+}
+
+
+/* =====================================================
+   WHITE HAMBURGER
+===================================================== */
+
+.navbar-white .navbar__hamburger div {
+
+    background-color: #FFFFFF;
+}
+
+
+/* =====================================================
+   BROWN HAMBURGER
+===================================================== */
+
+.navbar-brown .navbar__hamburger div {
+
+    background-color: #8B695E;
+}
+
+
+/* =====================================================
+   HAMBURGER X
+===================================================== */
+
+.navbar__hamburger.active div:nth-child(1) {
+
+    transform:
+        translateY(9px)
+        rotate(45deg);
+}
+
+
+.navbar__hamburger.active div:nth-child(2) {
+
+    opacity: 0;
+}
+
+
+.navbar__hamburger.active div:nth-child(3) {
+
+    transform:
+        translateY(-9px)
+        rotate(-45deg);
+}
+
+
+/* =====================================================
    MOBILE NAVBAR
-========================= */
+===================================================== */
 
 @media (max-width: 1025px) {
 
     .navbar {
+
+        top: 15px;
 
         left: auto;
         right: 20px;
@@ -161,71 +303,33 @@
 
         margin: 0;
 
-        justify-content: center;
-
         border-radius: 50%;
     }
 
 
+    .navbar__container {
+
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+    }
+
+
     /* =========================
-       HAMBURGER
+       SHOW HAMBURGER
     ========================= */
 
     .navbar__hamburger {
 
         display: flex;
 
-        flex-direction: column;
+        position: absolute;
 
-        justify-content: space-between;
+        top: 50%;
+        left: 50%;
 
-        width: 28px;
-        height: 20px;
-
-        cursor: pointer;
-
-        position: relative;
-    }
-
-
-    .navbar__hamburger div {
-
-        width: 100%;
-        height: 2px;
-
-        background-color: #8C8175;
-
-        border-radius: 50px;
-
-        transition:
-            transform .3s ease,
-            opacity .3s ease;
-    }
-
-
-    /* =========================
-       HAMBURGER X
-    ========================= */
-
-    .navbar__hamburger.active div:nth-child(1) {
-
-        transform:
-            translateY(9px)
-            rotate(45deg);
-    }
-
-
-    .navbar__hamburger.active div:nth-child(2) {
-
-        opacity: 0;
-    }
-
-
-    .navbar__hamburger.active div:nth-child(3) {
-
-        transform:
-            translateY(-9px)
-            rotate(-45deg);
+        transform: translate(-50%, -50%);
     }
 
 
@@ -235,7 +339,7 @@
 
     .navbar__menu {
 
-        display: none;
+        display: flex;
 
         flex-direction: column;
 
@@ -252,6 +356,8 @@
 
         padding: 10px;
 
+        margin: 0;
+
         background: rgba(253, 251, 247, .94);
 
         backdrop-filter: blur(12px);
@@ -265,12 +371,16 @@
         border-radius: 12px;
 
         opacity: 0;
+        visibility: hidden;
 
         transform: translateY(-10px);
 
+        pointer-events: none;
+
         transition:
             transform .3s ease,
-            opacity .3s ease;
+            opacity .3s ease,
+            visibility .3s ease;
     }
 
 
@@ -280,11 +390,13 @@
 
     .navbar__menu.active {
 
-        display: flex;
-
         opacity: 1;
 
+        visibility: visible;
+
         transform: translateY(0);
+
+        pointer-events: auto;
     }
 
 
@@ -292,7 +404,7 @@
        MOBILE ITEMS
     ========================= */
 
-    .navbar__item {
+    .navbar__menu li {
 
         width: 100%;
 
@@ -312,9 +424,15 @@
 
         font-size: .9rem;
 
-        color: #8C8175;
+        text-shadow: none !important;
+
+        transform: none !important;
     }
 
+
+    /* =========================
+       MOBILE UNDERLINE
+    ========================= */
 
     .navbar__links::after {
 
@@ -322,23 +440,36 @@
     }
 
 
-    .navbar__links:hover {
+    /* =========================
+       MOBILE DEFAULT
+       BLUE LINKS IN DROPDOWN
+    ========================= */
+
+    .navbar-white .navbar__links,
+    .navbar-brown .navbar__links {
 
         color: #7399A8;
+    }
 
-        transform: none;
+
+    .navbar-white .navbar__links:hover,
+    .navbar-brown .navbar__links:hover {
+
+        color: #7399A8;
 
         background: rgba(115, 153, 168, .08);
 
         border-radius: 7px;
+
+        transform: none;
     }
 
 }
 
 
-/* =========================
+/* =====================================================
    SMALL PHONES
-========================= */
+===================================================== */
 
 @media (max-width: 600px) {
 
@@ -355,66 +486,7 @@
 
         top: 70px;
 
-        right: 0;
-
         width: 180px;
     }
 
-}
-
-
-/* =========================
-   WHITE TEXT PAGES
-   HOME / LAUREN / ALYSSA
-========================= */
-
-.navbar-white {
-    background: transparent;
-
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-
-    border-color: transparent;
-
-    box-shadow: none;
-}
-
-
-.navbar-white .navbar__links {
-    color: #FFFFFF;
-
-    text-shadow:
-        0 1px 4px rgba(0, 0, 0, .18);
-}
-
-
-.navbar-white .navbar__links:hover {
-    color: #FFFFFF;
-
-    transform: translateY(-1px);
-}
-
-
-.navbar-white .navbar__links::after {
-    background: #FFFFFF;
-}
-
-
-/* =========================
-   BROWN TEXT PAGES
-   ITINERARIES / BASICS
-========================= */
-
-.navbar-brown .navbar__links {
-    color: #8C8175;
-}
-
-
-.navbar-brown .navbar__links:hover {
-    color: #7399A8;
-}
-
-
-.navbar-brown .navbar__links::after {
-    background: #7399A8;
 }

@@ -22,7 +22,7 @@ body {
 /* Remove fixed top */
 .cursor-text {
   position: fixed; /* fixed relative to viewport */
-  background: #ff4f4f;
+  background: #D9784A;
   color: white;
   font-size: 12px;
   padding: 4px 8px;
@@ -47,7 +47,7 @@ body {
   position: fixed;
   width: 1.5px;
   height: var(--length);
-  background: #FF4F4F;
+  background: #D9784A;
   transform-origin: center center;
   pointer-events: none;
   z-index: 9999;

@@ -143,7 +143,17 @@ export default function AboutUs() {
                                 />
                                 Instagram
                             </a>
-
+                            <a
+                                href="https://www.tiktok.com/@laurenhowerr"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <img
+                                    src="/tiktok.png"
+                                    alt=""
+                                />
+                                TikTok
+                            </a>
                             <a
                                 href="https://www.linkedin.com/in/laurenhower"
                                 target="_blank"

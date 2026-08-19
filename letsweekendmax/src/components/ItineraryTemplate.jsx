@@ -5,7 +5,7 @@ export default function ItineraryTemplate({ trip }) {
 
     const [selectedPhoto, setSelectedPhoto] = useState(null);
 const closeNav = () => setNavOpen(false);
-const [navOpen, setNavOpen] = useState(true);
+const [navOpen, setNavOpen] = useState(false);
     return (
 
         <>
@@ -141,19 +141,19 @@ const [navOpen, setNavOpen] = useState(true);
 
 
 
-    <div>
+<div>
 
-        <label>
-            Points Used
-        </label>
+    <label>
+        {trip.points.type === "cash"
+            ? "Cash Price"
+            : "Points Used"}
+    </label>
 
-        <h2>
-            {trip.points}
-        </h2>
+    <h2>
+        {trip.points.value}
+    </h2>
 
-    </div>
-
-
+</div>
 
     <div>
 
@@ -271,81 +271,116 @@ const [navOpen, setNavOpen] = useState(true);
 
 
 
+{/* ================= HOTEL ================= */}
+
+{trip.hotel && (
+
+    <div
+        className="journal-section"
+        id="hotel"
+    >
+
+        <h2>
+            Where We Stayed
+        </h2>
 
 
-            {/* ================= HOTEL ================= */}
+        <div className="hotel-card">
 
 
-            {trip.hotel && (
-
-            <div
-                className="journal-section"
-                id="hotel"
-            >
+            <h3>
+                {trip.hotel.name}
+            </h3>
 
 
-                <h2>
-                    Where We Stayed
-                </h2>
+            <p>
+                {trip.hotel.description}
+            </p>
 
 
+            {/* HOTEL PHOTOS */}
 
-                <div className="hotel-card">
+            {trip.hotel.photos && (
 
+                <div className="hotel-photo-grid">
 
-                    <h3>
-                        {trip.hotel.name}
-                    </h3>
+                    {trip.hotel.photos.map((photo, index) => {
 
+                        const imageSrc =
+                            typeof photo === "string"
+                                ? photo
+                                : photo.image;
 
+                        const caption =
+                            typeof photo === "object"
+                                ? photo.caption
+                                : null;
 
-                    <p>
-                        {trip.hotel.description}
-                    </p>
+                        return (
 
-
-
-
-                    {trip.hotel.photos && (
-
-                        <div className="hotel-photo-grid">
-
-
-                            {trip.hotel.photos.map((photo,index)=>(
+                            <div
+                                className="hotel-photo-wrapper"
+                                key={index}
+                                onClick={() =>
+                                    setSelectedPhoto(imageSrc)
+                                }
+                            >
 
                                 <img
-                                    key={index}
-                                    src={photo}
-                                    alt="hotel"
-                                    onClick={() =>
-                                        setSelectedPhoto(photo)
+                                    src={imageSrc}
+                                    alt={
+                                        caption ||
+                                        `${trip.hotel.name} photo`
                                     }
                                 />
 
-                            ))}
 
+                                {caption && (
 
-                        </div>
+                                    <div className="photo-hover-overlay">
 
-                    )}
+                                        <p>
+                                            {caption}
+                                        </p>
 
+                                    </div>
 
+                                )}
+
+                            </div>
+
+                        );
+
+                    })}
 
                 </div>
-
-
-            </div>
 
             )}
 
 
+            {/* HOTEL VIDEO */}
+
+            {trip.hotel.video && (
+
+                <div className="hotel-video">
+
+                    <video
+                        src={trip.hotel.video}
+                        controls
+                        playsInline
+                        preload="metadata"
+                    />
+
+                </div>
+
+            )}
 
 
+        </div>
 
+    </div>
 
-
-
-
+)}
 
 
             {/* ================= ITINERARY ================= */}
