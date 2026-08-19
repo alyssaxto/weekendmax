@@ -1,481 +1,421 @@
-.itineraries{
+/* =========================
+   ITINERARIES SECTION
+========================= */
 
-    padding:100px 8%;
-
-    background:#FAF4E8;
-
-    overflow:visible;
-
+.itineraries {
+    padding: 100px 6%;
+    background: #FAF4E8;
+    overflow: hidden;
 }
 
 
+/* =========================
+   HEADER
+========================= */
 
-/* ================= CLICK OVERLAY ================= */
+.itinerary-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
 
+.itinerary-header h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 3rem;
+    color: #7399A8;
+    margin: 0 0 15px;
+}
 
-.itinerary-summary{
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(0,0,0,.75);
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    padding:30px;
-
-    color:white;
-
-    opacity:0;
-
-    pointer-events:none;
-
-    transition:.35s ease;
-
-    z-index:5;
-
+.itinerary-header p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.05rem;
+    color: #7399A8;
+    max-width: 650px;
+    line-height: 1.7;
+    margin: 0;
 }
 
 
-.itinerary-card.active .itinerary-summary{
+/* =========================
+   VIEW ALL
+========================= */
 
-    opacity:1;
+.view-all {
+    flex-shrink: 0;
 
-    pointer-events:auto;
+    background: #7399A8;
+    color: white;
 
+    text-decoration: none;
+
+    padding: 12px 28px;
+
+    border-radius: 50px;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+
+    transition: .3s ease;
+}
+
+.view-all:hover {
+    background: #D9784A;
+    transform: translateY(-3px);
 }
 
 
-.itinerary-card.active .itinerary-overlay{
+/* =========================
+   4 × 1 GRID
+========================= */
 
-    opacity:0;
+.itinerary-scroll {
 
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin-top: 55px;
+
+    padding: 0;
+
+    overflow: visible;
 }
 
 
-.itinerary-summary h3{
+/* =========================
+   CARD
+========================= */
 
-    color:white;
+.itinerary-card {
 
-    font-size:2rem;
+    width: 100%;
 
-}
+    height: 520px;
 
+    background-size: cover;
+    background-position: center;
 
-.itinerary-summary p{
+    border-radius: 18px;
 
-    max-width:260px;
+    overflow: hidden;
 
-    line-height:1.7;
+    position: relative;
 
-}
-
-
-.itinerary-summary span{
-
-    color:#8C8175;
-
-    margin-top:15px;
-
-    font-weight:700;
-
-}
-
-
-.itinerary-summary small{
-
-    margin-top:20px;
-
-    opacity:.7;
-
-}
-
-
-.itinerary-summary h3{
-
-    font-size:2rem;
-
-    margin-bottom:15px;
-
-}
-
-
-
-.itinerary-summary p{
-
-    line-height:1.7;
-
-    max-width:260px;
-
-}
-
-
-
-.itinerary-summary span{
-
-    color:#7399A8;
-
-    margin-top:15px;
-
-    font-weight:700;
-
-}
-
-/* HEADER */
-
-.itinerary-heading{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:flex-end;
-
-}
-
-
-
-.itinerary-header h2{
-
-    font-size:3rem;
-
-    color:#7399A8;
-
-    margin-bottom:15px;
-
-}
-
-
-
-.itinerary-header p{
-
-    font-size:1.1rem;
-
-    color:#7399A8;
-
-    max-width:650px;
-
-    line-height:1.7;
-
-}
-
-
-.itinerary-card{
-
-    text-decoration:none;
-
-    color:inherit;
-
-    display:block;
-
-}
-/* VIEW ALL */
-
-.view-all{
-
-    background:#7399A8;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:12px 28px;
-
-    border-radius:50px;
-
-    transition:.3s;
-
-}
-
-
-
-.view-all:hover{
-
-    transform:translateY(-3px);
-
-    background:#D9784A;
-
-}
-
-
-
-
-
-/* HORIZONTAL CAROUSEL */
-
-.itinerary-scroll{
-
-    display:flex;
-
-    gap:35px;
-
-    margin-top:60px;
-
-    overflow-x:auto;
-
-    padding:50px 20px;
-
-    cursor:grab;
-
-    scroll-behavior:smooth;
-
-    scrollbar-width:none;
-
-}
-
-
-
-.itinerary-scroll::-webkit-scrollbar{
-
-    display:none;
-
-}
-
-
-
-.itinerary-scroll.dragging{
-
-    cursor:grabbing;
-
-    scroll-behavior:auto;
-
-}
-
-
-
-
-
-/* CARD */
-
-.itinerary-card{
-
-    flex:0 0 340px;
-
-    height:480px;
-
-    background-size:cover;
-
-    background-position:center;
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    position:relative;
-
+    cursor: pointer;
 
     transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
 
-    transform .35s ease,
+.itinerary-card:hover {
 
-    margin .35s ease,
+    transform: translateY(-8px);
 
-    box-shadow .35s ease;
-
+    box-shadow:
+        0 18px 40px rgba(52, 55, 53, .16);
 }
 
 
+/* =========================
+   DARK OVERLAY
+========================= */
 
-.itinerary-card:hover{
+.itinerary-overlay {
 
-    transform:
+    position: absolute;
 
-    scale(1.05)
+    inset: 0;
 
-    translateY(-10px);
+    display: flex;
 
-
-    margin-left:8px;
-
-    margin-right:8px;
-
-}
-
-
-
-
-
-/* DARK OVERLAY */
-
-.itinerary-overlay{
-
-
-    position:absolute;
-
-    inset:0;
-
-
-    display:flex;
-
-    align-items:flex-end;
-
+    align-items: flex-end;
 
     background:
+        linear-gradient(
+            transparent 30%,
+            rgba(19, 30, 44, .9)
+        );
 
-    linear-gradient(
-
-        transparent,
-
-        rgba(19, 30, 44, 0.85)
-
-    );
-
+    transition: opacity .35s ease;
 }
 
 
+/* =========================
+   CARD CONTENT
+========================= */
 
+.itinerary-info {
 
+    width: 100%;
 
-/* TEXT */
+    padding: 25px;
 
-.itinerary-info{
-
-    padding:30px;
-
-    color:white;
-
+    color: white;
 }
 
 
+/* =========================
+   TITLE
+========================= */
 
-.itinerary-title{
+.itinerary-title {
 
-    display:flex;
+    display: block;
 
-    justify-content:space-between;
+    margin-bottom: 12px;
+}
 
-    align-items:center;
+.itinerary-title h3 {
 
-    gap:15px;
+    font-family: "Poppins", sans-serif;
 
-    margin-bottom:15px;
+    font-size: 1.45rem;
 
+    line-height: 1.25;
+
+    color: white;
+
+    margin: 0 0 7px;
+}
+
+.itinerary-title span {
+    display: block;
+
+    color: #D9784A;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+
+    white-space: normal;
+
+    margin-top: 4px;
 }
 
 
+/* =========================
+   DESCRIPTION
+========================= */
 
-.itinerary-title h3{
+.itinerary-info p {
 
-    font-size:1.6rem;
+    font-family: "Poppins", sans-serif;
 
+    font-size: .8rem;
+
+    line-height: 1.55;
+
+    color: white;
+
+    opacity: .9;
+
+    margin: 0 0 20px;
 }
 
 
+/* =========================
+   BUTTON
+========================= */
 
-.itinerary-title span{
+.itinerary-info button {
 
-    color:#D9784A;
+    width: 100%;
 
-    font-size:1.1rem;
+    padding: 11px;
 
-    font-weight:700;
+    border: none;
 
-    white-space:nowrap;
+    border-radius: 30px;
 
+    background: white;
+
+    color: #26382F;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .8rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.itinerary-info button:hover {
+
+    background: #D9784A;
+
+    color: white;
 }
 
 
+/* =========================
+   CLICK SUMMARY
+========================= */
 
-.itinerary-info p{
+.itinerary-summary {
 
-    line-height:1.5;
+    position: absolute;
 
-    margin-bottom:25px;
+    inset: 0;
 
-    font-size:.85rem;
+    background: rgba(0, 0, 0, .76);
 
-    opacity:.9;
+    display: flex;
 
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: white;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity .35s ease;
+
+    z-index: 5;
 }
 
 
+.itinerary-card.active .itinerary-summary {
 
+    opacity: 1;
 
-
-/* BUTTON */
-
-.itinerary-info button{
-
-
-    width:100%;
-
-    padding:12px;
-
-
-    border:none;
-
-    border-radius:30px;
-
-
-    background:white;
-
-    color:#26382F;
-
-
-    font-family:Poppins;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-
-    transition:.3s;
-
+    pointer-events: auto;
 }
 
 
+.itinerary-card.active .itinerary-overlay {
 
-.itinerary-info button:hover{
-color: white;
-    background:#D9784A;
-
+    opacity: 0;
 }
 
 
+/* =========================
+   SUMMARY TEXT
+========================= */
+
+.itinerary-summary h3 {
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 1.6rem;
+
+    margin: 0 0 12px;
+}
+
+.itinerary-summary p {
+
+    max-width: 240px;
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: .8rem;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+.itinerary-summary span {
+
+    color: #7399A8;
+
+    font-size: .85rem;
+
+    font-weight: 700;
+
+    margin-top: 15px;
+}
+
+.itinerary-summary small {
+
+    color: white;
+
+    opacity: .65;
+
+    font-size: .7rem;
+
+    margin-top: 18px;
+}
 
 
+/* =========================
+   TABLET
+========================= */
 
-/* RESPONSIVE */
+@media (max-width: 1100px) {
 
-@media(max-width:900px){
-
-
-    .itinerary-heading{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        gap:25px;
-
+    .itineraries {
+        padding: 80px 5%;
     }
 
-
-
-    .itinerary-header h2{
-
-        font-size:2.2rem;
-
+    .itinerary-scroll {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-
-
-    .itinerary-card{
-
-        flex-basis:300px;
-
-        height:420px;
-
+    .itinerary-card {
+        height: 460px;
     }
 
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .itineraries {
+        padding: 70px 20px;
+    }
+
+    .itinerary-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .itinerary-header h2 {
+        font-size: 2rem;
+    }
+
+    .itinerary-header p {
+        font-size: .9rem;
+    }
+
+    .itinerary-scroll {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .itinerary-card {
+        height: 430px;
+    }
+
+    .itinerary-info {
+        padding: 25px;
+    }
 
 }
