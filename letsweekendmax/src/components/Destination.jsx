@@ -19,6 +19,15 @@ const destinations = [
             "/alyssa/16.jpg",
         ],
     },
+        {
+        location: "ROATAN, HONDURAS",
+        images: [
+            "/roatan/1.jpg",
+            "/roatan/11.jpg",
+                        "/roatan/6.1.jpg",
+            "/roatan/6.7.jpg",
+        ],
+    },
 ];
 
 function DestinationContent() {
