@@ -36,7 +36,7 @@ export default function Destinations() {
         {
             image: "/alyssa/sweden/4.jpg",
             location: "Sweden",
-            season: "Winter",
+            season: "Summer",
             region: "Europe",
             duration: "2 days PTO",
             link: "/Sweden"
@@ -73,7 +73,7 @@ export default function Destinations() {
                 <p>
                     Browse destination guides, discover how we booked flights
                     with points and cheap cash deals, and see how we made the
-                    most of every adventure.
+                    most of every weekend.
                 </p>
 
             </div>
