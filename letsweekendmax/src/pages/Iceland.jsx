@@ -12,11 +12,11 @@ export default function Iceland() {
 
         season: "Spring",
 
-        totalCost: "~$1,163 + Food",
+        totalCost: "~$1,234 + Food",
 
         points: {
             type: "cash",
-            value: "$1,163 per Person"
+            value: "$1,234 per Person"
         },
 
         travelers: "4 People",
@@ -24,15 +24,15 @@ export default function Iceland() {
         flightLink: "",
 
         description:
-            "For this trip, we're turning a long weekend into an Iceland adventure with a quick stop in New York on both ends. By working remotely from New York and taking an overnight flight to Reykjavík, we're able to maximize our time without using an entire week of PTO. Over three days in Iceland, we'll explore the Golden Circle, drive along the dramatic South Coast, hunt for the Northern Lights, relax in a geothermal lagoon, and spend time wandering around Reykjavík. Iceland is definitely not the cheapest destination, but splitting accommodations, packing food for excursions, and cooking meals at the Airbnb helps make the trip much more affordable.",
+            "For this trip, we're turning a long weekend into an Iceland adventure by flying through New York and maximizing every hour we have. Instead of spending a full week in Iceland, we're using overnight flights, remote work, and carefully planned tours to experience as much as possible in just three nights. Our itinerary includes the Golden Circle, Iceland's dramatic South Coast, a late-night Northern Lights hunt, a geothermal lagoon, and plenty of time exploring Reykjavík. Iceland isn't the cheapest destination, but splitting our Airbnb between four people, grocery shopping, cooking meals, and packing food for our full-day tours helps keep the trip manageable.",
 
         costs: [
 
             {
                 category: "Flights to New York",
                 description:
-                    "Roundtrip flights between Houston and New York.",
-                price: "~$193"
+                    "Flights between Houston and New York for our Iceland stopover.",
+                price: "~$64"
             },
 
             {
@@ -52,8 +52,8 @@ export default function Iceland() {
             {
                 category: "Excursions",
                 description:
-                    "Golden Circle tour, South Coast tour, Northern Lights tour, and a geothermal lagoon experience.",
-                price: "~$538"
+                    "Three booked GetYourGuide experiences: the Golden Circle, Northern Lights, and South Coast tours.",
+                price: "$304.45 per Person"
             },
 
             {
@@ -66,7 +66,7 @@ export default function Iceland() {
             {
                 category: "Food",
                 description:
-                    "Food is expensive in Iceland, so we plan to grocery shop, cook meals at the Airbnb, and pack food for full-day excursions.",
+                    "Food is not included in the trip total. We'll grocery shop, cook meals at the Airbnb, and pack food for our full-day excursions.",
                 price: "Varies"
             },
 
@@ -74,7 +74,7 @@ export default function Iceland() {
                 category: "New York Stopover",
                 description:
                     "Hotel and transportation for the overnight stops in New York before and after Iceland.",
-                price: "~$180"
+                price: "~$100"
             }
 
         ],
@@ -85,164 +85,274 @@ export default function Iceland() {
 
             description: (
                 <>
-                    For this trip, we're staying in an Airbnb in Reykjavík and
-                    splitting the cost between four people. Since Iceland can be
-                    an expensive destination, having access to a kitchen is one
-                    of the easiest ways we're planning to save money.
+                    We stayed in an Airbnb in Reykjavík and split the cost between
+                    four people. Since Iceland can be an expensive destination,
+                    having access to a kitchen was one of the easiest ways we saved
+                    money.
 
                     <br /><br />
 
-                    Instead of eating every meal at restaurants, we'll grocery
-                    shop after arriving, cook dinner at the Airbnb, and prepare
-                    food to bring with us on our full-day excursions.
+                    Instead of eating every meal at restaurants, we grocery shopped
+                    after arriving, cooked dinner at the Airbnb, and prepared food
+                    to bring with us on our full-day excursions.
 
                     <br /><br />
 
-                    The Airbnb will also give us a comfortable place to relax
-                    after long days exploring Iceland. With early morning tours
-                    and a late-night Northern Lights excursion, having a central
-                    place to come back to will be especially important.
+                    Staying in Reykjavík also made it easy to join guided tours
+                    without renting a car. Our Golden Circle and Northern Lights
+                    tours both used Bus Stop #12 at Höfðatorg as the meeting point,
+                    while our South Coast tour included pickup from our selected
+                    Reykjavík location.
 
                     <br /><br />
 
-                    Splitting the stay between four travelers keeps the
-                    accommodation cost relatively low while giving us the
-                    flexibility to cook, relax, and maximize our time in
-                    Reykjavík.
+                    Splitting the stay between four travelers kept accommodation
+                    costs relatively low while giving us a comfortable place to
+                    cook, relax, and recharge between long days of exploring.
                 </>
             ),
-
-
         },
 
         days: [
 
             {
-                title: "Arrival + The Golden Circle + Reykjavík",
+                title: "Arrival + Golden Circle + Northern Lights",
 
                 description: [
 
                     <>
-                        We arrived in Iceland early Friday morning after taking
-                        an overnight flight from New York. Since we landed around
-                        6:30 AM, we planned to take transportation into Reykjavík,
-                        store our luggage, and head straight into our first
-                        adventure instead of waiting around for check-in.
+                        We arrived in Iceland early Friday morning after taking an
+                        overnight flight from New York. Since we landed around
+                        6:30 AM, we planned to get into Reykjavík, store our luggage,
+                        and start exploring instead of waiting around for Airbnb
+                        check-in.
                     </>,
 
                     <>
-                        Our first full experience in Iceland is the Golden Circle.
-                        The tour takes us through some of Iceland's most famous
-                        landscapes and natural attractions, making it the perfect
-                        introduction to the country after arriving.
+                        Our first major adventure was a full-day Golden Circle tour
+                        with BusTravel Iceland. The 8.5-hour tour included stops at
+                        Kerid Crater, Gullfoss Waterfall, Geysir, and Þingvellir
+                        National Park, with transportation and a guide included.
+                        Our tour met at Bus Stop #12 at Höfðatorg in Reykjavík.
                     </>,
 
                     <>
-                        After spending the day exploring, we'll head back to
-                        Reykjavík and finally settle into our Airbnb. We'll go
-                        grocery shopping, cook dinner, and take the evening to
-                        relax after a long travel day.
+                        After returning to Reykjavík, we headed back to the Airbnb,
+                        went grocery shopping, cooked dinner, and took some time to
+                        rest before heading back out later that night.
                     </>,
 
                     <>
-                        To end the night, we'll head to Hús máls og menningar,
-                        one of Reykjavík's famous bookstore bars. After an early
-                        morning arrival and a full day of sightseeing, grabbing a
-                        drink surrounded by books and live music sounds like the
-                        perfect first night in Iceland.
+                        At 9:30 PM, we met back at Bus Stop #12 for our Northern
+                        Lights bus tour. The four-hour experience included
+                        transportation, a guide, scenic stops for photography, and
+                        hot cocoa while we searched for the Aurora Borealis.
+                    </>,
+
+                    <>
+                        Seeing the Northern Lights is never guaranteed, since
+                        visibility depends on weather and solar conditions. However,
+                        the tour provider adjusts the route based on forecasts and
+                        offers a free retry if the lights aren't visible.
                     </>
 
                 ],
 
                 photos: [
+                    {
+                        src: "iceland/2.jpg",
+                    },
+                    {
+                        src: "iceland/3.jpg",
+                    },
+                    {
+                        src: "iceland/4.jpg",
+                    },
+                    {
+                        src: "iceland/5.jpg",
+                    },
+                    {
+                        src: "iceland/8.jpg",
+                        overlayText: "Group Photo"
+                    },
+                    {
+                        src: "iceland/17.jpg",
+                    }
+                ],
 
+                activities: [
+                    {
+                        title: "Golden Circle Full-Day Tour with Kerid Crater",
+                        date: "March 27, 2026 · 10:30 AM",
+                        duration: "8.5 hours",
+                        price: "$181.02 for 2 Adults",
+                        location: "Bus Stop #12, Höfðatorg",
+                        link: "https://www.getyourguide.com/reykjavik-l30/grand-golden-circle-tour-t67012/"
+                    },
+                    {
+                        title: "Northern Lights Bus Tour with Hot Cocoa",
+                        date: "March 27, 2026 · 9:30 PM",
+                        duration: "4 hours",
+                        price: "$148.12 for 2 Adults",
+                        location: "Bus Stop #12, Höfðatorg",
+                        link: "https://www.getyourguide.com/reykjavik-l30/iceland-northern-lights-bus-tour-from-reykjavik-w-hot-cocoa-t67019/"
+                    }
                 ]
             },
 
             {
-                title: "South Coast Adventure + Northern Lights",
+                title: "South Coast Adventure",
 
                 description: [
 
                     <>
-                        Saturday is our biggest adventure day of the trip. We
-                        have an early start for a full-day South Coast tour, so
-                        we're planning to pack our own lunch before leaving the
-                        Airbnb. Food can get expensive in Iceland, and bringing
-                        snacks and lunch is an easy way to save money.
+                        Saturday was our biggest adventure day. We had an early
+                        start for a 10-hour small-group South Coast tour, so we
+                        packed our own lunch before leaving the Airbnb. Food can
+                        get expensive in Iceland, and bringing our own lunch and
+                        snacks was an easy way to save money.
                     </>,
 
                     <>
-                        The South Coast is known for some of Iceland's most
-                        dramatic scenery, from waterfalls and black sand beaches
-                        to glaciers and massive cliffs. Since we only have a few
-                        days in Iceland, taking a guided tour allows us to see a
-                        lot without needing to rent a car or plan the logistics
-                        ourselves.
+                        The tour took us along Iceland's dramatic South Coast,
+                        with stops at Skógafoss, Vík, Reynisfjara Black Sand Beach,
+                        Sólheimajökull Glacier, and Seljalandsfoss.
                     </>,
 
                     <>
-                        After returning to Reykjavík, we'll spend some time
-                        walking around downtown before heading back to the
-                        Airbnb to cook dinner and rest.
+                        One of the best parts of taking a guided tour was being able
+                        to see so many major sights without renting a car or having
+                        to worry about driving Iceland's roads ourselves. The tour
+                        included transportation and a knowledgeable guide who shared
+                        stories and information about the different locations.
                     </>,
 
                     <>
-                        The day doesn't end there. At 9:30 PM, we're heading back
-                        out for a late-night Northern Lights tour. Seeing the
-                        Northern Lights is one of the biggest reasons we wanted
-                        to visit Iceland, so we're hoping the weather cooperates
-                        and gives us a chance to see them in person.
+                        We were advised to bring warm clothing, comfortable shoes,
+                        weather-appropriate layers, a daypack, sunglasses, and a
+                        packed lunch. Since March can still be cold and slippery,
+                        shoe grips or crampons were also recommended.
+                    </>,
+
+                    <>
+                        After spending most of the day exploring the South Coast,
+                        we returned to Reykjavík and spent the evening relaxing
+                        after another packed day.
                     </>
 
                 ],
 
                 photos: [
-  
+                    {
+                        src: "iceland/1.jpg",
+                    },
+                    {
+                        src: "iceland/15.jpg",
+                    },
+                    {
+                        src: "iceland/18.jpg",
+                        overlayText: "Icelandic Horse"
+                    },
+                    {
+                        src: "iceland/19.jpg",
+                    },
+                    {
+                        src: "iceland/20.jpg",
+                    },
+                    {
+                        src: "iceland/16.jpg",
+                        overlayText: "Walking to get dinner in a snowstorm"
+                    },
+                    {
+                        src: "iceland/6.jpg",
+                        overlayText: "Northern Lights"
+                    },
+                    {
+                        src: "iceland/7.jpg",
+                        overlayText: "Northern Lights"
+                    },
+                    {
+                        src: "iceland/14.jpg",
+                        overlayText: "Walking to get dinner in a snowstorm"
+                    }
+                ],
+
+                activities: [
+                    {
+                        title: "Iceland South Coast Small-Group Adventure",
+                        date: "March 28, 2026",
+                        duration: "10 hours",
+                        price: "$279.76 for 2 Adults",
+                        location: "Reykjavík pickup",
+                        link: "https://www.getyourguide.com/reykjavik-l30/from-reykjavik-iceland-south-coast-small-group-adventure-t165284/"
+                    }
                 ]
             },
 
             {
-                title: "Reykjavík + A Geothermal Lagoon",
+                title: "Reykjavík + Geothermal Lagoon",
 
                 description: [
 
                     <>
                         We saved our final day for a slower morning in Reykjavík.
-                        We'll start with breakfast at Brauð & Co, one of the most
-                        popular bakeries in the city, before spending some time
-                        walking around and exploring more of Reykjavík.
+                        After several full days of tours and late nights, we wanted
+                        time to actually enjoy the city instead of immediately
+                        rushing into another excursion.
                     </>,
 
                     <>
-                        After checking out of the Airbnb, we'll store our luggage
-                        and head to one of Iceland's famous geothermal lagoons.
-                        We're deciding between the Blue Lagoon and Sky Lagoon,
-                        both of which would be the perfect way to relax after
-                        several busy days of sightseeing and early morning tours.
+                        We started the morning with breakfast at Brauð & Co before
+                        walking around Reykjavík and exploring more of the city's
+                        colorful streets and shops.
                     </>,
 
                     <>
-                        Once we're done soaking and relaxing, we'll grab our
-                        luggage and begin making our way back toward Keflavík
-                        Airport. Our flight leaves around 8 PM, so we're planning
-                        to leave Reykjavík with plenty of time to get through
-                        transportation and airport security.
+                        After checking out of the Airbnb, we stored our luggage and
+                        headed to a geothermal lagoon for a relaxing afternoon.
+                        After spending the previous two days chasing waterfalls,
+                        glaciers, beaches, and the Northern Lights, soaking in
+                        Iceland's warm geothermal water was the perfect way to end
+                        the trip.
                     </>,
 
                     <>
-                        We'll fly back to New York that evening, wrapping up our
-                        Iceland adventure before spending Monday working remotely
-                        and eventually catching our flight back to Houston.
-                        By using New York as a stopover and working remotely
-                        around the flights, we're able to turn a few days off into
-                        an international adventure.
+                        Once we finished at the lagoon, we collected our luggage
+                        and made our way toward Keflavík Airport for our evening
+                        flight back to New York.
+                    </>,
+
+                    <>
+                        We flew back to New York that evening, then spent Monday
+                        working remotely before eventually catching our flight back
+                        to Houston. By combining an international trip with a New
+                        York stopover and remote work, we were able to turn a few
+                        days off into a much bigger adventure.
                     </>
 
                 ],
 
                 photos: [
-
+                    {
+                        src: "iceland/13.jpg",
+                        overlayText: "Blue Lagoon"
+                    },
+                    {
+                        src: "iceland/9.jpg",
+                        overlayText: "Reykjavík Rainbow Street"
+                    },
+                    {
+                        src: "iceland/10.jpg",
+                        overlayText: "Lower Skólavörðustígur Downtown"
+                    },
+                    {
+                        src: "iceland/11.jpg",
+                        overlayText: "Blue Lagoon"
+                    },
+                    {
+                        src: "iceland/12.jpg",
+                        overlayText: "Blue Lagoon"
+                    }
                 ]
             }
 
@@ -250,34 +360,36 @@ export default function Iceland() {
 
         tips: [
 
-            "Flying overnight helps maximize your time in Iceland, especially if you're working around limited PTO.",
+            "Use overnight flights to maximize your time in Iceland when you're working with limited PTO.",
 
-            "Store your luggage after arriving so you can start exploring immediately instead of waiting for Airbnb check-in.",
+            "Store your luggage after arriving in Reykjavík so you can start exploring before Airbnb check-in.",
 
-            "Book full-day tours if you don't want to rent a car or worry about navigating Iceland's roads.",
+            "Bus Stop #12 at Höfðatorg is a major meeting point for tours, including both the Golden Circle and Northern Lights tours.",
 
-            "Pack snacks and lunch for excursions—food can be expensive in Iceland.",
+            "Book full-day guided tours if you don't want to rent a car or worry about navigating Iceland's roads.",
 
-            "Stay in an Airbnb with a kitchen and grocery shop after arriving to save money on meals.",
+            "Pack a lunch and snacks for full-day excursions. Food and drinks at tourist stops can add up quickly.",
 
-            "Bring layers. Icelandic weather can change quickly, especially during full-day outdoor tours.",
+            "Stay somewhere with a kitchen and grocery shop after arriving to save money on meals.",
 
-            "Plan a Northern Lights tour, but remember that sightings depend heavily on weather and visibility.",
+            "Bring multiple warm layers. Icelandic weather can change quickly, and you may spend long periods outside.",
 
-            "Schedule the geothermal lagoon toward the end of your trip so you can relax after several busy days of exploring.",
+            "For the South Coast in March, bring comfortable waterproof shoes and consider shoe grips or crampons.",
 
-            "Compare Blue Lagoon and Sky Lagoon based on your itinerary, transportation, and the experience you want.",
+            "Northern Lights sightings are never guaranteed. Our tour offered a free retry if we didn't see the lights.",
 
-            "Book airport transportation in advance so you have plenty of time to get back to Keflavík Airport for your flight.",
+            "Northern Lights tours can be canceled because of poor weather, so check your email before heading to the meeting point.",
 
-            "If you're using New York as a stopover, look for hotels with free airport shuttles to make the transition between flights easier.",
+            "Compare geothermal lagoons based on your itinerary, transportation, and the type of experience you want.",
 
-            "Bring a reusable water bottle—Iceland has excellent tap water, so you don't need to constantly buy bottled water."
+            "If you're using New York as a stopover, look for accommodations with convenient airport transportation.",
+
+            "Bring a reusable water bottle. Iceland has excellent tap water, so there's little reason to constantly buy bottled water."
 
         ],
 
         verdict:
-            "Iceland is one of those destinations that feels almost impossible to fully experience in just one weekend, but with overnight flights, guided tours, and a little planning, we're able to see an incredible amount in only a few days. From waterfalls and black sand beaches to Reykjavík's colorful streets, geothermal lagoons, and hopefully the Northern Lights, this itinerary is all about maximizing a short trip. Iceland isn't cheap, but splitting an Airbnb, cooking meals, and packing food for excursions helps make the experience much more manageable. If you're looking for a trip that feels completely different from anywhere else, Iceland is definitely worth the long weekend."
+            "Iceland is one of those destinations that feels impossible to fully experience in just a few days, but this trip proved that a short itinerary can still pack in a lot. In only three nights, we explored the Golden Circle, chased the Northern Lights, drove along the South Coast, saw waterfalls, glaciers and black sand beaches, wandered around Reykjavík, and ended the trip with a geothermal lagoon. The key was planning around our limited time: overnight flights, guided tours, an Airbnb with a kitchen, packed lunches, and a New York stopover made it possible to turn a long weekend into a full Iceland adventure. Iceland isn't the cheapest destination, but splitting costs between four people and being strategic about food and transportation helped make it much more manageable.",
     };
 
     return <ItineraryTemplate trip={trip} />;
