@@ -44,7 +44,7 @@ export default function Destinations() {
 
 
         {
-            image: "/iceland.jpg",
+            image: "/iceland/3.jpg",
             location: "Iceland",
             season: "Spring",
             region: "Europe",

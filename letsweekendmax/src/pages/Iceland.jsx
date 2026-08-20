@@ -4,7 +4,7 @@ export default function Iceland() {
 
     const trip = {
 
-        cover: "/iceland.jpg",
+        cover: "/iceland/21.jpg",
 
         destination: "Reykjavík, Iceland",
 
@@ -118,45 +118,7 @@ export default function Iceland() {
             {
                 title: "Arrival + Golden Circle + Northern Lights",
 
-                description: [
-
-                    <>
-                        We arrived in Iceland early Friday morning after taking an
-                        overnight flight from New York. Since we landed around
-                        6:30 AM, we planned to get into Reykjavík, store our luggage,
-                        and start exploring instead of waiting around for Airbnb
-                        check-in.
-                    </>,
-
-                    <>
-                        Our first major adventure was a full-day Golden Circle tour
-                        with BusTravel Iceland. The 8.5-hour tour included stops at
-                        Kerid Crater, Gullfoss Waterfall, Geysir, and Þingvellir
-                        National Park, with transportation and a guide included.
-                        Our tour met at Bus Stop #12 at Höfðatorg in Reykjavík.
-                    </>,
-
-                    <>
-                        After returning to Reykjavík, we headed back to the Airbnb,
-                        went grocery shopping, cooked dinner, and took some time to
-                        rest before heading back out later that night.
-                    </>,
-
-                    <>
-                        At 9:30 PM, we met back at Bus Stop #12 for our Northern
-                        Lights bus tour. The four-hour experience included
-                        transportation, a guide, scenic stops for photography, and
-                        hot cocoa while we searched for the Aurora Borealis.
-                    </>,
-
-                    <>
-                        Seeing the Northern Lights is never guaranteed, since
-                        visibility depends on weather and solar conditions. However,
-                        the tour provider adjusts the route based on forecasts and
-                        offers a free retry if the lights aren't visible.
-                    </>
-
-                ],
+description: [ <> We arrived in Iceland early Friday morning after taking an overnight flight from New York. Since we landed around 6:30 AM, we planned to get into Reykjavík, store our luggage, and start exploring instead of waiting around for Airbnb check-in. </>, <> Our first major adventure was the{" "} <a href="https://www.getyourguide.com/reykjavik-l30/grand-golden-circle-tour-t67012/" target="_blank" rel="noopener noreferrer" > Golden Circle Full-Day Tour with Kerid Crater </a> . The 8.5-hour tour cost $181.02 for two adults and included stops at Kerid Crater, Gullfoss Waterfall, Geysir, and Þingvellir National Park. The tour met at Bus Stop #12 at Höfðatorg in Reykjavík. </>, <> After returning to Reykjavík, we headed back to the Airbnb, went grocery shopping, cooked dinner, and took some time to rest before heading back out later that night. </>, <> At 9:30 PM, we met back at Bus Stop #12 for our{" "} <a href="https://www.getyourguide.com/reykjavik-l30/iceland-northern-lights-bus-tour-from-reykjavik-w-hot-cocoa-t67019/" target="_blank" rel="noopener noreferrer" > Northern Lights Bus Tour with Hot Cocoa </a> . The four-hour experience cost $148.12 for two adults and included transportation, a guide, scenic stops for photography, and hot cocoa while we searched for the Aurora Borealis. </>, <> Seeing the Northern Lights is never guaranteed, since visibility depends on weather and solar conditions. The tour provider adjusts the route based on forecasts and offers a free retry if the lights aren't visible. </> ],
 
                 photos: [
                     {
@@ -180,67 +142,12 @@ export default function Iceland() {
                     }
                 ],
 
-                activities: [
-                    {
-                        title: "Golden Circle Full-Day Tour with Kerid Crater",
-                        date: "March 27, 2026 · 10:30 AM",
-                        duration: "8.5 hours",
-                        price: "$181.02 for 2 Adults",
-                        location: "Bus Stop #12, Höfðatorg",
-                        link: "https://www.getyourguide.com/reykjavik-l30/grand-golden-circle-tour-t67012/"
-                    },
-                    {
-                        title: "Northern Lights Bus Tour with Hot Cocoa",
-                        date: "March 27, 2026 · 9:30 PM",
-                        duration: "4 hours",
-                        price: "$148.12 for 2 Adults",
-                        location: "Bus Stop #12, Höfðatorg",
-                        link: "https://www.getyourguide.com/reykjavik-l30/iceland-northern-lights-bus-tour-from-reykjavik-w-hot-cocoa-t67019/"
-                    }
-                ]
             },
 
             {
                 title: "South Coast Adventure",
 
-                description: [
-
-                    <>
-                        Saturday was our biggest adventure day. We had an early
-                        start for a 10-hour small-group South Coast tour, so we
-                        packed our own lunch before leaving the Airbnb. Food can
-                        get expensive in Iceland, and bringing our own lunch and
-                        snacks was an easy way to save money.
-                    </>,
-
-                    <>
-                        The tour took us along Iceland's dramatic South Coast,
-                        with stops at Skógafoss, Vík, Reynisfjara Black Sand Beach,
-                        Sólheimajökull Glacier, and Seljalandsfoss.
-                    </>,
-
-                    <>
-                        One of the best parts of taking a guided tour was being able
-                        to see so many major sights without renting a car or having
-                        to worry about driving Iceland's roads ourselves. The tour
-                        included transportation and a knowledgeable guide who shared
-                        stories and information about the different locations.
-                    </>,
-
-                    <>
-                        We were advised to bring warm clothing, comfortable shoes,
-                        weather-appropriate layers, a daypack, sunglasses, and a
-                        packed lunch. Since March can still be cold and slippery,
-                        shoe grips or crampons were also recommended.
-                    </>,
-
-                    <>
-                        After spending most of the day exploring the South Coast,
-                        we returned to Reykjavík and spent the evening relaxing
-                        after another packed day.
-                    </>
-
-                ],
+description: [ <> Saturday was our biggest adventure day. We had an early start for a 10-hour{" "} <a href="https://www.getyourguide.com/reykjavik-l30/from-reykjavik-iceland-south-coast-small-group-adventure-t165284/" target="_blank" rel="noopener noreferrer" > Iceland South Coast Small-Group Adventure </a> . The tour cost $279.76 for two adults and included transportation and a guide. Since food can get expensive in Iceland, we packed our own lunch and snacks before leaving the Airbnb. </>, <> The tour took us along Iceland's dramatic South Coast, with stops at Skógafoss, Vík, Reynisfjara Black Sand Beach, Sólheimajökull Glacier, and Seljalandsfoss. </>, <> One of the best parts of taking a guided tour was being able to see so many major sights without renting a car or having to worry about driving Iceland's roads ourselves. The guide also shared stories and information about the different locations along the way. </>, <> We were advised to bring warm clothing, comfortable shoes, weather-appropriate layers, a daypack, sunglasses, and a packed lunch. Since March can still be cold and slippery, shoe grips or crampons were also recommended. </>, <> After spending most of the day exploring the South Coast, we returned to Reykjavík and spent the evening relaxing after another packed day. </> ],
 
                 photos: [
                     {
@@ -291,46 +198,10 @@ export default function Iceland() {
 
             {
                 title: "Reykjavík + Geothermal Lagoon",
-
-                description: [
-
-                    <>
-                        We saved our final day for a slower morning in Reykjavík.
-                        After several full days of tours and late nights, we wanted
-                        time to actually enjoy the city instead of immediately
-                        rushing into another excursion.
-                    </>,
-
-                    <>
-                        We started the morning with breakfast at Brauð & Co before
-                        walking around Reykjavík and exploring more of the city's
-                        colorful streets and shops.
-                    </>,
-
-                    <>
-                        After checking out of the Airbnb, we stored our luggage and
-                        headed to a geothermal lagoon for a relaxing afternoon.
-                        After spending the previous two days chasing waterfalls,
-                        glaciers, beaches, and the Northern Lights, soaking in
-                        Iceland's warm geothermal water was the perfect way to end
-                        the trip.
-                    </>,
-
-                    <>
-                        Once we finished at the lagoon, we collected our luggage
-                        and made our way toward Keflavík Airport for our evening
-                        flight back to New York.
-                    </>,
-
-                    <>
-                        We flew back to New York that evening, then spent Monday
-                        working remotely before eventually catching our flight back
-                        to Houston. By combining an international trip with a New
-                        York stopover and remote work, we were able to turn a few
-                        days off into a much bigger adventure.
-                    </>
-
-                ],
+description: [ <> We saved our final day for a slower morning in Reykjavík. After several full days of tours and late nights, we wanted time to actually enjoy the city instead of immediately rushing into another excursion. </>,
+<> We started the morning with breakfast at Brauð & Co before walking around Reykjavík and exploring more of the city's colorful streets and shops. </>,
+<> After checking out of the Airbnb, we stored our luggage and headed to Blue Lagoon (a geothermal lagoon) for a relaxing afternoon. After spending the previous two days chasing waterfalls, glaciers, beaches, and the Northern Lights, soaking in Iceland's warm geothermal water was the perfect way to end the trip. </>,
+<> Once we finished at the lagoon, we collected our luggage and made our way toward Keflavík Airport for our evening flight back to New York. </>, <> We flew back to New York that evening, then spent Monday working remotely before eventually catching our flight back to Houston. By combining an international trip with a New York stopover and remote work, we were able to turn a few days off into a much bigger adventure. </> ],
 
                 photos: [
                     {
