@@ -16,7 +16,7 @@ export default function Iceland() {
 
         points: {
             type: "cash",
-            value: "$1,234 per Person"
+            value: "$461"
         },
 
         travelers: "4 People",
