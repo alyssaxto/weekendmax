@@ -181,7 +181,10 @@ description: [ <> Saturday was our biggest adventure day. We had an early start 
                     {
                         src: "iceland/14.jpg",
                         overlayText: "Walking to get dinner in a snowstorm"
-                    }
+                    },
+                                        {
+                        src: "iceland/22.jpg",
+                    },
                 ],
 
                 activities: [
