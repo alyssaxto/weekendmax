@@ -13,7 +13,7 @@ import Roatan from "./pages/Roatan";
 import Basics from "./pages/Basics";
 import Alyssa from "./pages/Alyssa";
 import Lauren from "./pages/Lauren";
-
+import Sweden from "./pages/Sweden";
 
 function App(){
 
@@ -34,6 +34,12 @@ return (
 <Route 
     path="/Roatan" 
     element={<Roatan />} 
+/>
+
+
+<Route 
+    path="/Sweden" 
+    element={<Sweden />} 
 />
 
 <Route 
