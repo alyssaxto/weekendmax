@@ -46,6 +46,7 @@ export default function Destinations() {
         {
             image: "/iceland/3.jpg",
             location: "Iceland",
+            points: "$300–400 flight",
             season: "Spring",
             region: "Europe",
             duration: "2 days PTO",

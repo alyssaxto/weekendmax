@@ -177,7 +177,9 @@ hotel: {
                 ],
 
                 photos: [
-             
+               {
+    src:"canada/4.jpg",
+},
                 ]
 
             },
@@ -234,6 +236,9 @@ hotel: {
 
                 photos: [
 
+  {
+    src:"canada/3.jpg",
+},
                 ]
 
             },
@@ -286,7 +291,9 @@ hotel: {
                 ],
 
                 photos: [
-
+  {
+    src:"canada/2.jpg",
+},
                 ]
 
             },
@@ -331,6 +338,9 @@ hotel: {
                 ],
 
                 photos: [
+  {
+    src:"canada/2.jpg",
+},
 
                 ]
 
