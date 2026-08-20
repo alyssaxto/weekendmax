@@ -150,6 +150,33 @@ hotel: {
                 ],
 
                 photos: [
+                    {
+    src:"/alyssa/sweden/1.jpg",
+},
+                    {
+    src:"/alyssa/sweden/4.jpg",
+},
+                    {
+    src:"/alyssa/sweden/12.jpg",
+},
+                    {
+    src:"/alyssa/sweden/13.jpg",
+},
+                    {
+    src:"/alyssa/sweden/14.jpg",
+},
+                    {
+    src:"/alyssa/sweden/15.jpg",
+},
+                    {
+    src:"/alyssa/sweden/16.jpg",
+},
+                    {
+    src:"/alyssa/sweden/17.jpg",
+},
+                    {
+    src:"/alyssa/sweden/19.jpg",
+},
 
                 ]
             },
@@ -199,7 +226,30 @@ hotel: {
                 ],
 
                 photos: [
-
+                    {
+    src:"/alyssa/sweden/18.jpg",
+},
+                    {
+    src:"/alyssa/sweden/23.jpg",
+},
+                    {
+    src:"/alyssa/sweden/24.jpg",
+},
+                    {
+    src:"/alyssa/sweden/25.jpg",
+},
+                    {
+    src:"/alyssa/sweden/21.jpg",
+},
+                    {
+    src:"/alyssa/sweden/22.jpg",
+},
+                    {
+    src:"/alyssa/sweden/2.jpg",
+},
+  {
+    src:"/alyssa/sweden/28.jpg",
+},
                 ]
             },
 
@@ -250,7 +300,30 @@ hotel: {
                 ],
 
                 photos: [
-
+                    {
+    src:"/alyssa/sweden/20.jpg",
+},
+                    {
+    src:"/alyssa/sweden/1.jpg",
+},
+                    {
+    src:"/alyssa/sweden/4.jpg",
+},
+                    {
+    src:"/alyssa/sweden/3.jpg",
+},
+  {
+    src:"/alyssa/sweden/26.jpg",
+},
+  {
+    src:"/alyssa/sweden/27.jpg",
+},
+  {
+    src:"/alyssa/sweden/29.jpg",
+},
+  {
+    src:"/alyssa/sweden/30.jpg",
+},
                 ]
             }
 
