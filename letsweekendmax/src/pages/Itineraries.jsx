@@ -49,7 +49,7 @@ export default function Destinations() {
             season: "Spring",
             region: "Europe",
             duration: "2 days PTO",
-            link: "/filler"
+            link: "/Iceland"
         }
 
     ];

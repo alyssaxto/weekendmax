@@ -98,7 +98,7 @@ export default function Itinerary(){
             location:"Iceland",
             image:"/iceland.jpg",
             description:"Chasing waterfalls, glaciers, and the northern lights.",
-            link:"/filler"
+            link:"/Iceland"
         },
 
 
