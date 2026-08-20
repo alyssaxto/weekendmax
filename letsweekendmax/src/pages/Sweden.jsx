@@ -216,7 +216,7 @@ hotel: {
                     </>,
 
                     <>
-                        For dinner, we planned to try Meatballs for the People before
+                        For dinner, we went to Corner Club before
                         heading out for drinks and potentially experiencing Stockholm's
                         nightlife. One thing to keep in mind is that many clubs in
                         Stockholm have strict age requirements and dress codes, so it's
@@ -268,15 +268,7 @@ hotel: {
                     </>,
 
                     <>
-                        Next, we headed to the Vasa Museum to see the famous 17th-century
-                        warship that was recovered and preserved after sinking in
-                        Stockholm's harbor. Seeing the massive ship in person was one of
-                        the most memorable parts of the trip and definitely worth adding
-                        to a Stockholm itinerary.
-                    </>,
-
-                    <>
-                        After the museum, we spent time exploring Djurgården, walking
+                        We spent time exploring Djurgården, walking
                         through the parks and stopping at cafés before heading back to
                         the Airbnb. Since we had a concert that evening, we decided to
                         save time by taking a rideshare back instead of relying entirely
